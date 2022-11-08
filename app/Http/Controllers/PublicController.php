@@ -17,4 +17,8 @@ class PublicController extends Controller
     public function login(){
         return view ('auth.login');
     }
+
+    public function createAnnounce(){
+        return view('announces.createAnnounce');
+    }
 }

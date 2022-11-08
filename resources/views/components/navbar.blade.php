@@ -21,6 +21,9 @@
             <a class="nav-link" href="">Benvenut* {{Auth::user()->name}}</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="{{route('createAnnounce')}}">Annunci</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link disabled">Disabled</a>
           </li>
           <li class="nav-item">
