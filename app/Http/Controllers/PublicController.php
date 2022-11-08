@@ -8,12 +8,6 @@ use Illuminate\Support\Facades\View;
 
 class PublicController extends Controller
 {
-    public function __construct()
-    {
-        $categories=Category::all();
-        View::share('categories', $categories);
-    }
-
     public function welcome(){
         return view ('welcome');
     }

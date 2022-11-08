@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Announce;
+use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
 
 class AnnounceForm extends Component
@@ -12,13 +13,14 @@ class AnnounceForm extends Component
     public $price;
     public $location;
     public $description;
-    public $selCategory;
+    public $category;
 
 
     public function createAnnounce(){
+        $category = Category::find($this->category);
         $user=Auth::user();
         $this->validate();
-        $announce=Announce::create([
+        $category->announces()->create([
             'name'=>$this->name,
             'price'=>$this->price,
             'location'=>$this->location,
@@ -26,20 +28,31 @@ class AnnounceForm extends Component
             'vendor'=>$user->id
             
         ]);
-        if($announce){
-            $announce->category()->attach($this->selCategory);
-        }
-        
-        
+        session()->flash('message', 'Dioboia ce l hai fatta');
+        $this->cleanForm();
     }
-
-
+    
     protected $rules=[
-        'name'=>'required | min:3',
-        'price'=>'required',
+        'name'=>'required | min:4',
+        'price'=>'required | numeric | digits_between:0,8',
         'location'=>'required',
-        'description'=>'required',
+        'description'=>'required | min:8',
     ];
+
+    protected $messages = [
+        'required' => 'Il campo :attribute e obbligatorio oh!',
+        'min' => 'Il campo :attribute e troppo corto guaglio',
+        'digits_between' => 'Il campo :attribute puo contenere al massimo 8 cifre!',
+        'numeric' => 'Il campo :attribute deve essere un numero!'
+    ];
+
+    protected function cleanForm(){
+        $this->name = '';
+        $this->category = '';
+        $this->price = '';
+        $this->location = '';
+        $this->description = '';
+    }
 
 
 
