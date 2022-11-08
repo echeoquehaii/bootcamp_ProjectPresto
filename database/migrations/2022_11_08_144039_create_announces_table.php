@@ -16,12 +16,11 @@ return new class extends Migration
         Schema::create('announces', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('vendor');
+            $table->unsignedBigInteger('vendor');
+            $table->foreign('vendor')->references('id')->on('users');
             $table->char('price', 8, 2);
             $table->string('location');
             $table->string('description');
-            $table->unsignedBigInteger('category_id');
-            $table->foreign('category_id')->references('id')->on('categories');
             $table->timestamps();
         });
     }
