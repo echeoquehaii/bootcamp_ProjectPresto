@@ -1,6 +1,11 @@
 <x-layout>
 
     <h1 class="text-center">Ecco gli Annunci!</h1>
+    @if (session('message'))
+        <div class="alert alert-success">
+            {{ session('message') }}
+        </div>
+    @endif
 <div class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         Categorie
@@ -24,6 +29,7 @@
             <p class="card-text">{{$announce->location}}</p>
             <p class="card-text">{{$announce->description}}</p>
             <p class="card-text">{{$announce->category->name}}</p>
+            <p class="card-text">Data creazione: {{$announce->created_at}}</p>
             <a href="{{route('detAnnounce', compact('announce'))}}" class="btn btn-primary">Vai al dettaglio coglione</a>
         </div>
     </div>

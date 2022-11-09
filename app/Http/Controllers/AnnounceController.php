@@ -13,18 +13,17 @@ class AnnounceController extends Controller
         return view('announces.createAnnounce');
     }
 
-    public function announce(){
-        $announces = Announce::paginate(2);
-        return view('announces.announce', compact('announces'));
+    public function indexAnnounce(){
+        $announces = Announce::orderBy('created_at', 'desc')->paginate(2);
+        return view('announces.indexAnnounce', compact('announces'));
     }
 
     public function categoryShow(Category $category){
-        return view('announces.categoryShow', compact('category'));
+/*  $variabile = Announce::paginate(1);  */
+    return view('announces.categoryShow', compact('category'));
     }
 
     public function detAnnounce(Announce $announce){
         return view('announces.detAnnounce', compact('announce'));
     }
-    
-   
 }

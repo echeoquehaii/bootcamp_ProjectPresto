@@ -24,7 +24,7 @@
             <a class="nav-link" href="{{route('createAnnounce')}}">Crea Annuncio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route('announce')}}">Lista Annunci</a>
+            <a class="nav-link" href="{{route('indexAnnounce')}}">Lista Annunci</a>
           </li>
           
           <li class="nav-item">

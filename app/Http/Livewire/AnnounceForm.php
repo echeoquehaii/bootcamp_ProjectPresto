@@ -15,8 +15,7 @@ class AnnounceForm extends Component
     public $description;
     public $category;
 
-
-    public function createAnnounce(){
+    public function storeAnnounce(){
         $category = Category::find($this->category);
         $user=Auth::user();
         $this->validate();
@@ -28,8 +27,8 @@ class AnnounceForm extends Component
             'user_id'=>$user->id
             
         ]);
-        session()->flash('message', 'Dioboia ce l hai fatta');
-        $this->cleanForm();
+        session()->flash('message', 'Hai caricato l\'annuncio');
+        redirect (route('indexAnnounce'));
     }
     
     protected $rules=[
@@ -40,11 +39,20 @@ class AnnounceForm extends Component
         'category'=>'required',
     ];
 
+    protected $validationAttributes = [
+        'name'=> 'nome',
+        'price'=> 'prezzo',
+        'location'=> 'posizione',
+        'description'=> 'descrizione',
+        'category'=> 'categoria',
+    ];
+
     protected $messages = [
-        'required' => 'Il campo :attribute e obbligatorio oh!',
-        'min' => 'Il campo :attribute e troppo corto guaglio',
-        'digits_between' => 'Il campo :attribute puo contenere al massimo 8 cifre!',
-        'numeric' => 'Il campo :attribute deve essere un numero!'
+        'required' => 'Il campo :attribute è obbligatorio',
+        'name.min' => 'Devi inserire almeno 4 caratteri',
+        'description.min' => 'Devi inserire almeno 8 caratteri',
+        'digits_between' => 'Il campo :attribute puo contenere al massimo 8 cifre',
+        'numeric' => 'Il campo :attribute deve essere un numero'
     ];
 
     protected function cleanForm(){
@@ -54,12 +62,6 @@ class AnnounceForm extends Component
         $this->location = '';
         $this->description = '';
     }
-
-
-
-
-
-
 
     public function updated($propertyName){
         $this->validateOnly($propertyName);

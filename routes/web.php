@@ -19,7 +19,7 @@ Route::get('/', [PublicController::class, "welcome"])->name('welcome');
 Route::get('/register', [PublicController::class, "register"])->name('register');
 Route::get('/login', [PublicController::class, "login"])->name('login');
 Route::get('/nuovo/createAnnounce', [AnnounceController::class, "createAnnounce"])->middleware('auth')->name('createAnnounce');
-Route::get('/announce', [AnnounceController::class, "announce"])->name('announce');
+Route::get('/announce', [AnnounceController::class, "indexAnnounce"])->name('indexAnnounce');
 Route::get('/announce/{category}', [AnnounceController::class, "categoryShow"])->name('categoryShow');
 Route::get('/announce/dettaglio/{announce}', [AnnounceController::class, "detAnnounce"])->name('detAnnounce');
 

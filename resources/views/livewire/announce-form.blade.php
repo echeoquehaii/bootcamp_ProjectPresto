@@ -5,7 +5,7 @@
         </div>
     @endif
     
-    <form wire:submit.prevent="createAnnounce">
+    <form wire:submit.prevent="storeAnnounce">
         
         <div class="mb-3">
           <label class="form-label">Nome:</label>
