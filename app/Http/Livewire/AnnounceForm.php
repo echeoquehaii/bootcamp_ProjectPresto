@@ -25,7 +25,7 @@ class AnnounceForm extends Component
             'price'=>$this->price,
             'location'=>$this->location,
             'description'=>$this->description,
-            'vendor'=>$user->id
+            'user_id'=>$user->id
             
         ]);
         session()->flash('message', 'Dioboia ce l hai fatta');
@@ -37,6 +37,7 @@ class AnnounceForm extends Component
         'price'=>'required | numeric | digits_between:0,8',
         'location'=>'required',
         'description'=>'required | min:8',
+        'category'=>'required',
     ];
 
     protected $messages = [
@@ -67,5 +68,6 @@ class AnnounceForm extends Component
     public function render()
     {
         return view('livewire.announce-form');
+        
     }
 }

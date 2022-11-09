@@ -17,5 +17,8 @@ use App\Http\Controllers\PublicController;
 Route::get('/', [PublicController::class, "welcome"])->name('welcome');
 Route::get('/register', [PublicController::class, "register"])->name('register');
 Route::get('/login', [PublicController::class, "login"])->name('login');
-Route::get('/nuovo/annuncio', [PublicController::class, "createAnnounce"])->middleware('auth')->name('createAnnounce');
+Route::get('/nuovo/createAnnounce', [PublicController::class, "createAnnounce"])->middleware('auth')->name('createAnnounce');
+Route::get('/announce', [PublicController::class, "announce"])->name('announce');
+Route::get('/announce/{category}', [PublicController::class, "categoryShow"])->name('categoryShow');
+
 

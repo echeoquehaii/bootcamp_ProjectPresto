@@ -13,7 +13,7 @@ class Announce extends Model
     protected $fillable = [
         'name', 
         'price',
-        'vendor',
+        'user_id',
         'location',
         'description',
         'category_id',

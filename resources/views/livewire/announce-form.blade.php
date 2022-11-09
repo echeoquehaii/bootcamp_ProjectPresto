@@ -13,11 +13,13 @@
           @error('name') {{$message}} @enderror
         </div>
 
-        <select wire:model.defer="category" id="">
+        <select class="@error('category') is-invalid @enderror" wire:model.defer="category" id="">
+            <option value="">Scegli una categoriah</option>
             @foreach($categories as $category)
             <option value="{{$category->id}}">{{$category->name}}</option>
             @endforeach
         </select>
+        @error('category') {{$message}} @enderror
 
         <div class="mb-3">
             <label class="form-label">Prezzo:</label>
@@ -36,6 +38,13 @@
             <textarea wire:model.lazy='description' cols="30" rows="10" class="@error('description') is-invalid @enderror"></textarea>
             @error('description') {{$message}} @enderror
         </div>
+
+        <form>
+            <div class="form-group">
+              <label for="exampleFormControlFile1">Scegli l'immagine!</label>
+              <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            </div>
+        </form>
 
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>

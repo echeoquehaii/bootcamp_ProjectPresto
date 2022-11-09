@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('announces', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->unsignedBigInteger('vendor');
-            $table->foreign('vendor')->references('id')->on('users');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->char('price', 8, 2);
             $table->string('location');
             $table->string('description');
