@@ -39,12 +39,12 @@
             @error('description') {{$message}} @enderror
         </div>
 
-        <form>
+        {{-- <form>
             <div class="form-group">
               <label for="exampleFormControlFile1">Scegli l'immagine!</label>
               <input type="file" class="form-control-file" id="exampleFormControlFile1">
             </div>
-        </form>
+        </form> --}}
 
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
