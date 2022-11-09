@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        $categories = [
+        $ctegories = [
             ['name'=>'Supernova'],
             ['name'=>'Nana bianca'],
             ['name'=>'Nana nera'],

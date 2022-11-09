@@ -23,16 +23,4 @@ class PublicController extends Controller
         return view ('auth.login');
     }
 
-    public function createAnnounce(){
-        return view('announces.createAnnounce');
-    }
-
-    public function announce(){
-        $announces = Announce::all();
-        return view('announces.announce', compact('announces'));
-    }
-
-    public function categoryShow(Category $category){
-        return view('announces.categoryShow', compact('category'));
-    }
 }

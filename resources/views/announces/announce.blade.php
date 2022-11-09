@@ -24,11 +24,15 @@
             <p class="card-text">{{$announce->location}}</p>
             <p class="card-text">{{$announce->description}}</p>
             <p class="card-text">{{$announce->category->name}}</p>
-            <a href="" class="btn btn-primary">Scopri di più, capi fra?</a>
+            <a href="{{route('detAnnounce', compact('announce'))}}" class="btn btn-primary">Vai al dettaglio coglione</a>
         </div>
     </div>
 
     @endforeach
+
+    {{$announces->links()}}
+        
+    
 
 
 </x-layout>

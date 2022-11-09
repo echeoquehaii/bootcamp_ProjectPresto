@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\AnnounceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +18,10 @@ use App\Http\Controllers\PublicController;
 Route::get('/', [PublicController::class, "welcome"])->name('welcome');
 Route::get('/register', [PublicController::class, "register"])->name('register');
 Route::get('/login', [PublicController::class, "login"])->name('login');
-Route::get('/nuovo/createAnnounce', [PublicController::class, "createAnnounce"])->middleware('auth')->name('createAnnounce');
-Route::get('/announce', [PublicController::class, "announce"])->name('announce');
-Route::get('/announce/{category}', [PublicController::class, "categoryShow"])->name('categoryShow');
+Route::get('/nuovo/createAnnounce', [AnnounceController::class, "createAnnounce"])->middleware('auth')->name('createAnnounce');
+Route::get('/announce', [AnnounceController::class, "announce"])->name('announce');
+Route::get('/announce/{category}', [AnnounceController::class, "categoryShow"])->name('categoryShow');
+Route::get('/announce/dettaglio/{announce}', [AnnounceController::class, "detAnnounce"])->name('detAnnounce');
+
 
 
