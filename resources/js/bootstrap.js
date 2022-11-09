@@ -32,3 +32,19 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     forceTLS: (import.meta.env.VITE_PUSHER_SCHEME ?? 'https') === 'https',
 //     enabledTransports: ['ws', 'wss'],
 // });
+let bubble = document.querySelector('#bubble');
+let links = document.querySelectorAll('.nav-link');
+
+window.addEventListener('scroll' , ()=>{
+    let scrolled = window.scrollY;
+    if(scrolled > 0){
+        bubble.classList.add('bubbles');
+        links.forEach((link)=>{
+            link.classList.add('d-none');
+        })
+    }else{
+        bubble.classList.remove('bubbles');
+        links.forEach((link)=>{
+            link.classList.remove('d-none')
+        })
+}})

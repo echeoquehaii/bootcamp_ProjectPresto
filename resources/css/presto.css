@@ -1,3 +1,151 @@
-h1 {
-    color: red;
+*{
+    font-family: 'Orbitron', sans-serif;
 }
+
+:root{
+    --bl: rgb(25, 28, 36);
+    --wh: rgb(255, 255, 255);
+}
+
+.bg-body {
+    background-image: url(../media/WhiteNebula.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    color: var(--wh);
+}
+
+.bg-nav {
+    background-image: url(../media/Nebula.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text-wh {
+    color: var(--wh);
+}
+
+.bubbles {
+    position: relative;
+    display: flex;
+}
+
+.bubbles span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: white;
+    margin: 0 25px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px rgb(255, 255, 255),
+    0 0 50px rgb(228, 228, 228),
+    0 0 100px rgb(228, 228, 228);
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+    background: rgb(64, 0, 88);
+    box-shadow: 0 0 0 10px rgb(64, 0, 88),
+    0 0 50px rgb(156, 0, 218),
+    0 0 100px rgb(156, 0, 218);
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+.bg-main {
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.425)60%, rgb(0, 0, 0)90%), url(../media/bgnebula.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mt-custom{
+    margin-top: 56px !important;
+}
+
+.row-height {
+    height: 800px;
+    margin-left: 70px;
+}
+
+.btn-custom {
+    background: transparent;
+    border: 2px solid;
+    border-color: rgb(64, 0, 88);
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    padding: 10px 30px;
+    transition: 0.5s;
+}
+
+.btn-custom:hover {
+    letter-spacing: 0.25em;
+    background: rgb(64, 0, 88);
+    color: #fff;
+    box-shadow: 0 0 35px rgb(64, 0, 88);
+}
+
+a i {
+    position: absolute;
+    display: block;
+    color: white;
+}
+
+a i::before {
+    content: '';
+    position: absolute;
+    top: -68px;
+    left: 100%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: 2px solid white;
+    transition: 0.5s;
+}
+
+a:hover i::before {
+    right: 0%;
+    transform: translateX(-50%) rotate(45deg);
+    box-shadow: 40px 39px white;
+}
+
+/* CSS da deletare */
+.img-container{
+    height: 300px;
+}
+
+.img-container img{
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.card-title{
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+.detText {
+    color:  rgb(64, 0, 88);
+    font-weight: bolder;
+}
+
+label, .form-label {
+    color:  white;
+}
+/* CSS da deletare END*/
