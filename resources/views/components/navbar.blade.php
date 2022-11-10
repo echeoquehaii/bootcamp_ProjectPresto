@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-nav fixed-top">
   <div class="container-fluid" id="bubble">
-    <a class="navbar-brand text-wh" href="{{route('welcome')}}">Stellarian</a>
+    
+    <a class="navbar-brand text-wh" href="{{route('welcome')}}"><img src="/img/f.png" alt="" class="logoSize"> Presto</a>
     <span style="--i:11;"></span>
     <span style="--i:12;"></span>
     <span style="--i:24;"></span>

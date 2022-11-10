@@ -27,18 +27,29 @@
 
 
     <div class="container">
-        <div class="row">
+        <div class="row mt-custom">
             @foreach ($announces as $announce)
-            <div class="col-12 col-md-4">
-                <div class="card my-3 g-0 mx-auto" style="width: 18rem;">
-                    <img src="https://picsum.photos/200/300" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">{{$announce->name}}</h5>
-                        <p class="card-text">Venditore: {{$announce->user->name}}</p>
-                        <p class="card-text">Categoria: {{$announce->category->name}}</p>
-                        <a href="{{route('detAnnounce', compact('announce'))}}" class="btn btn-primary">Vai al dettaglio</a>
+            <div class="col-12 col-md-4 mt-custom">
+                <div class="card0">
+                    <div class="lines"></div>
+                    <div class="imgBx">
+                        <img src="https://picsum.photos/200/300" alt="" class="imageBx">
                     </div>
-                </div>
+                    <div class="content">
+                        <div class="details">
+                            <h2>{{$announce->name}}</h2>
+                            <div class="data">
+                                <h3>Venditore: {{$announce->user->name}}</h3>
+                                <h3>Categoria: {{$announce->category->name}}</h3>
+                            </div>
+                            <div class="actionBtn">
+                                <a href="{{route('detAnnounce', compact('announce'))}}"><button>Vai al dettaglio</button></a>
+                            </div>
+                        </div>
+        
+                    </div>
+                    
+                 </div> 
             </div>
             @endforeach       
         </div>
