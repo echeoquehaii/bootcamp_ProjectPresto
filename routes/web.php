@@ -31,6 +31,8 @@ Route::get('/announce/dettaglio/{announce}', [AnnounceController::class, "detAnn
 //Rotte revisore
 
 Route::get('/revisor/home', [RevisorController::class, "indexRevisor"])->name('indexRevisor');
+Route::patch('/accept/announce/{announce}', [RevisorController::class, "acceptAnnounce"])->name('revisor.acceptAnnounce');
+Route::patch('/reject/announce/{announce}', [RevisorController::class, "rejectAnnounce"])->name('revisor.rejectAnnounce');
 
 
 
