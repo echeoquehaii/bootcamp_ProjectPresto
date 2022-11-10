@@ -25,10 +25,11 @@
         </div>
     </div>
 
-
+   
     <div class="container">
         <div class="row mt-custom">
             @foreach ($announces as $announce)
+            
             <div class="col-12 col-md-4 mt-custom">
                 <div class="card0">
                     <div class="lines"></div>
@@ -51,6 +52,7 @@
                     
                  </div> 
             </div>
+            
             @endforeach       
         </div>
     </div>

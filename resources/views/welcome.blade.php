@@ -1,4 +1,11 @@
 <x-layout>
+
+    @if (session('access.denied'))
+        <div class="alert alert-success mt-5">
+            {{ session('access.denied')}}
+        </div>
+    @endif
+    
     <div class="container-fluid mt-custom bg-main vh-100">
         <div class="row align-items-center row-height">
             <div class="col-12 col-md-8 text-wh">
