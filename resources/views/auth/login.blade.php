@@ -1,6 +1,6 @@
 <x-layout>
     
-   <h1>Entra nella fam FRA!</h1>
+   <h1 class="text-center text-white space">Effettua il login!</h1>
 
    @if ($errors->any())
         <div class="alert alert-danger">

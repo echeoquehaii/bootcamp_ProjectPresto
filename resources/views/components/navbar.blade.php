@@ -60,7 +60,7 @@
             <span class="visually-hidden">unread messages</span>
            </span>
         @endif
-          <a class="nav-link text-wh" href="{{route('welcome')}}">{{Auth::user()->name}}</a>
+          <a class="nav-link text-wh" href="{{route('welcome')}}">Benvenuto:{{Auth::user()->name}}</a>
         @endguest
     </div>
   </div>

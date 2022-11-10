@@ -1,6 +1,6 @@
 <x-layout>
     
-    <h1>Registrati!!!</h1>
+    <h1 class="space text-center text-white">Registrati al nostro sito!</h1>
 
     @if ($errors->any())
         <div class="alert alert-danger">
