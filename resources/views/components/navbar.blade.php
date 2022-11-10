@@ -53,7 +53,13 @@
         </li>
         
       </ul>
-        <a class="nav-link text-wh" href="{{route('welcome')}}">{{Auth::user()->name}}</a>
+        @if(Auth::user()->is_revisor)
+          <a href="{{route('indexRevisor')}}">Zona revisore</a>
+          <span>{{App\Models\Announce::toBeRevisionedCount()}}
+            <span class="visually-hidden">unread messages</span>
+           </span>
+        @endif
+          <a class="nav-link text-wh" href="{{route('welcome')}}">{{Auth::user()->name}}</a>
         @endguest
     </div>
   </div>
