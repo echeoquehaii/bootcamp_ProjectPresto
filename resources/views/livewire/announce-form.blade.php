@@ -4,7 +4,7 @@
             {{ session('message') }}
         </div>
     @endif
-    <div class="container">
+    <div class="container mt-5">
         <div class="row">
             <div class="col-9">
                 <form wire:submit.prevent="storeAnnounce">

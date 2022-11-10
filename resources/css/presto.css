@@ -336,3 +336,15 @@ label, .form-label {
 .card0 .content .details .actionBtn button:hover {
     opacity: 1;
 }
+
+
+/* immagine welcome e spazio per margin top(Miki) */
+.img-wel{
+    background-image: url(../media/R.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.space{
+    margin-top: 80px;
+}
