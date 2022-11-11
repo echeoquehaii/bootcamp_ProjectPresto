@@ -29,7 +29,7 @@
                 <div class="single-widget widget-quick-links mt-5">
                     <h5 class="widget-title">Lavora con Noi</h5>
                     <ul>
-                        <li><a href="#">Invia qui il tuo curriculum!</a></li>
+                        <li><a href="{{route('becomeRevisor')}}" class="btn btn-warning">Diventa revisore</a></li>
                     </ul>
                 </div>
             </div>
@@ -53,7 +53,3 @@
                     </ul>
                 </div>
             </div>
-            
-        </div>
-    </div>
-</div>

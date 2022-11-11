@@ -27,4 +27,11 @@ class AnnounceController extends Controller
     public function detAnnounce(Announce $announce){
         return view('announces.detAnnounce', compact('announce'));
     }
+
+    public function searchAnnounces (Request $request){
+        dd($request->searched);
+        $announces = Announce::search($request->searched)->where('is_accepted', true)->paginate(6);
+
+        return view('announces.indexAnnounce', compact('announces'));
+    }
 }

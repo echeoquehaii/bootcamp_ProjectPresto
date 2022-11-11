@@ -5,6 +5,12 @@
             {{ session('access.denied')}}
         </div>
     @endif
+
+    @if (session('message'))
+        <div class="alert alert-success mt-5">
+            {{ session('message') }}
+        </div>
+    @endif
     
     <div class="container-fluid mt-custom bg-main vh-100">
         <div class="row align-items-center row-height">

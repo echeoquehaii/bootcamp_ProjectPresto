@@ -33,6 +33,16 @@ Route::get('/announce/dettaglio/{announce}', [AnnounceController::class, "detAnn
 Route::get('/revisor/home', [RevisorController::class, "indexRevisor"])->middleware('IsRevisor')->name('indexRevisor');
 Route::patch('/accept/announce/{announce}', [RevisorController::class, "acceptAnnounce"])->middleware('IsRevisor')->name('revisor.acceptAnnounce');
 Route::patch('/reject/announce/{announce}', [RevisorController::class, "rejectAnnounce"])->middleware('IsRevisor')->name('revisor.rejectAnnounce');
+Route::get('/request/revisor', [RevisorController::class, "becomeRevisor"])->middleware('auth')->name('becomeRevisor');
+Route::get('/make/revisor/{user}', [RevisorController::class, "makeRevisor"])->name('makeRevisor');
+
+//Rotta per ricerche
+
+Route::get('/search/announces', [AnnounceController::class, 'searchAnnounces'])->name('searchAnnounces');
+
+// Rotta lavora con noi
+
+//Route::get('/', [])->name('workWithUs');
 
 
 
