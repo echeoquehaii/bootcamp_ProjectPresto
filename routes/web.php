@@ -36,6 +36,14 @@ Route::patch('/reject/announce/{announce}', [RevisorController::class, "rejectAn
 Route::get('/request/revisor', [RevisorController::class, "becomeRevisor"])->middleware('auth')->name('becomeRevisor');
 Route::get('/make/revisor/{user}', [RevisorController::class, "makeRevisor"])->name('makeRevisor');
 
+//Rotta per ricerche
+
+Route::get('/search/announces', [AnnounceController::class, 'searchAnnounces'])->name('searchAnnounces');
+
+// Rotta lavora con noi
+
+//Route::get('/', [])->name('workWithUs');
+
 
 
 

@@ -36,4 +36,21 @@ class Announce extends Model
         return Announce::where('is_accepted', null)->count();
     }
 
+    public function toSearchableArray(){
+
+       $category = $this->category;
+
+       $array = [
+        
+        'id' => $this-> id,
+        'name' => $this-> name,
+        'price' => $this-> price,
+        'location' => $this-> location,
+        'description' => $this-> description,
+        'category' => $category,
+
+    ];
+
+    return $array;
+}
 }

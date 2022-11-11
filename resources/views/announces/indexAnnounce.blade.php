@@ -8,27 +8,12 @@
         </div>
     @endif
 
-    <div class="container mt-3">
-        <div class="row justify-content-center">
-            <div class="col-4 d-flex justify-content-center">
-                <div class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Categorie
-                    </a>
-                    <ul class="dropdown-menu">
-                        @foreach ($categories as $category)
-                        <li><a class="dropdown-item" href="{{route('categoryShow', compact('category'))}}">{{$category->name}}</a></li>
-                        @endforeach
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
    
     <div class="container">
         <div class="row mt-custom">
-            @foreach ($announces as $announce)
+            @forelse ($announces as $announce)
             
             <div class="col-12 col-md-4 mt-custom">
                 <div class="card0">
@@ -50,10 +35,15 @@
         
                     </div>
                     
-                 </div> 
+                </div> 
             </div>
-            
-            @endforeach       
+            @empty
+            <div class="col-12">
+                <div>
+                    <p>Non ci sono annunci per questo titolo</p>
+                </div>
+            </div>
+            @endforelse      
         </div>
     </div>
 

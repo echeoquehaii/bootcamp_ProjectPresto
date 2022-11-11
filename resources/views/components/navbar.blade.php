@@ -45,15 +45,40 @@
         <li class="nav-item">
           <a class="nav-link text-wh" href="{{route('indexAnnounce')}}">Lista Annunci</a>
         </li>
-        
-        <li class="nav-item">
-         <a class="nav-link text-wh" href="{{route('logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">LogOut</a>
-         <form id="logout-form" method="POST" class="d-none" action="{{route('logout')}}">
-          @csrf
-         </form>
+        <li>
+          <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-4 d-flex justify-content-center">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categorie
+                        </a>
+                        <ul class="dropdown-menu">
+                            @foreach ($categories as $category)
+                            <li><a class="dropdown-item" href="{{route('categoryShow', compact('category'))}}">{{$category->name}}</a></li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <form action="{{route('searchAnnounces')}}" method="GET" class="d-flex">
+            <input name="searched" class="form-control" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit"></button>
+          </form>
         </li>
         
+        
+        
       </ul>
+      
+        <a class="nav-link text-wh me-5" href="{{route('logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">LogOut</a>
+          <form id="logout-form" method="POST" class="d-none" action="{{route('logout')}}">
+         @csrf
+          </form>
+     
         @if(Auth::user()->is_revisor)
           <a href="{{route('indexRevisor')}}">Zona revisore</a>
           <span>{{App\Models\Announce::toBeRevisionedCount()}}
