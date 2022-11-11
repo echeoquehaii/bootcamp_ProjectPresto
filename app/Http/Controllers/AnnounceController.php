@@ -20,7 +20,7 @@ class AnnounceController extends Controller
 
     public function categoryShow(Category $category){
 /*  $variabile = Announce::paginate(1);  */
-
+    
     return view('announces.categoryShow', compact('category'));
     }
 
