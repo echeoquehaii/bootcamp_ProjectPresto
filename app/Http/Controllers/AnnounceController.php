@@ -29,8 +29,8 @@ class AnnounceController extends Controller
     }
 
     public function searchAnnounces (Request $request){
-        dd($request->searched);
-        $announces = Announce::search($request->searched)->where('is_accepted', true)->paginate(6);
+/*         dd($request->searched);
+ */        $announces = Announce::search($request->searched)->where('is_accepted', true)->paginate(6);
 
         return view('announces.indexAnnounce', compact('announces'));
     }
