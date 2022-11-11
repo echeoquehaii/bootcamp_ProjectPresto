@@ -12,7 +12,7 @@
         </div>
     @endif 
 
-    <div class="container">
+    <div class="container mb-5">
         <form method="POST" action="{{route('register')}}">
             @csrf
 
