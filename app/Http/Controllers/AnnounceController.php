@@ -20,8 +20,8 @@ class AnnounceController extends Controller
 
     public function categoryShow(Category $category){
 /*  $variabile = Announce::paginate(1);  */
-    
-    return view('announces.categoryShow', compact('category'));
+    $acceptedAnnounces = $category->announces->where('is_accepted', true);
+    return view('announces.categoryShow', compact('category', 'acceptedAnnounces'));
     }
 
     public function detAnnounce(Announce $announce){
