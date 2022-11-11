@@ -1,7 +1,5 @@
 <x-layout>
     
-    <h1>Registrati!!!</h1>
-
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -12,32 +10,50 @@
         </div>
     @endif 
 
-    <div class="container">
-        <form method="POST" action="{{route('register')}}">
-            @csrf
-
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Indirizzo email</label>
-                <input type="email" class="form-control" name="email">
+    <div class="container vh-100 mt-custom1">
+        <div class="row vh-100 justify-content-center text-center align-items-center">
+            <div class="col-12 col-md-3"></div>
+            <div class="col-12 col-md-6">
+                <div class="formRegister">       
+                    <div class="lines"></div>
+                    <div class="content">                       
+                            
+                        <form method="POST" action="{{route('register')}}">
+    
+                                <h2 class="text-wh text-center mb-4">REGISTRATI</h2>
+    
+                                @csrf
+                    
+                                <div class="mb-4 inputBox">
+                                    <input type="email"  name="email" required="required">
+                                    <label for="exampleInputEmail1" class="form-label">Indirizzo email:</label>
+                                    <i></i>                                   
+                                </div>
+                            
+                                <div class="mb-2 inputBox">
+                                    <input type="text"  name="name" required="required">
+                                    <label for="exampleInputPassword1" class="form-label">Nome e Cognome:</label>
+                                    <i></i>                                   
+                                </div>
+                                <div class="mb-2 inputBox">
+                                    <input type="password"  name="password" required="required">
+                                    <label for="exampleInputPassword1" class="form-label">Password:</label>
+                                    <i></i>                                   
+                                </div>
+                                <div class="mb-2 inputBox">
+                                    <input type="password"  name="password_confirmation" required="required">
+                                    <label for="exampleInputPassword1" class="form-label">Conferma Password:</label>
+                                    <i></i>                                   
+                                </div>
+                                
+                                <button type="submit" class="btnLogForm">Registrati</button>
+                            </form>
+                    </div>                       
+                </div>
             </div>
-
-            <div class="mb-3">
-                <label class="form-label">Nome e Cognome</label>
-                <input type="text" class="form-control" name="name">
-            </div>
-
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" name="password">
-            </div>
-
-            <div class="mb-3">
-                <label class="form-label">Conferma Password</label>
-                <input type="password" class="form-control" name="password_confirmation">
-            </div>
-            
-            <button type="submit" class="btn btn-primary">Registrati</button>
-        </form>
+            <div class="col-12 col-md-3"></div>
+        </div>
     </div>
 
 </x-layout>
+
