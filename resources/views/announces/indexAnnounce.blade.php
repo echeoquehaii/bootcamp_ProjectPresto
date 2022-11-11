@@ -11,7 +11,7 @@
     
 
    
-    <div class="container">
+    <div class="container height">
         <div class="row mt-custom">
             @forelse ($announces as $announce)
             

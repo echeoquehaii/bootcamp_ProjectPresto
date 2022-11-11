@@ -4,7 +4,7 @@
     <h1 class="text-center mt-custom">Ecco la tua categoria stellare: {{$category->name}}</h1>
 
     
-    <div class="container">
+    <div class="container height">
         <div class="row">
             @forelse ($category->announces as $announce)
                <div class="card0">
@@ -30,7 +30,7 @@
             @empty
                 <p>Non ci sono oggetti di questa categoria!</p>
             @auth
-             <div class="container">
+             <div class="container height">
                  <a href="{{route('createAnnounce')}}"><button class="btn btn-warning">Inserisci annuncio</button></a>
              </div>
             @endauth 

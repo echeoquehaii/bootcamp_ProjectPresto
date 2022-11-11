@@ -4,7 +4,7 @@
             {{ session('message') }}
         </div>
     @endif
-    <div class="container mt-5">
+    <div class="container mt-5 height">
         <div class="row">
             <div class="col-9">
                 <form wire:submit.prevent="storeAnnounce">
@@ -59,7 +59,7 @@
                         </div>
                     </form> --}}
             
-                    <button type="submit" class="btn btn-primary">Carica l'annuncio</button>
+                    <button type="submit" class="btn btn-primary mb-5">Carica l'annuncio</button>
                 </form>    
 
             </div>

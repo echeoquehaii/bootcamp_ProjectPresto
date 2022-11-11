@@ -435,5 +435,5 @@ label, .form-label {
 }
 
 .height{
-    height: 300px;
+    min-height: 400px;
 }

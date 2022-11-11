@@ -64,7 +64,7 @@
           </div>
         </li>
         <li>
-          <form action="{{route('searchAnnounces')}}" method="GET" class="d-flex">
+          <form action="{{route('searchAnnounces')}}" method="GET" class="d-flex" id="noShow">
             <input name="searched" class="form-control" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit"></button>
           </form>
@@ -80,7 +80,7 @@
           </form>
      
         @if(Auth::user()->is_revisor)
-          <a href="{{route('indexRevisor')}}">Zona revisore</a>
+          <a href="{{route('indexRevisor')}}" id="noShow">Zona revisore</a>
           <span>{{App\Models\Announce::toBeRevisionedCount()}}
             <span class="visually-hidden">unread messages</span>
            </span>
