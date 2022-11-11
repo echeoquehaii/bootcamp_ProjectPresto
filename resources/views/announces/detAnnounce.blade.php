@@ -1,7 +1,7 @@
 <x-layout>
     
     <h1>Il dettaglio di {{$announce->name}}</h1>
-    <div class="container">
+    <div class="container height">
         <div class="row vh-100">
             <div class="col-12">
                 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">

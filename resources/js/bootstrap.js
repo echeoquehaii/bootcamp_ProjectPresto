@@ -34,6 +34,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 // });
 let bubble = document.querySelector('#bubble');
 let links = document.querySelectorAll('.nav-link');
+let noShows = document.querySelectorAll('#noShow');
 
 window.addEventListener('scroll' , ()=>{
     let scrolled = window.scrollY;
@@ -41,10 +42,12 @@ window.addEventListener('scroll' , ()=>{
         bubble.classList.add('bubbles');
         links.forEach((link)=>{
             link.classList.add('d-none');
-        })
+        });
+        
     }else{
         bubble.classList.remove('bubbles');
         links.forEach((link)=>{
             link.classList.remove('d-none')
         })
+        
 }})
