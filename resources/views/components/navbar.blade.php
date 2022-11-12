@@ -1,28 +1,9 @@
-<nav class="navbar navbar-expand-lg bg-nav fixed-top">
-  <div class="container-fluid" id="bubble">
-    
+<nav class="navbar navbar-expand-lg fixed-top bg-transparent">
+  <div class="container-fluid">
+
     <a class="navbar-brand text-wh" href="{{route('welcome')}}"><img src="/img/f.png" alt="" class="logoSize"> Presto</a>
-    <span style="--i:11;"></span>
-    <span style="--i:12;"></span>
-    <span style="--i:24;"></span>
-    <span style="--i:10;"></span>
-    <span style="--i:14;"></span>
-    <span style="--i:23;"></span>
-    <span style="--i:18;"></span>
-    <span style="--i:16;"></span>
-    <span style="--i:19;"></span>
-    <span style="--i:20;"></span>
-    <span style="--i:22;"></span>
-    <span style="--i:25;"></span>
-    <span style="--i:18;"></span>
-    <span style="--i:21;"></span>
-    <span style="--i:15;"></span>
-    <span style="--i:13;"></span>
-    <span style="--i:26;"></span>
-    <span style="--i:17;"></span>
-    <span style="--i:13;"></span>
-    <span style="--i:28;"></span>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    
+    <button class="navbar-toggler" style="white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -66,7 +47,7 @@
         <li>
           <form action="{{route('searchAnnounces')}}" method="GET" class="d-flex" id="noShow">
             <input name="searched" class="form-control" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-warning" type="submit"></button>
+            <button class="btn btn-outline-warning" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
           </form>
         </li>
         

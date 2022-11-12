@@ -5,7 +5,6 @@
             <div class="col-lg-3 col-md-6 col-12">
                 <div class="single-widget widget-about mt-5">
                     <h5 class="widget-title">Il team:</h5>
-                    <p>Siamo 5 giovani Full Stack Developer Junior con la voglia di conquistare il mondo</p>
                     <ul>
                         <li>Michele Gramazio</li>
                         <li>Bruno Cataldo</li>

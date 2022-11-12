@@ -155,6 +155,30 @@ a:hover i::before {
     font-weight: bolder;
 }
 
+/* Button UP Valerio */
+
+#buttonUpScroll{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    background-color: var(--vio);
+    position: fixed;
+    bottom: 15%;
+    right: 2%;
+    text-decoration: none;
+}
+
+#bottoneSu{
+    color: #212121;
+    font-size: larger;
+    position: fixed;
+    bottom: 15%;
+    right: 2%;
+}
+
+/* Button UP Valerio END*/
+
+
 /* CSS da deletare END*/
 
 .logoSize {
@@ -774,7 +798,7 @@ height: 39px;
     border-bottom-color: rgb(107,36,102) !important;
     border-left-color: rgb(107,36,102) !important;
     border-right-color: rgb(107,36,102) !important;
-    border-top-color: rgb(107,36,102) ;
+    border-top-color: rgb(107,36,102);
 }
 
 .nav-link:hover::after {

@@ -1,6 +1,6 @@
 <x-layout>
 
-    <h1 class="text-center">Ecco gli Annunci!</h1>
+    <h1 class="text-center mt-custom">Ecco gli Annunci!</h1>
 
     @if (session('message'))
         <div class="alert alert-success">
@@ -43,7 +43,11 @@
             @endforelse      
         </div>
     </div>
-
+    <a href="#" id="buttonUpScroll" class="d-none">
+        <div id="bottoneSu">
+            <i class="fa-solid fa-angles-up fa-2x"></i>
+        </div>
+    </a>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-4 d-flex justify-content-center mt-3">

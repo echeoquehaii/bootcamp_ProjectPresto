@@ -11,8 +11,31 @@
             {{ session('message') }}
         </div>
     @endif
+  
+    <div class="container-fluid bg-main vh-100">
+        <div id="bubble">
+            <span style="--i:11;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:24;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:23;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+            <span style="--i:22;"></span>
+            <span style="--i:25;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:26;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:28;"></span>
+        </div>
     
-    <div class="container-fluid mt-custom bg-main vh-100">
         <div class="row align-items-center row-height">
             <div class="col-12 col-md-8 text-wh">
                 <h1 class="display-2">P R E S T O</h1>
@@ -26,8 +49,13 @@
                 @endauth
             </div>
         </div>
-    
     </div>
+    <a href="#" id="buttonUpScroll" class="d-none">
+        <div id="bottoneSu">
+            <i class="fa-solid fa-angles-up fa-2x"></i>
+        </div>
+    </a>
+
     <div class="container-fluid img-wel">
         <h2 class="text-center text-wh display-5">Stai cercando una stella?</h2>
         <h2 class="text-center text-wh display-5  mt-5">Trova sul nostro portale la tua preferita!</h2>

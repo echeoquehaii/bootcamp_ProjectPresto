@@ -10,11 +10,16 @@
     @livewireStyles
 </head>
 <body class="bg-body">
-    <div class="main">
     <x-navbar></x-navbar>
+
+  
+
     {{$slot}}
 
-    </div>
+
+    
+
+    
     
     <x-footer></x-footer>
 
