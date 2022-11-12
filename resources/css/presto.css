@@ -24,10 +24,22 @@ h1 {
     background-image: url(../media/Nebula.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    position: fixed;
 }
 
 .text-wh {
     color: var(--wh);
+}
+
+.nav-link {
+    margin-right: 10px;
+}
+
+.nav-link:hover {
+    transform: scale(1.2);
+    background-color: var(--vio);
+    border-radius: 20%;
+    
 }
 
 .bubbles {
@@ -45,8 +57,27 @@ h1 {
     box-shadow: 0 0 0 10px rgb(255, 255, 255),
     0 0 50px rgb(228, 228, 228),
     0 0 100px rgb(228, 228, 228);
-    animation: animate 15s linear infinite;
+    animation: animate 15s linear;
     animation-duration: calc(125s / var(--i));
+}
+
+#buttonUpScroll{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    background-color: var(--vio);
+    position: fixed;
+    bottom: 15%;
+    right: 2%;
+    text-decoration: none;
+}
+
+#bottoneSu{
+    color: #212121;
+    font-size: larger;
+    position: fixed;
+    bottom: 15%;
+    right: 2%;
 }
 
 .bubbles span:nth-child(even) {
@@ -70,6 +101,7 @@ h1 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
 
 .mt-custom{

@@ -19,7 +19,7 @@
                 <div class="card0">
                     <div class="lines"></div>
                     <div class="imgBx">
-                        <img src="https://picsum.photos/200/300" alt="" class="imageBx">
+                        <img src="https://picsum.photos/200/300" alt="" class="imageBx img-fluid">
                     </div>
                     <div class="content">
                         <div class="details">
@@ -46,7 +46,11 @@
             @endforelse      
         </div>
     </div>
-
+    <a href="#" id="buttonUpScroll" class="d-none">
+        <div id="bottoneSu">
+            <i class="fa-solid fa-angles-up fa-2x"></i>
+        </div>
+    </a>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-4 d-flex justify-content-center">
