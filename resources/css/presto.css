@@ -134,12 +134,16 @@ a:hover i::before {
 /* CSS da deletare */
 .img-container{
     height: 300px;
+    border-radius: 1em;
+
 }
 
 .img-container img{
     height: 100%;
     object-fit: cover;
     overflow: hidden;
+    border-radius: 1em;
+
 }
 
 .card-title{
@@ -159,17 +163,21 @@ a:hover i::before {
 }
 
 /* CSS Cards Start*/
-
+.card-height {
+    height: 400px;
+}
 .card0 {
     position: relative;
     width: 350px;
     height: 250px;
     background: #333;
     transition: 0.5s;
+    border-radius: 1em;
+
 }
 
 .card0:hover {
-    height: 450px;
+    height: 400px;
 }
 
 .card0 .lines {
@@ -177,6 +185,7 @@ a:hover i::before {
     inset: 0;
     background: #000;
     overflow: hidden;
+    border-radius: 1em;
 }
 
 .card0 .lines::before {
@@ -218,6 +227,7 @@ a:hover i::before {
     transition: 0.5s;
     z-index: 10;
     overflow: hidden;
+    border-radius: 1em;
 }
 
 .card0:hover .imgBx {
@@ -320,7 +330,7 @@ a:hover i::before {
 .card0 .content .details .actionBtn {
     display: flex;
     justify-content: space-evenly;
-    gap: 20px; 
+    gap: 20px;
 }
 
 .card0 .content .details .actionBtn button {
@@ -339,6 +349,22 @@ a:hover i::before {
 .card0 .content .details .actionBtn button:hover {
     opacity: 1;
 }
+
+/* Modifiche card Miguel */
+.content .details .data .actionBtn {
+    padding-bottom: 0px !important;
+}
+
+.cardTitle {
+    transition: 0.5s;
+}
+
+.card0:hover .cardTitle {
+   transform: translateY(25px);
+
+}
+/* Modifiche card Miguel END */
+/* CSS Cards END*/
 
 
 /* immagine welcome e spazio per margin top(Miki) */
@@ -360,6 +386,10 @@ a:hover i::before {
 .bg-theme, .bg-dark, .bg-dark-light, .bg-secondary {
     color: #ffffff;
 }
+/* immagine welcome e spazio per margin top (Miki) END */
+
+/* Footer (Miki) */
+
 .widgets.footer-widgets .widget-title {
     color: #ffffff;
     font-family: "Raleway", sans-serif;
@@ -438,11 +468,11 @@ a:hover i::before {
 }
 
 .height{
-    min-height: 400px;
+    min-height: 110vh;
 }
+/* /* Footer (Miki) END */
 
 
-/* CSS Cards END*/
 
 /* CSS LogIn Form START*/
 
@@ -733,3 +763,22 @@ height: 39px;
     overflow: hidden;
     padding: 40px;
 }
+
+/* Pagination Miguel */
+.page-link {
+    color: rgb(107,36,102);
+    border-color: rgb(107,36,102);
+}
+.page-item.active {
+    background-color: rgb(107,36,102) !important;
+    border-bottom-color: rgb(107,36,102) !important;
+    border-left-color: rgb(107,36,102) !important;
+    border-right-color: rgb(107,36,102) !important;
+    border-top-color: rgb(107,36,102) ;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+ }
+
