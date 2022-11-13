@@ -1,7 +1,8 @@
 <div>
 
-    <div class="container-fluid mt-custom1">
-        <div class="row align-items-center justify-content-center">
+    <div class="container-fluid mb-5 height space">
+        <div class="row vh-100 align-items-center justify-content-center">
+            <div class="col-12 col-md-3"></div>
             <div class="col-12 col-md-6">
                 <div class="formAnnounce my-5">       
                     <div class="lines"></div>

@@ -2,11 +2,11 @@
 
     
     
-    <h1 class="space text-center">{{$announce_to_check ? 'Ecco l annuncio da revisionare' : 'Non ci sono annunci da revisionare'}} </h1>
+    <h1 class="space text-center padRevis">{{$announce_to_check ? 'Ecco l annuncio da revisionare' : 'Non ci sono annunci da revisionare'}} </h1>
     
     @if ($announce_to_check)
     
-        <div class="container height">
+        <div class="container height ">
             <div class="row">
                 <div class="col-12">
                     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
