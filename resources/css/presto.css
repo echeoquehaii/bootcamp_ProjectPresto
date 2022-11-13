@@ -283,7 +283,7 @@ a:hover i::before {
 /* CSS da deletare */
 .img-container{
     height: 300px;
-    border-radius: 1em;
+    border-radius: 50%;
 
 }
 
@@ -291,7 +291,7 @@ a:hover i::before {
     height: 100%;
     object-fit: cover;
     overflow: hidden;
-    border-radius: 1em;
+    border-radius: 50%;
 
 }
 
@@ -393,6 +393,7 @@ a:hover i::before {
     position: absolute;
     inset: 5px;
     background: #292929;
+    border-radius: 1em;     
 }
 
 .card0 .imgBx {
@@ -406,7 +407,7 @@ a:hover i::before {
     transition: 0.5s;
     z-index: 10;
     overflow: hidden;
-    border-radius: 1em;
+    border-radius: 50%;
 }
 
 .card0:hover .imgBx {
@@ -440,6 +441,7 @@ a:hover i::before {
     position: absolute;
     inset: 5px;
     background: #292929;
+    border-radius: 50%;
 }
 
 .card0 .imgBx .imageBx {
@@ -450,7 +452,7 @@ a:hover i::before {
     width: calc(100% - 20px);
     height: calc(100% - 20px);
     filter: grayscale(1);
-    
+    border-radius: 50%; 
 }
 
 .card0 .content {
@@ -461,6 +463,8 @@ a:hover i::before {
     justify-content: center;
     align-items: flex-end;
     overflow: hidden;
+    border-radius: 1em;
+
 }
 
 .card0 .content .details {
