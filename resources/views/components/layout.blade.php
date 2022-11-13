@@ -31,8 +31,7 @@
         <p class="fa-solid fa-angles-up fa-2x my-auto"></p>
     </a>
     
-
-    
+    CIAO
     
     <x-footer></x-footer>
     @livewireScripts
