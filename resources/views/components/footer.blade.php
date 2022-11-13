@@ -5,12 +5,11 @@
             <div class="col-lg-3 col-md-6 col-12">
                 <div class="single-widget widget-about mt-5">
                     <h5 class="widget-title">Il team:</h5>
-                    <p>Siamo 5 giovani Full Stack Developer Junior con la voglia di conquistare il mondo</p>
                     <ul>
                         <li>Michele Gramazio</li>
                         <li>Bruno Cataldo</li>
                         <li>Valerio Quattrociocche</li>
-                        <li>Dario Koi</li>
+                        <li>Dario Sorrentino</li>
                         <li>Michele De Girolamo</li>
                     </ul>
                 </div>
@@ -20,7 +19,7 @@
                 <div class="single-widget widget-quick-links mt-5">
                     <h5 class="widget-title">Il mio Account:</h5>
                     <ul>
-                        <li><a href="#">Il mio account</a></li>
+                        <li><a href="{{route('welcome')}}">Il mio account</a></li>
                     </ul>
                 </div>
             </div>

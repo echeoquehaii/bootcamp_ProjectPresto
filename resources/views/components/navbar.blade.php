@@ -1,56 +1,36 @@
-<nav class="navbar navbar-expand-lg bg-nav fixed-top">
-  <div class="container-fluid" id="bubble">
-    
-    <a class="navbar-brand text-wh" href="{{route('welcome')}}"><img src="/img/f.png" alt="" class="logoSize"> Presto</a>
-    <span style="--i:11;"></span>
-    <span style="--i:12;"></span>
-    <span style="--i:24;"></span>
-    <span style="--i:10;"></span>
-    <span style="--i:14;"></span>
-    <span style="--i:23;"></span>
-    <span style="--i:18;"></span>
-    <span style="--i:16;"></span>
-    <span style="--i:19;"></span>
-    <span style="--i:20;"></span>
-    <span style="--i:22;"></span>
-    <span style="--i:25;"></span>
-    <span style="--i:18;"></span>
-    <span style="--i:21;"></span>
-    <span style="--i:15;"></span>
-    <span style="--i:13;"></span>
-    <span style="--i:26;"></span>
-    <span style="--i:17;"></span>
-    <span style="--i:13;"></span>
-    <span style="--i:28;"></span>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand text-wh hover-underline-animation nav-link" href="{{route('welcome')}}"><img src="/img/logo.png" alt="" class="logoSize"> Presto</a>
+  
+    <button class="navbar-toggler" style="white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
         <li class="nav-item">
-          <a class="nav-link text-wh" aria-current="page" href="{{route('welcome')}}">Home</a>
+          <a class="nav-link text-wh hover-underline-animation" aria-current="page" href="{{route('welcome')}}">Home</a>
         </li>
         @guest
         <li class="nav-item">
-          <a class="nav-link text-wh" href="{{route('register')}}">Registrazione</a>
+          <a class="nav-link text-wh hover-underline-animation" href="{{route('register')}}">Registrazione</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-wh" href="{{route('login')}}">Log In</a>
+          <a class="nav-link text-wh hover-underline-animation" href="{{route('login')}}">Log In</a>
         </li>
         @else
         
         <li class="nav-item">
-          <a class="nav-link text-wh" href="{{route('createAnnounce')}}">Crea Annuncio</a>
+          <a class="nav-link text-wh hover-underline-animation" href="{{route('createAnnounce')}}">Crea Annuncio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-wh" href="{{route('indexAnnounce')}}">Lista Annunci</a>
+          <a class="nav-link text-wh hover-underline-animation" href="{{route('indexAnnounce')}}">Lista Annunci</a>
         </li>
         <li>
           <div class="container">
             <div class="row justify-content-center">
                 <div class="col-4 d-flex justify-content-center">
-                    <div class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="nav-item dropdown hover-underline-animation">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Categorie
                         </a>
                         <ul class="dropdown-menu">
@@ -65,28 +45,40 @@
         </li>
         <li>
           <form action="{{route('searchAnnounces')}}" method="GET" class="d-flex" id="noShow">
-            <input name="searched" class="form-control" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit"></button>
+            <div class="searchBox">
+              <div class="search"><i class="fa-solid fa-magnifying-glass"></i></div>
+              <div class="searchInput">
+                <input name="searched" type="text" placeholder="Cerca" aria-label="Search" class="violet text-white">
+              </div>
+              <div class="close"><i class="fa-sharp fa-solid fa-xmark"></i></div>
+            </div>           
           </form>
         </li>
         
         
         
       </ul>
-      
-        <a class="nav-link text-wh me-5" href="{{route('logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">LogOut</a>
-          <form id="logout-form" method="POST" class="d-none" action="{{route('logout')}}">
-         @csrf
-          </form>
-     
-        @if(Auth::user()->is_revisor)
-          <a href="{{route('indexRevisor')}}" id="noShow">Zona revisore</a>
-          <span>{{App\Models\Announce::toBeRevisionedCount()}}
-            <span class="visually-hidden">unread messages</span>
-           </span>
-        @endif
-          <a class="nav-link text-wh" href="{{route('welcome')}}">Benvenuto:{{Auth::user()->name}}</a>
+          <div class="nav-item dropdown hover-underline-animation mx-3">
+          <a class="nav-link text-wh hover-underline-animation dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{Auth::user()->name}}</a>
+          <ul class="dropdown-menu">
+            <li><a href="#" class="hover-underline-animation dropdown-item">Profile</a></li>
+            <li><a class="nav-link me-5 hover-underline-animation dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">LogOut</a>
+              <form id="logout-form" method="POST" class="d-none" action="{{route('logout')}}">
+             @csrf
+              </form>
+            </li>
+            <li>@if(Auth::user()->is_revisor)
+              <a href="{{route('indexRevisor')}}" id="noShow" class="hover-underline-animation nav-link dropdown-item">Zona revisore: </a>
+              <span>{{App\Models\Announce::toBeRevisionedCount()}}
+                <span class="visually-hidden">unread messages</span>
+               </span>
+            @endif</li>
+          </ul>
         @endguest
     </div>
   </div>
+  @guest
+  <p class="text-transparent" ><img src="/img/logo-transparent.png" alt="" class="logoSize"> Presto</p>
+  @endguest
+
 </nav>

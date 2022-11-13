@@ -10,14 +10,32 @@
     @livewireStyles
 </head>
 <body class="bg-body">
-    <div class="main">
     <x-navbar></x-navbar>
+
+    @if (session('message'))
+    <div class="alert alert-success mt-custom position-absolute w-100">
+        {{ session('message') }}
+    </div>
+    @endif
+
+    @if (session('access.denied'))
+        <div class="alert alert-success mt-custom position-absolute w-100">
+            {{ session('access.denied')}}
+        </div>
+    @endif
+
+
     {{$slot}}
 
-    </div>
+    <a href="#" id="buttonUpScroll" class="d-none">
+        <p class="fa-solid fa-angles-up fa-2x my-auto"></p>
+    </a>
+    
+
+    
     
     <x-footer></x-footer>
-
+    @yield('welcomejs')
     @livewireScripts
 </body>
 </html>

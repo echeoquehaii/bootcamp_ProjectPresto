@@ -27,7 +27,7 @@ class AnnounceForm extends Component
             'user_id'=>$user->id
             
         ]);
-        session()->flash('message', 'Annuncio da revisiorare!');
+        session()->flash('message', 'Annuncio in attesa di revisione');
         redirect (route('indexAnnounce'));
     }
     

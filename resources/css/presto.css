@@ -9,6 +9,10 @@
     --vio: rgb(156, 0, 218);
 }
 
+.violet {
+    background-color: var(--vio) !important;
+}
+
 .bg-body {
     background-image: url(../media/WhiteNebula.jpg);
     background-position: center;
@@ -19,19 +23,138 @@
 h1 {
     color: var(--wh);
 }
-
+/* Navbar */
 .bg-nav {
-    background-image: url(../media/Nebula.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: rgba(91, 27, 112, 0.27) !important;
+    box-shadow: 0 8px 32px 0 rgba(82, 17, 78, 0.37);
+    backdrop-filter: blur( 4.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
 }
+
+.text-transparent {
+    color: rgba(255, 255, 255, 0);
+    padding-top: var(--bs-navbar-brand-padding-y);
+    padding-bottom: var(--bs-navbar-brand-padding-y);
+    margin-right: var(--bs-navbar-brand-margin-end);
+    font-size: var(--bs-navbar-brand-font-size);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: var(--vio);
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: var(--vio);
+  }
+  
+  .hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--vio);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+.dropdown:hover {
+    color: var(--vio) !important;
+}
+
+.dropdown-toggle{
+    color:white;
+}
+
+/* SEARCHBOX START */
+
+.searchBox {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: var(--vio);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.searchBox.active {
+    width: 300px;
+}
+
+.searchBox .search {
+    position: relative;
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.searchBox .close {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.25em;
+    scale: 0;
+    transition: 0.5s;
+}
+
+.searchBox.active .close {
+    scale: 1;
+    transition-delay: 0.5s;
+}
+
+.searchBox .searchInput {
+    position: absolute;
+    left: 60px;
+    width: calc(100% - 80px);
+    height: 100%;
+    line-height: 40px;
+
+}
+
+.searchBox .searchInput input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.25em;
+}
+
+/* SEARCHBOX START */
+/* Navbar */
 
 .text-wh {
     color: var(--wh);
 }
 
 .bubbles {
-    position: relative;
+    position: absolute;
     display: flex;
 }
 
@@ -77,7 +200,7 @@ h1 {
 }
 
 .mt-custom1{
-    margin-top: 30px !important;
+    margin-top: 60px !important;
 }
 
 .row-height {
@@ -134,12 +257,16 @@ a:hover i::before {
 /* CSS da deletare */
 .img-container{
     height: 300px;
+    border-radius: 1em;
+
 }
 
 .img-container img{
     height: 100%;
     object-fit: cover;
     overflow: hidden;
+    border-radius: 1em;
+
 }
 
 .card-title{
@@ -151,6 +278,36 @@ a:hover i::before {
     font-weight: bolder;
 }
 
+/* Button UP Valerio */
+
+#buttonUpScroll{
+    color: #ffffff;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    background: rgba(108, 35, 133, 0.664) !important;
+    box-shadow: 0 8px 32px 0 rgba(199, 44, 189, 0.37);
+    backdrop-filter: blur( 4.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    position: fixed;
+    bottom: 15%;
+    right: 2%;
+    display: flex;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;    
+}
+
+#bottoneSu{
+    font-size: larger;
+    position: fixed;
+    bottom: 15%;
+    right: 2%;
+}
+
+/* Button UP Valerio END*/
+
+
 /* CSS da deletare END*/
 
 .logoSize {
@@ -159,17 +316,21 @@ a:hover i::before {
 }
 
 /* CSS Cards Start*/
-
+.card-height {
+    height: 400px;
+}
 .card0 {
     position: relative;
     width: 350px;
     height: 250px;
     background: #333;
     transition: 0.5s;
+    border-radius: 1em;
+
 }
 
 .card0:hover {
-    height: 450px;
+    height: 400px;
 }
 
 .card0 .lines {
@@ -177,6 +338,7 @@ a:hover i::before {
     inset: 0;
     background: #000;
     overflow: hidden;
+    border-radius: 1em;
 }
 
 .card0 .lines::before {
@@ -218,6 +380,7 @@ a:hover i::before {
     transition: 0.5s;
     z-index: 10;
     overflow: hidden;
+    border-radius: 1em;
 }
 
 .card0:hover .imgBx {
@@ -320,7 +483,7 @@ a:hover i::before {
 .card0 .content .details .actionBtn {
     display: flex;
     justify-content: space-evenly;
-    gap: 20px; 
+    gap: 20px;
 }
 
 .card0 .content .details .actionBtn button {
@@ -339,6 +502,22 @@ a:hover i::before {
 .card0 .content .details .actionBtn button:hover {
     opacity: 1;
 }
+
+/* Modifiche card Miguel */
+.content .details .data .actionBtn {
+    padding-bottom: 0px !important;
+}
+
+.cardTitle {
+    transition: 0.5s;
+}
+
+.card0:hover .cardTitle {
+   transform: translateY(25px);
+
+}
+/* Modifiche card Miguel END */
+/* CSS Cards END*/
 
 
 /* immagine welcome e spazio per margin top(Miki) */
@@ -360,6 +539,10 @@ a:hover i::before {
 .bg-theme, .bg-dark, .bg-dark-light, .bg-secondary {
     color: #ffffff;
 }
+/* immagine welcome e spazio per margin top (Miki) END */
+
+/* Footer (Miki) */
+
 .widgets.footer-widgets .widget-title {
     color: #ffffff;
     font-family: "Raleway", sans-serif;
@@ -433,16 +616,22 @@ a:hover i::before {
     margin-top: 20px;
 }
 
-.footer-bottom-area{
-    bottom: 0%;
+.footer{
+    bottom: 0px;
 }
 
 .height{
-    min-height: 400px;
+    min-height: 110vh;
 }
 
+/* padding zona revisore */
 
-/* CSS Cards END*/
+.padRevis{
+    margin-bottom: 50vh;
+}
+/* /* Footer (Miki) END */
+
+
 
 /* CSS LogIn Form START*/
 
@@ -733,3 +922,28 @@ height: 39px;
     overflow: hidden;
     padding: 40px;
 }
+
+/* Pagination Miguel */
+.page-link {
+    color: rgb(107,36,102);
+    border-color: rgb(107,36,102);
+}
+.page-item.active {
+    background-color: rgb(107,36,102) !important;
+    border-bottom-color: rgb(107,36,102) !important;
+    border-left-color: rgb(107,36,102) !important;
+    border-right-color: rgb(107,36,102) !important;
+    border-top-color: rgb(107,36,102);
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+ }
+
+ .carouselH {
+    height: 500px;
+    width: 1300px;
+ }
+
+

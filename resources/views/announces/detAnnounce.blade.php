@@ -1,6 +1,6 @@
 <x-layout>
     
-    <h1>Il dettaglio di {{$announce->name}}</h1>
+    <h1 class="mt-custom text-center">Il dettaglio di {{$announce->name}}</h1>
     <div class="container height">
         <div class="row vh-100">
             <div class="col-12">
