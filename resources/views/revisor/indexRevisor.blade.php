@@ -2,7 +2,7 @@
 
     
     
-    <h1 class="height space text-center">{{$announce_to_check ? 'Ecco l annuncio da revisionare' : 'Non ci sono annunci da revisionare'}} </h1>
+    <h1 class="space text-center">{{$announce_to_check ? 'Ecco l annuncio da revisionare' : 'Non ci sono annunci da revisionare'}} </h1>
     
     @if ($announce_to_check)
     

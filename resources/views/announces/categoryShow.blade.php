@@ -2,7 +2,6 @@
 
     
     <h1 class="text-center mt-custom">Ecco la tua categoria stellare: {{$category->name}}</h1>
-
     
     <div class="container-fluid height">
         <div class="row mt-custom">

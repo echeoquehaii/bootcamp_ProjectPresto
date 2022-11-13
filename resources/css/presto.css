@@ -19,12 +19,64 @@
 h1 {
     color: var(--wh);
 }
-
+/* Navbar */
 .bg-nav {
     background-image: url(../media/Nebula.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.text-transparent {
+    color: rgba(255, 255, 255, 0);
+    padding-top: var(--bs-navbar-brand-padding-y);
+    padding-bottom: var(--bs-navbar-brand-padding-y);
+    margin-right: var(--bs-navbar-brand-margin-end);
+    font-size: var(--bs-navbar-brand-font-size);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: var(--vio);
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: var(--vio);
+  }
+  
+  .hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--vio);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+.dropdown:hover {
+    color: var(--vio) !important;
+}
+
+.dropdown-toggle{
+    color:white;
+}
+  
+/* Navbar */
 
 .text-wh {
     color: var(--wh);
@@ -77,7 +129,7 @@ h1 {
 }
 
 .mt-custom1{
-    margin-top: 30px !important;
+    margin-top: 60px !important;
 }
 
 .row-height {
@@ -158,6 +210,7 @@ a:hover i::before {
 /* Button UP Valerio */
 
 #buttonUpScroll{
+    color: #212121;
     height: 50px;
     width: 50px;
     border-radius: 50px;
@@ -165,11 +218,13 @@ a:hover i::before {
     position: fixed;
     bottom: 15%;
     right: 2%;
+    display: flex;
     text-decoration: none;
+    text-align: center;
+    justify-content: center;    
 }
 
 #bottoneSu{
-    color: #212121;
     font-size: larger;
     position: fixed;
     bottom: 15%;

@@ -1,37 +1,37 @@
 <nav class="navbar navbar-expand-lg fixed-top bg-transparent">
   <div class="container-fluid">
 
-    <a class="navbar-brand text-wh" href="{{route('welcome')}}"><img src="/img/f.png" alt="" class="logoSize"> Presto</a>
-    
+    <a class="navbar-brand text-wh hover-underline-animation" href="{{route('welcome')}}"><img src="/img/logo.png" alt="" class="logoSize"> Presto</a>
+  
     <button class="navbar-toggler" style="white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
         <li class="nav-item">
-          <a class="nav-link text-wh" aria-current="page" href="{{route('welcome')}}">Home</a>
+          <a class="nav-link text-wh hover-underline-animation" aria-current="page" href="{{route('welcome')}}">Home</a>
         </li>
         @guest
         <li class="nav-item">
-          <a class="nav-link text-wh" href="{{route('register')}}">Registrazione</a>
+          <a class="nav-link text-wh hover-underline-animation" href="{{route('register')}}">Registrazione</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-wh" href="{{route('login')}}">Log In</a>
+          <a class="nav-link text-wh hover-underline-animation" href="{{route('login')}}">Log In</a>
         </li>
         @else
         
         <li class="nav-item">
-          <a class="nav-link text-wh" href="{{route('createAnnounce')}}">Crea Annuncio</a>
+          <a class="nav-link text-wh hover-underline-animation" href="{{route('createAnnounce')}}">Crea Annuncio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-wh" href="{{route('indexAnnounce')}}">Lista Annunci</a>
+          <a class="nav-link text-wh hover-underline-animation" href="{{route('indexAnnounce')}}">Lista Annunci</a>
         </li>
         <li>
           <div class="container">
             <div class="row justify-content-center">
                 <div class="col-4 d-flex justify-content-center">
-                    <div class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="nav-item dropdown hover-underline-animation">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Categorie
                         </a>
                         <ul class="dropdown-menu">
@@ -55,19 +55,23 @@
         
       </ul>
       
-        <a class="nav-link text-wh me-5" href="{{route('logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">LogOut</a>
+        <a class="nav-link text-wh me-5 hover-underline-animation" href="{{route('logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">LogOut</a>
           <form id="logout-form" method="POST" class="d-none" action="{{route('logout')}}">
          @csrf
           </form>
      
         @if(Auth::user()->is_revisor)
-          <a href="{{route('indexRevisor')}}" id="noShow">Zona revisore</a>
+          <a href="{{route('indexRevisor')}}" id="noShow" class="hover-underline-animation">Zona revisore</a>
           <span>{{App\Models\Announce::toBeRevisionedCount()}}
             <span class="visually-hidden">unread messages</span>
            </span>
         @endif
-          <a class="nav-link text-wh" href="{{route('welcome')}}">Benvenuto:{{Auth::user()->name}}</a>
+          <a class="nav-link text-wh hover-underline-animation" href="{{route('welcome')}}">Benvenuto:{{Auth::user()->name}}</a>
         @endguest
     </div>
   </div>
+  @guest
+  <p class="text-transparent" ><img src="/img/logo-transparent.png" alt="" class="logoSize"> Presto</p>
+  @endguest
+
 </nav>

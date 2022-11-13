@@ -19,7 +19,7 @@
                 <div class="single-widget widget-quick-links mt-5">
                     <h5 class="widget-title">Il mio Account:</h5>
                     <ul>
-                        <li><a href="#">Il mio account</a></li>
+                        <li><a href="{{route('welcome')}}">Il mio account</a></li>
                     </ul>
                 </div>
             </div>

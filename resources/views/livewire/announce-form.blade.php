@@ -1,15 +1,9 @@
 <div>
-    @if (session('message'))
-        <div class="alert alert-success">
-            {{ session('message') }}
-        </div>
-    @endif
 
-    <div class="container vh-100 mt-custom1">
-        <div class="row vh-100 align-items-center justify-content-center">
-            <div class="col-12 col-md-3"></div>
+    <div class="container-fluid mt-custom1">
+        <div class="row align-items-center justify-content-center">
             <div class="col-12 col-md-6">
-                <div class="formAnnounce">       
+                <div class="formAnnounce my-5">       
                     <div class="lines"></div>
                     <div class="content">
                         <form wire:submit.prevent="storeAnnounce">
@@ -73,7 +67,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-3"></div>
         </div>
     </div>
+</div>
+
 </div>

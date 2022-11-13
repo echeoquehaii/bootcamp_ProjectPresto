@@ -36,7 +36,7 @@
                                     <i></i>                                   
                                 </div>
                                 <div class="links">
-                                    <a href="">Non hai ancora un account? Registrati!</a>
+                                    <a href="{{route('register')}}">Non hai ancora un account? Registrati!</a>
                                 </div>
                                 <button type="submit" class="btnLog">Login</button>
                             </form>
