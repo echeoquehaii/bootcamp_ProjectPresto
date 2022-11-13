@@ -26,29 +26,24 @@
           <a class="nav-link text-wh hover-underline-animation" href="{{route('indexAnnounce')}}">Lista Annunci</a>
         </li>
         <li>
-          <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-4 d-flex justify-content-center">
-                    <div class="nav-item dropdown hover-underline-animation">
-                        <p class="nav-link dropdown-toggle text-wh mb-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Categorie
-                        </p>
-                        <ul class="dropdown-menu">
-                            @foreach ($categories as $category)
-                            <li><a class="dropdown-item" href="{{route('categoryShow', compact('category'))}}">{{$category->name}}</a></li>
-                            @endforeach
-                        </ul>
-                    </div>
-                </div>
-            </div>
+          <div class="nav-item dropdown hover-underline-animation">
+              <p class="nav-link dropdown-toggle text-wh mb-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categorie
+              </p>
+              <ul class="dropdown-menu">
+                  @foreach ($categories as $category)
+                  <li><a class="dropdown-item" href="{{route('categoryShow', compact('category'))}}">{{$category->name}}</a></li>
+                  @endforeach
+              </ul>
           </div>
         </li>
+        
         <li>
           <form action="{{route('searchAnnounces')}}" method="GET" class="d-flex" id="noShow">
             <div class="searchBox">
               <div class="search"><i class="fa-solid fa-magnifying-glass"></i></div>
               <div class="searchInput">
-                <input name="searched" type="text" placeholder="Cerca" aria-label="Search" class="violet text-white">
+                <input name="searched" type="text" placeholder="Cerca" aria-label="Search" class="searchBoxInputField">
               </div>
               <div class="close"><i class="fa-sharp fa-solid fa-xmark"></i></div>
             </div>           

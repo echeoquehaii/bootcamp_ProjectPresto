@@ -35,7 +35,6 @@
     
     
     <x-footer></x-footer>
-    @yield('welcomejs')
     @livewireScripts
 </body>
 </html>

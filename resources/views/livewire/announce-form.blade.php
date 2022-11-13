@@ -1,8 +1,8 @@
 <div>
 
     <div class="container-fluid mb-5 height space">
-        <div class="row mx-auto justify-content-center">
-            <div class="col-12">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
                 <div class="formAnnounce my-5">       
                     <div class="lines"></div>
                     <div class="content">
