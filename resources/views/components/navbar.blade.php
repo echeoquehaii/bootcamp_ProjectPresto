@@ -57,17 +57,16 @@
           <a class="nav-link text-wh dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="hover-underline-animation">{{Auth::user()->name}}</span></a>
           <ul class="dropdown-menu dropdown-menu-end">
             <li><a href="#" class="hover-underline-animation dropdown-item">Profile</a></li>
-            <li><a class=" me-5 hover-underline-animation dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">LogOut</a>
+            <li>@if(Auth::user()->is_revisor)
+              <a href="{{route('indexRevisor')}}" id="noShow" class="hover-underline-animation  dropdown-item">Zona revisore: <span>{{App\Models\Announce::toBeRevisionedCount()}}
+                <span class="visually-hidden">unread messages</span>
+               </span></a>             
+            @endif</li>
+            <li><a class=" me-5 hover-underline-animation dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
               <form id="logout-form" method="POST" class="d-none" action="{{route('logout')}}">
              @csrf
               </form>
             </li>
-            <li>@if(Auth::user()->is_revisor)
-              <a href="{{route('indexRevisor')}}" id="noShow" class="hover-underline-animation  dropdown-item">Zona revisore: <span>{{App\Models\Announce::toBeRevisionedCount()}}
-                <span class="visually-hidden">unread messages</span>
-               </span></a>
-              
-            @endif</li>
           </ul>
         @endguest
     </div>
