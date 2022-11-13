@@ -46,7 +46,7 @@
         </li>
         <li>
           <form action="{{route('searchAnnounces')}}" method="GET" class="d-flex" id="noShow">
-            <input name="searched" class="form-control" type="search" placeholder="Search" aria-label="Search">
+            <input name="searched" class="form-control" type="search" placeholder="Cerca" aria-label="Search">
             <button class="btn btn-outline-warning" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
           </form>
         </li>

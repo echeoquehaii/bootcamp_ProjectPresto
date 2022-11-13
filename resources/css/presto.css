@@ -487,12 +487,18 @@ a:hover i::before {
     margin-top: 20px;
 }
 
-.footer-bottom-area{
-    bottom: 0%;
+.footer{
+    bottom: 0px;
 }
 
 .height{
     min-height: 110vh;
+}
+
+/* padding zona revisore */
+
+.padRevis{
+    margin-bottom: 50vh;
 }
 /* /* Footer (Miki) END */
 
@@ -805,4 +811,5 @@ height: 39px;
     transform: scaleX(1);
     transform-origin: left;
  }
+
 

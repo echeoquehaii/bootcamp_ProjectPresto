@@ -5,7 +5,7 @@
         </div>
     @endif
 
-    <div class="container vh-100 mt-custom1">
+    <div class="container mb-5 height space">
         <div class="row vh-100 align-items-center justify-content-center">
             <div class="col-12 col-md-3"></div>
             <div class="col-12 col-md-6">
