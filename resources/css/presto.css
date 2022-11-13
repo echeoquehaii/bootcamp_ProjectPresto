@@ -146,8 +146,28 @@ h1 {
     font-size: 1.25em;
 }
 
-/* SEARCHBOX START */
-/* Navbar */
+/* SEARCHBOX END */
+
+/* Responsiveness Navbar Miguel */
+@media (max-width: 990px) {
+    .collapse {
+        padding: 0px;
+        width: 100% ;
+        padding-inline: 12px;
+        background: rgba(91, 27, 112, 0.27) !important;
+        box-shadow: 0 8px 32px 0 rgba(82, 17, 78, 0.37);
+        backdrop-filter: blur( 4.5px );
+        }
+    }
+
+@media (max-width: 990px) {
+    .collapsedNavContainer {
+        padding: 0px;
+        }
+    }
+/* Responsiveness Navbar Miguel END */
+
+/* Navbar END*/
 
 .text-wh {
     color: var(--wh);
@@ -516,7 +536,17 @@ a:hover i::before {
    transform: translateY(25px);
 
 }
-/* Modifiche card Miguel END */
+
+@media screen and (max-width: 850px) {
+    .content .formAnnounce .lines{
+        margin: 0px;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        width: min-content !important;
+    }
+}
+/* Modifiche card Miguel END */    
+
 /* CSS Cards END*/
 
 
