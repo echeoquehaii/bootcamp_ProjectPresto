@@ -59,16 +59,16 @@
         
       </ul>
           <div class="nav-item dropdown hover-underline-animation mx-3">
-          <a class="nav-link text-wh dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{Auth::user()->name}}</a>
+          <a class="nav-link text-wh dropdown-toggle me-4" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{Auth::user()->name}}</a>
           <ul class="dropdown-menu">
-            <li><a href="#" class="hover-underline-animation dropdown-item">Profile</a></li>
-            <li><a class="nav-link me-5 hover-underline-animation dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">LogOut</a>
+            <li><a href="#" class="hover-underline-animation dropdown-item ">Profile</a></li>
+            <li><a class="hover-underline-animation dropdown-item " href="{{route('logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">LogOut</a>
               <form id="logout-form" method="POST" class="d-none" action="{{route('logout')}}">
              @csrf
               </form>
             </li>
             <li>@if(Auth::user()->is_revisor)
-              <a href="{{route('indexRevisor')}}" id="noShow" class="hover-underline-animation nav-link dropdown-item">Zona revisore: </a>
+              <a href="{{route('indexRevisor')}}" id="noShow" class="hover-underline-animation dropdown-item">Zona revisore: </a>
               <span>{{App\Models\Announce::toBeRevisionedCount()}}
                 <span class="visually-hidden">unread messages</span>
                </span>
