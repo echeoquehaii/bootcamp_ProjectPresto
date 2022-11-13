@@ -2,13 +2,13 @@
 
     
     
-    <h1 class="space text-center padRevis">{{$announce_to_check ? 'Ecco l annuncio da revisionare' : 'Non ci sono annunci da revisionare'}} </h1>
+    <h1 class="space text-center">{{$announce_to_check ? 'Annunci da revisionare' : 'Non ci sono annunci da revisionare'}} </h1>
     
     @if ($announce_to_check)
     
-        <div class="container height ">
-            <div class="row">
-                <div class="col-12">
+        <div class="container-fluid">
+            <div class="row align-items-center justify-content-evenly">
+                <div class="col-6">
                     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -17,13 +17,13 @@
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <div class="img-container">
+                                <div class="img-container carouselH">
                                     <img src="https://picsum.photos/2000/320" class="d-block w-100 " alt="...">
                                 </div>
                                 
                             </div>
                             <div class="carousel-item">
-                                <div class="img-container">
+                                <div class="img-container carouselH">
                                     <img src="https://picsum.photos/2000/301" class="d-block w-100 " alt="...">
                                 </div>
                                 <div class="carousel-caption d-none d-md-block">
@@ -31,7 +31,7 @@
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <div class="img-container">
+                                <div class="img-container carouselH">
                                     <img src="https://picsum.photos/2000/300" class="d-block w-100 " alt="...">
                                 </div>
                                 <div class="carousel-caption d-none d-md-block">
@@ -58,23 +58,24 @@
                     </div>
                    
                 </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-12 col-md-6">
-                    <form action="{{route('revisor.acceptAnnounce', ['announce'=>$announce_to_check])}}" method="POST">
-                    @csrf
-                    @method('PATCH')
-                      <button type="submit" class="btn btn-success shadow">Accetta</button>
-                    </form>
-                </div>
-                <div class="col-12 col-md-6 text-end">
-                    <form action="{{route('revisor.rejectAnnounce', ['announce'=>$announce_to_check])}}" method="POST">
-                    @csrf
-                    @method('PATCH')
-                      <button type="submit" class="btn btn-danger shadow">Rifiuta</button>
-                    </form>
-                </div>
-            </div>
+                    <div class="col-4">
+                    <div class="col-12 col-md-12">
+                        <form action="{{route('revisor.acceptAnnounce', ['announce'=>$announce_to_check])}}" method="POST">
+                            @csrf
+                                @method('PATCH')
+                                    <button type="submit" class="btn btn-success shadow">Accetta</button>
+                        </form>
+                    </div>
+                    <div class="col-12 col-md-12">
+                        <form action="{{route('revisor.rejectAnnounce', ['announce'=>$announce_to_check])}}" method="POST">
+                            @csrf
+                                @method('PATCH')
+                                    <button type="submit" class="btn btn-danger shadow">Rifiuta</button>
+                        </form>
+                    </div>
+                    </div>
+                    
+            </div>     
         </div>
     @endif
 

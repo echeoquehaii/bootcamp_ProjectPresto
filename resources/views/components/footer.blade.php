@@ -9,7 +9,7 @@
                         <li>Michele Gramazio</li>
                         <li>Bruno Cataldo</li>
                         <li>Valerio Quattrociocche</li>
-                        <li>Dario Koi</li>
+                        <li>Dario Sorrentino</li>
                         <li>Michele De Girolamo</li>
                     </ul>
                 </div>

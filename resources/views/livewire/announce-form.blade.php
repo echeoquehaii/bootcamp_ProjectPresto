@@ -3,7 +3,7 @@
     <div class="container-fluid mb-5 height space">
         <div class="row vh-100 align-items-center justify-content-center">
             <div class="col-12 col-md-3"></div>
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-8">
                 <div class="formAnnounce my-5">       
                     <div class="lines"></div>
                     <div class="content">
@@ -14,11 +14,11 @@
                             <div class="mb-3 inputBox">
                                 <input required="required" type="text" class="@error('name') is-invalid @enderror" wire:model.lazy='name'>
                                 <label class="form-label">Nome Stella:</label>
-                                <i></i>                             
-                              <div class="text-white">
-                                @error('name') {{$message}} @enderror
-                              </div>
+                                <i></i>                                                         
                             </div>
+                                <div class="text-white">
+                                    @error('name') {{$message}} @enderror
+                                </div>
                     
                             <select class="@error('category') is-invalid @enderror btnLogDrop" wire:model.defer="category" id="">
                                 <option value="">Scegli una categoria</option>
@@ -26,35 +26,35 @@
                                 <option value="{{$category->id}}">{{$category->name}}</option>
                                 @endforeach
                             </select>
-                            <div class="text-white">
-                                @error('category') {{$message}} @enderror
-                            </div>
+                                <div class="text-white">
+                                    @error('category') {{$message}} @enderror
+                                </div>
                     
                             <div class="mb-3 inputBox">
                                 <input required="required" type="numeric" class="@error('price') is-invalid @enderror" wire:model.lazy='price'>
                                 <label class="form-label">Prezzo:</label>
-                                <i></i>                                    
-                                    <div class="text-white">
-                                        @error('price') {{$message}} @enderror
-                                    </div>
+                                <i></i>                                                                       
                             </div>
+                                <div class="text-white">
+                                    @error('price') {{$message}} @enderror
+                                </div>
                     
                             <div class="mb-3 inputBox">
                                 <input required="required" type="text" class="@error('location') is-invalid @enderror" wire:model.lazy='location'>
                                 <label class="form-label">Posizione:</label>
                                 <i></i>   
-                                    <div class="text-white">    
-                                        @error('location') {{$message}} @enderror
-                                    </div>
                             </div>
+                                <div class="text-white">    
+                                    @error('location') {{$message}} @enderror
+                                </div>
                     
                             <div class="mb-3 inputBox">
                                 <p class="form-label text-white">Descrizione:</p>
                                 <textarea wire:model.lazy='description' cols="30" rows="10" class="@error('description') is-invalid @enderror"></textarea>
+                            </div>
                                 <div class="text-white">
                                     @error('description') {{$message}} @enderror
                                 </div>
-                            </div>
                     
                             {{-- <form>
                                 <div class="form-group">
