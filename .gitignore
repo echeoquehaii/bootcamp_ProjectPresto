@@ -18,3 +18,4 @@ yarn-error.log
 /storage/announces.index-shm
 /storage/announces.index-wal
 /storage/announces.index
+/storage/*.index
