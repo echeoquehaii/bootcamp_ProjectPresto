@@ -1,8 +1,8 @@
 <div>
 
     <div class="container-fluid mb-5 height space">
-        <div class="row align-items-center justify-content-center">
-            <div class="col-12 col-md-8">
+        <div class="row mx-auto justify-content-center">
+            <div class="col-12">
                 <div class="formAnnounce my-5">       
                     <div class="lines"></div>
                     <div class="content">
