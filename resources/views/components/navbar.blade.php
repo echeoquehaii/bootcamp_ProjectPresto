@@ -30,9 +30,9 @@
             <div class="row justify-content-center">
                 <div class="col-4 d-flex justify-content-center">
                     <div class="nav-item dropdown hover-underline-animation">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <p class="nav-link dropdown-toggle text-wh mb-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Categorie
-                        </a>
+                        </p>
                         <ul class="dropdown-menu">
                             @foreach ($categories as $category)
                             <li><a class="dropdown-item" href="{{route('categoryShow', compact('category'))}}">{{$category->name}}</a></li>
@@ -59,8 +59,8 @@
         
       </ul>
           <div class="nav-item dropdown mx-3">
-          <a class="nav-link text-wh dropdown-toggle me-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="hover-underline-animation">{{Auth::user()->name}}</span></a>
-          <ul class="dropdown-menu">
+          <a class="nav-link text-wh dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="hover-underline-animation">{{Auth::user()->name}}</span></a>
+          <ul class="dropdown-menu dropdown-menu-end">
             <li><a href="#" class="hover-underline-animation dropdown-item">Profile</a></li>
             <li><a class=" me-5 hover-underline-animation dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">LogOut</a>
               <form id="logout-form" method="POST" class="d-none" action="{{route('logout')}}">
