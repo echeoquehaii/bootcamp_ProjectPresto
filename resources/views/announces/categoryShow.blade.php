@@ -6,7 +6,7 @@
     
     <div class="container height">
         <div class="row">
-            @forelse ($category->announces as $announce)
+            @forelse ($acceptedAnnounces as $announce)
                <div class="card0">
             <div class="lines"></div>
             <div class="imgBx">
