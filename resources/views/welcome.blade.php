@@ -1,4 +1,5 @@
 <x-layout>
+    @vite(['resources/js/welcome.js'])
 
     <div id="bubble" class="navbar navbar-expand-lg fixed-top bg-transparent">
         <span style="--i:11;"></span>
@@ -23,7 +24,7 @@
         <span style="--i:28;"></span>
     </div>     
 
-        <div class="container-fluid bg-main vh-100">
+        <div class="container-fluid bg-main vh-100 welcome-padding">
             <div class="row align-items-center row-height">
                 <div class="col-12 col-md-8 text-wh">
                     <h1 class="display-2">P R E S T O</h1>
@@ -72,7 +73,6 @@
             </div>
         </div>
 
-        @section('welcomejs')
-            @include ('js-welcome')
-        @stop
-</x-layout>
+{{--         <script type="text/javascript" src="{{ URL::asset('js/welcome.js') }}"></script>
+ --}}
+    </x-layout>

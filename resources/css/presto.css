@@ -87,8 +87,8 @@ h1 {
     position: relative;
     width: 40px;
     height: 40px;
-    background: var(--vio);
-    color: white;
+/*     background: var(--vio);
+ */    color: white;
     display: flex;
     justify-content: space-between;
     transition: 0.5s;
@@ -144,6 +144,12 @@ h1 {
     border: none;
     outline: none;
     font-size: 1.25em;
+}
+
+.searchBoxInputField {
+    color: white;
+    background-color: transparent !important;
+    border-bottom: solid;
 }
 
 /* SEARCHBOX END */
@@ -277,7 +283,7 @@ a:hover i::before {
 /* CSS da deletare */
 .img-container{
     height: 300px;
-    border-radius: 1em;
+    border-radius: 50%;
 
 }
 
@@ -285,7 +291,7 @@ a:hover i::before {
     height: 100%;
     object-fit: cover;
     overflow: hidden;
-    border-radius: 1em;
+    border-radius: 50%;
 
 }
 
@@ -337,7 +343,7 @@ a:hover i::before {
 
 /* CSS Cards Start*/
 .card-height {
-    height: 400px;
+    height: 420px;
 }
 .card0 {
     position: relative;
@@ -387,6 +393,7 @@ a:hover i::before {
     position: absolute;
     inset: 5px;
     background: #292929;
+    border-radius: 1em;     
 }
 
 .card0 .imgBx {
@@ -400,7 +407,7 @@ a:hover i::before {
     transition: 0.5s;
     z-index: 10;
     overflow: hidden;
-    border-radius: 1em;
+    border-radius: 50%;
 }
 
 .card0:hover .imgBx {
@@ -434,6 +441,7 @@ a:hover i::before {
     position: absolute;
     inset: 5px;
     background: #292929;
+    border-radius: 50%;
 }
 
 .card0 .imgBx .imageBx {
@@ -444,6 +452,7 @@ a:hover i::before {
     width: calc(100% - 20px);
     height: calc(100% - 20px);
     filter: grayscale(1);
+    border-radius: 50%; 
 }
 
 .card0 .content {
@@ -454,6 +463,8 @@ a:hover i::before {
     justify-content: center;
     align-items: flex-end;
     overflow: hidden;
+    border-radius: 1em;
+
 }
 
 .card0 .content .details {
@@ -537,12 +548,16 @@ a:hover i::before {
 
 }
 
-@media screen and (max-width: 850px) {
-    .content .formAnnounce .lines{
+@media screen and (max-width: 700px) {
+    .content, .formAnnounce {
         margin: 0px;
         padding-left: 0px !important;
         padding-right: 0px !important;
-        width: min-content !important;
+        width: 100% !important;
+    }
+
+    .inputBox {
+        width: 100% !important;
     }
 }
 /* Modifiche card Miguel END */    
@@ -590,7 +605,7 @@ a:hover i::before {
     bottom: 0;
     height: 2px;
     width: 100px;
-    background: #13bfb1;
+    background: #fff;
 }
 .widgets.footer-widgets .widget-quick-links ul {
     margin-top: -4px;

@@ -31,11 +31,8 @@
         <p class="fa-solid fa-angles-up fa-2x my-auto"></p>
     </a>
     
-
-    
     
     <x-footer></x-footer>
-    @yield('welcomejs')
     @livewireScripts
 </body>
 </html>
