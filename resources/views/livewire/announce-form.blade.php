@@ -54,15 +54,32 @@
                                 <div class="text-white">
                                     @error('description') {{$message}} @enderror
                                 </div>
-                    
-                            {{-- <form>
-                                <div class="form-group">
-                                  <label for="exampleFormControlFile1">Scegli l'immagine!</label>
-                                  <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                
+                            <div class="mb-3">
+                                <input wire:model="temporary_images" type="file" name="images" multiple class="form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="Img"/>
+                                @error('temporary_images.*') 
+                                    <p class="text-danger mt-2">{{$message}}</p>
+                                @enderror
+                            </div>
+
+                            @if (!empty($images))
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p>Anteprima foto</p>
+                                        <div class="raw border border-4 border-info rounded shadow py-4">
+                                            @foreach ($images as $key => $image)
+                                            <div class="col my-3">
+                                                <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}}); height:200px;"></div>
+                                                <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">Cancella</button>
+                                            </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
                                 </div>
-                            </form> --}}
-                    
+                            @endif  
+
                             <button type="submit" class="btnLogForm">Carica l'annuncio</button>
+
                         </form>
                     </div>
                 </div>
