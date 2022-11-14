@@ -24,24 +24,27 @@ class AnnounceForm extends Component
     public $announce;
 
     public function storeAnnounce(){
-/*      $category = Category::find($this->category);
-        $user_id=Auth::user()->id;
-        dd($this);
-*/     
+        /*         VECCHIA FUNZIONE STORE     */
+        /*  
+            public function storeAnnounce(){
+                $category = Category::find($this->category);
+                $user=Auth::user();
+                $this->validate();
+                $category->announces()->create([
+                    'name'=>$this->name,
+                    'price'=>$this->price,
+                    'location'=>$this->location,
+                    'description'=>$this->description,
+                    'user_id'=>$user->id
+                    
+                ]);
+                session()->flash('message', 'Annuncio in attesa di revisione');
+                redirect (route('indexAnnounce'));
+            }
 
-/*     $this->announce = Category::find($this->category)->announces()->create($this->validate());
+        */
 
-    if(count($this->images)){
-        foreach($this->images as $image){
-            $this->announce->images()->create(['path'=>$image->store('images', 'public')]);
-        }
-    }
-
-    $this->announce->user()->associate(Auth::user());
-    $this->announce->save();
-*/
-
-/*      FUNZIONE FUNZIONANTE PER LE IMMAGINI INCREDIBBBILMENTE   */
+        /*  FUNZIONE FUNZIONANTE PER LE IMMAGINI INCREDIBBBILMENTE   */
 
         $user=Auth::user();
         $this->validate();
@@ -52,27 +55,17 @@ class AnnounceForm extends Component
             'description'=>$this->description,
             'user_id'=>$user->id
         ]);
-        
-/*         $this->announce->user()->associate(Auth::user());
-        $this->announce->save();
- */
+
+        /*  FUNZIONE DI AULAB  */
+        /*      $this->announce = Category::find($this->category)->announces()->create($this->validate());
+                $this->announce->user()->associate(Auth::user());
+                $this->announce->save();
+        */
         if(count($this->images)){
             foreach($this->images as $image){
                 $this->announce->images()->create(['path'=>$image->store('images', 'public')]);
             }
         } 
-
-
-/*
-        $category->announces()->create([
-            'name'=>$this->name,
-            'price'=>$this->price,
-            'location'=>$this->location,
-            'description'=>$this->description,
-            'user_id'=>$user->id
-            
-        ]);
-*/
 
         session()->flash('message', 'Annuncio in attesa di revisione');
         redirect (route('indexAnnounce'));
