@@ -389,7 +389,7 @@ a:hover i::before {
 .card0 .lines::after {
     content: '';
     position: absolute;
-    inset: 5px;
+    inset: 3px;
     background: #292929;
     border-radius: 1em;     
 }
@@ -437,7 +437,7 @@ a:hover i::before {
 .card0 .imgBx::after {
     content: '';
     position: absolute;
-    inset: 5px;
+    inset: 3px;
     background: #292929;
     border-radius: 50%;
 }
