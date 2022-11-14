@@ -80,7 +80,7 @@
       
           <div class="nav-item dropdown mx-3">
           <a class="nav-link text-wh dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="hover-underline-animation">{{Auth::user()->name}}</span></a>
-          <ul class="dropdown-menu dropdown-menu-end">
+          <ul class="dropdown-menu dropdown-center">
             <li><a href="#" class="hover-underline-animation dropdown-item">Profile</a></li>
             <li>@if(Auth::user()->is_revisor)
               <a href="{{route('indexRevisor')}}" id="noShow" class="hover-underline-animation  dropdown-item">Zona revisore: <span>{{App\Models\Announce::toBeRevisionedCount()}}
