@@ -169,6 +169,16 @@ h1 {
         box-shadow: 0 8px 32px 0 rgba(82, 17, 78, 0.37);
         backdrop-filter: blur( 4.5px );
         }
+    .dropdown-menu{
+        background: rgba(91, 27, 112, 0.27) !important;
+        box-shadow: 0 8px 32px 0 rgba(82, 17, 78, 0.37);
+        backdrop-filter: blur( 4.5px );
+        -webkit-backdrop-filter: blur( 4.5px );
+        
+    }
+    .dropdown-item{
+        color: white !important;
+    }
     }
 
 @media (max-width: 990px) {
