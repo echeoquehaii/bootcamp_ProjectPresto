@@ -45,5 +45,10 @@ Route::get('/search/announces', [AnnounceController::class, 'searchAnnounces'])-
 //Route::get('/', [])->name('workWithUs');
 
 
+//Rotta Lingua
+
+Route::post('/lingua/{lang}', [AnnounceController::class, 'setLanguage'])->name('set_language_locale');
+
+
 
 
