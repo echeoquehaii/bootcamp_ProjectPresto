@@ -283,7 +283,6 @@ a:hover i::before {
 /* CSS da deletare */
 .img-container{
     height: 300px;
-    border-radius: 50%;
 
 }
 
@@ -291,7 +290,6 @@ a:hover i::before {
     height: 100%;
     object-fit: cover;
     overflow: hidden;
-    border-radius: 50%;
 
 }
 
