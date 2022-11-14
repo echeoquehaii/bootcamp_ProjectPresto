@@ -254,7 +254,19 @@ h1 {
     color: #fff;
     box-shadow: 0 0 35px rgb(64, 0, 88);
 }
+.btn-customFooter{
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    background-color: #fff;
+    color: var(--pr);
+    border: 2px solid;
+    border-color: var(--pr);
+}
 
+.btn-customFooter:hover {
+    background-color: var(--pr);
+    border: 2px solid #fff;
+}
 a i {
     position: absolute;
     display: block;

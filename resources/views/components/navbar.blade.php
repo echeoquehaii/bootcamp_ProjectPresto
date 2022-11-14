@@ -7,18 +7,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
-        <li class="nav-item">
-          <x-_locale lang="it" nation="it"></x-_locale>
-        </li>
-        <li class="nav-item">
-          <x-_locale lang="en" nation="gb"></x-_locale>
-        </li>
-        <li class="nav-item">
-          <x-_locale lang="es" nation="es"></x-_locale>
-        </li>
-        <li class="nav-item">
-          <x-_locale lang="no" nation="no"></x-_locale>
-        </li>
+        
         <li class="nav-item">
           <a class="nav-link text-wh hover-underline-animation" aria-current="page" href="{{route('welcome')}}">Home</a>
         </li>
@@ -61,10 +50,34 @@
             </div>           
           </form>
         </li>
-        
-        
-        
+
+        <li>
+          <div class="btn-group nav-item hover-underline-animation text-wh">
+            <p class="nav-link dropdown-toggle text-wh mb-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Lingua
+            </p>
+            <ul class="dropdown-menu">
+              <li class="nav-item">
+                <x-_locale lang="it" nation="it"></x-_locale>
+              </li>
+              <li class="nav-item">
+                <x-_locale lang="en" nation="gb"></x-_locale>
+              </li>
+              <li class="nav-item">
+                <x-_locale lang="es" nation="es"></x-_locale>
+              </li>
+              <li class="nav-item">
+                <x-_locale lang="no" nation="no"></x-_locale>
+              </li>
+            </ul>
+          </div>
+        </li>
       </ul>
+        
+        
+        
+        
+      
           <div class="nav-item dropdown mx-3">
           <a class="nav-link text-wh dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="hover-underline-animation">{{Auth::user()->name}}</span></a>
           <ul class="dropdown-menu dropdown-menu-end">
