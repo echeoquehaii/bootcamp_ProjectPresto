@@ -19,8 +19,6 @@ class AnnounceForm extends Component
     public $category;
     public $temporary_images;
     public $images = [];
-    public $image;
-    public $form_id;
     public $announce;
 
     public function storeAnnounce(){
@@ -123,6 +121,9 @@ class AnnounceForm extends Component
         $this->price = '';
         $this->location = '';
         $this->description = '';
+        $this->image = '';
+        $this->images = [];
+        $this->temporary_images = [];
     }
 
     public function updated($propertyName){

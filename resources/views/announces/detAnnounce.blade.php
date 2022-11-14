@@ -10,30 +10,40 @@
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="img-container">
-                                <img src="https://picsum.photos/2000/320" class="d-block w-100 " alt="...">
-                            </div>
-                            
+
+                    @if(!$announce->images()->get()->isEmpty())
+                        <div class="carousel-inner">
+                            @foreach($announce->images as $image)
+                                <div class="carousel-item @if($loop->first)active @endif">
+                                    <div class="img-container">
+                                        <img src="{{Storage::url($image->path)}}" class="d-block w-100 " alt="...">
+                                    </div>
+                                </div>
+                            @endforeach
                         </div>
-                        <div class="carousel-item">
-                            <div class="img-container">
-                                <img src="https://picsum.photos/2000/301" class="d-block w-100 " alt="...">
+                    @else
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="img-container">
+                                    <img src="https://picsum.photos/2000/320" class="d-block w-100 " alt="...">
+                                </div>
                             </div>
-                            <div class="carousel-caption d-none d-md-block">
-                                
+                            <div class="carousel-item active">
+                                <div class="img-container">
+                                    <img src="https://picsum.photos/2000/320" class="d-block w-100 " alt="...">
+                                </div>
                             </div>
+                            <div class="carousel-caption d-none d-md-block"></div>
+
+                            <div class="carousel-item active">
+                                <div class="img-container">
+                                    <img src="https://picsum.photos/2000/320" class="d-block w-100 " alt="...">
+                                </div>
+                            </div>
+                            <div class="carousel-caption d-none d-md-block"></div>
                         </div>
-                        <div class="carousel-item">
-                            <div class="img-container">
-                                <img src="https://picsum.photos/2000/300" class="d-block w-100 " alt="...">
-                            </div>
-                            <div class="carousel-caption d-none d-md-block">
-                               
-                            </div>
-                        </div>
-                    </div>
+                    @endif
+
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>

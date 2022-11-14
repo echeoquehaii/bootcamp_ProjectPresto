@@ -11,21 +11,29 @@
                 <div class="col-6">
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
-                              <div class="swiper-slide">
-                                <img src="https://picsum.photos/200/300" />
-                              </div>
-                              <div class="swiper-slide">
-                                <img src="https://picsum.photos/200/300" />
-                              </div>
-                              <div class="swiper-slide">
-                                <img src="https://picsum.photos/200/300" />
-                              </div>
-                              <div class="swiper-slide">
-                                <img src="https://picsum.photos/200/300"/>
-                              </div>
-                              <div class="swiper-slide">
-                                <img src="https://picsum.photos/200/300" />
-                              </div>               
+                                @if(!$announce_to_check->images()->get()->isEmpty())
+                                    @foreach($announce_to_check->images as $image)
+                                        <div class="swiper-slide">
+                                            <img src="{{Storage::url($image->path)}}" class="img-fluid"/>
+                                        </div>
+                                    @endforeach
+                                @else
+                                    <div class="swiper-slide">
+                                        <img src="https://picsum.photos/200/300" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="https://picsum.photos/200/300" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="https://picsum.photos/200/300" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="https://picsum.photos/200/300"/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="https://picsum.photos/200/300" />
+                                    </div>
+                                @endif
                             </div>
                             <div class="swiper-pagination"></div>
                         </div>

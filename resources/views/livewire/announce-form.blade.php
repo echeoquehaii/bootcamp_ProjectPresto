@@ -22,7 +22,7 @@
                             <select class="@error('category') is-invalid @enderror btnLogDrop" wire:model.defer="category" id="">
                                 <option value="">Scegli una categoria</option>
                                 @foreach($categories as $category)
-                                <option value="{{$category->id}}">{{$category->name}}</option>
+                                    <option value="{{$category->id}}">{{$category->name}}</option>
                                 @endforeach
                             </select>
                                 <div class="text-white">
