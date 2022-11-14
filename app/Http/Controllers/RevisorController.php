@@ -28,7 +28,11 @@ class RevisorController extends Controller
         return redirect()->back()->with('message', 'Complimenti, hai rifiutato l\'annuncio');
     }
 
-    public function becomeRevisor(){
+    public function profileRevisor(){
+        return view('revisor.profileRevisor');
+    }
+
+/*     public function becomeRevisor(){
         if(Auth::user()->is_revisor != true){
             Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
             return redirect()->back()->with('message', 'Complimenti! Richiesta inviata con successo!');
@@ -36,7 +40,7 @@ class RevisorController extends Controller
             return redirect()->back()->with('message', 'Sei già revisore, richiesta rifiutata!');
         }
     }
-
+ */
     public function makeRevisor(User $user){
         Artisan::call('presto:makeUserRevisor', ["email"=>$user->email]);
         return redirect('/')->with('message', 'Complimenti! L\'utente è diventato revisore!');
