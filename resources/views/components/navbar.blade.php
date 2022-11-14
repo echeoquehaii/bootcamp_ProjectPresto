@@ -73,29 +73,25 @@
           </div>
         </li>
       </ul>
-        
-        
-        
-        
-      
-          <div class="nav-item dropdown mx-3">
-          <a class="nav-link text-wh dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="hover-underline-animation">{{Auth::user()->name}}</span></a>
-          <ul class="dropdown-menu dropdown-center">
-            <li><a href="#" class="hover-underline-animation dropdown-item">Profile</a></li>
-            <li>@if(Auth::user()->is_revisor)
-              <a href="{{route('indexRevisor')}}" id="noShow" class="hover-underline-animation  dropdown-item">Zona revisore: <span>{{App\Models\Announce::toBeRevisionedCount()}}
-                <span class="visually-hidden">unread messages</span>
-               </span></a>             
-            @endif</li>
-            <li><a class=" me-5 hover-underline-animation dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
-              <form id="logout-form" method="POST" class="d-none" action="{{route('logout')}}">
-             @csrf
-              </form>
-            </li>
-          </ul>
-        @endguest
+            
+      <div class="nav-item dropdown mx-3">
+            <a class="nav-link text-wh dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="hover-underline-animation">{{Auth::user()->name}}</span></a>
+            <div class="dropdown-menu dropdown-menu-end" id="userdropjs">
+              <li><a href="#" class="hover-underline-animation dropdown-item userdropjs-item">Profile</a></li>
+              <li>@if(Auth::user()->is_revisor)
+                <a href="{{route('indexRevisor')}}" id="noShow" class="hover-underline-animation dropdown-item userdropjs-item">Zona revisore: <span>{{App\Models\Announce::toBeRevisionedCount()}}
+                  <span class="visually-hidden">unread messages</span>
+                </span></a>             
+              @endif</li>
+              <li><a class=" me-5 hover-underline-animation dropdown-item userdropjs-item" href="{{route('logout')}}" onclick="event.preventDefadivt();document.getElementById('logout-form').submit();">Logout</a>
+                <form id="logout-form" method="POST" class="d-none" action="{{route('logout')}}">
+              @csrf
+                </form>
+              </li>
+            </div>
+          @endguest
+      </div>
     </div>
-  </div>
   @guest
   <p class="text-transparent" ><img src="/img/logo-transparent.png" alt="" class="logoSize"> Presto</p>
   @endguest

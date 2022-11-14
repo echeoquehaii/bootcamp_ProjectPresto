@@ -186,6 +186,21 @@ h1 {
         padding: 0px;
         }
     }
+
+.dropdown-mobile {
+    position: relative !important;
+    margin: 0 !important;
+    width: 100% !important;
+    background: transparent !important;
+    backdrop-filter: none;
+    border: transparent;
+}
+
+.dropdown-item-mobile:focus, .dropdown-item-mobile:hover {
+    background-color: #1C2331 !important;
+    color: orange !important;
+}
+
 /* Responsiveness Navbar Miguel END */
 
 /* Navbar END*/
