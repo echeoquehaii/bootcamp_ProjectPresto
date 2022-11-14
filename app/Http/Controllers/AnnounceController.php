@@ -34,4 +34,9 @@ class AnnounceController extends Controller
 
         return view('announces.indexAnnounce', compact('announces'));
     }
+
+    public function setLanguage($lang){
+        session()->put('locale', $lang);
+        return redirect()->back();
+    }
 }

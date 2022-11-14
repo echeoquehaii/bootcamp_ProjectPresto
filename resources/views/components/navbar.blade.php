@@ -8,6 +8,18 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
         <li class="nav-item">
+          <x-_locale lang="it" nation="it"></x-_locale>
+        </li>
+        <li class="nav-item">
+          <x-_locale lang="en" nation="gb"></x-_locale>
+        </li>
+        <li class="nav-item">
+          <x-_locale lang="es" nation="es"></x-_locale>
+        </li>
+        <li class="nav-item">
+          <x-_locale lang="no" nation="no"></x-_locale>
+        </li>
+        <li class="nav-item">
           <a class="nav-link text-wh hover-underline-animation" aria-current="page" href="{{route('welcome')}}">Home</a>
         </li>
         @guest

@@ -1,6 +1,6 @@
 <x-layout>
 
-    <h1 class="text-center mt-custom">Ecco gli Annunci!</h1>
+    <h1 class="text-center mt-custom">{{__('ui.allAnnounces')}}</h1>
    
     <div class="container-fluid height">
         <div class="row mt-custom">
