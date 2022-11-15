@@ -18,13 +18,13 @@
     <x-navbar></x-navbar>
 
     @if (session('message'))
-    <div class="alert alert-success mt-custom position-absolute w-100">
+    <div class="alert alert-success w-100 mt-custom">
         {{ session('message') }}
     </div>
     @endif
 
     @if (session('access.denied'))
-        <div class="alert alert-success mt-custom position-absolute w-100">
+        <div class="alert alert-success w-100  mt-custom">
             {{ session('access.denied')}}
         </div>
     @endif
