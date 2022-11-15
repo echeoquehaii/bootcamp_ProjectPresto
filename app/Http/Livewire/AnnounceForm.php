@@ -5,8 +5,10 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\Announce;
 use App\Models\Category;
-use Illuminate\Support\Facades\Auth;
+use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 class AnnounceForm extends Component
 {
@@ -21,8 +23,39 @@ class AnnounceForm extends Component
     public $images = [];
     public $announce;
 
-    public function storeAnnounce(){
-        /*         VECCHIA FUNZIONE STORE     */
+    public function storeAnnounce()
+    {
+
+        /*  FUNZIONE FUNZIONANTE PER LE IMMAGINI INCREDIBBBILMENTE   */
+
+        $user = Auth::user();
+        $this->validate();
+        $this->announce = Category::find($this->category)->announces()->create([
+            'name' => $this->name,
+            'price' => $this->price,
+            'location' => $this->location,
+            'description' => $this->description,
+            'user_id' => $user->id
+        ]);
+
+        if (count($this->images)) {
+            foreach ($this->images as $image) {
+                /*  $this->announce->images()->create(['path'=>$image->store('images', 'public')]);  */
+                $newFileName = "announces/{$this->announce->id}";
+                $newImage = $this->announce->images()->create(['path' => $image->store($newFileName, 'public')]);
+
+                dispatch(new ResizeImage($newImage->path, 400, 300));
+            }
+
+            File::deleteDirectory(storage_path('/app/livewire-tmp'));
+        }
+
+        session()->flash('message', 'Annuncio in attesa di revisione');
+        redirect(route('indexAnnounce'));
+
+
+
+        /*  VECCHIA FUNZIONE STORE     */
         /*  
             public function storeAnnounce(){
                 $category = Category::find($this->category);
@@ -42,67 +75,49 @@ class AnnounceForm extends Component
 
         */
 
-        /*  FUNZIONE FUNZIONANTE PER LE IMMAGINI INCREDIBBBILMENTE   */
-
-        $user=Auth::user();
-        $this->validate();
-        $this->announce = Category::find($this->category)->announces()->create([
-            'name'=>$this->name,
-            'price'=>$this->price,
-            'location'=>$this->location,
-            'description'=>$this->description,
-            'user_id'=>$user->id
-        ]);
-
         /*  FUNZIONE DI AULAB  */
         /*      $this->announce = Category::find($this->category)->announces()->create($this->validate());
                 $this->announce->user()->associate(Auth::user());
                 $this->announce->save();
         */
-        if(count($this->images)){
-            foreach($this->images as $image){
-                $this->announce->images()->create(['path'=>$image->store('images', 'public')]);
-            }
-        } 
-
-        session()->flash('message', 'Annuncio in attesa di revisione');
-        redirect (route('indexAnnounce'));
     }
 
-    public function updatedTemporaryImages(){
+    public function updatedTemporaryImages()
+    {
         if ($this->validate([
-            'temporary_images.*'=>'image|max:1024',
+            'temporary_images.*' => 'image|max:1024',
         ])) {
-            foreach ($this->temporary_images as $image){
+            foreach ($this->temporary_images as $image) {
                 $this->images[] = $image;
             }
         }
     }
 
-    public function removeImage($key){
+    public function removeImage($key)
+    {
         if (in_array($key, array_keys($this->images))) {
             unset($this->images[$key]);
         }
     }
-    
-    protected $rules=[
-        'name'=>'required|min:4',
-        'price'=>'required|numeric|digits_between:0,8',
-        'location'=>'required',
-        'description'=>'required|min:8',
-        'category'=>'required',
+
+    protected $rules = [
+        'name' => 'required|min:4',
+        'price' => 'required|numeric|digits_between:0,8',
+        'location' => 'required',
+        'description' => 'required|min:8',
+        'category' => 'required',
         'images.*' => 'image|max:1024',
         'temporary_images.*' => 'image|max:1024'
 
     ];
 
     protected $validationAttributes = [
-        'name'=> 'nome',
-        'price'=> 'prezzo',
-        'location'=> 'posizione',
-        'description'=> 'descrizione',
-        'category'=> 'categoria',
-        'images'=> 'immagini',
+        'name' => 'nome',
+        'price' => 'prezzo',
+        'location' => 'posizione',
+        'description' => 'descrizione',
+        'category' => 'categoria',
+        'images' => 'immagini',
     ];
 
     protected $messages = [
@@ -115,7 +130,8 @@ class AnnounceForm extends Component
         'images.max' => 'L\'immagine dev\'essere al massimo di 1mb',
     ];
 
-    protected function cleanForm(){
+    protected function cleanForm()
+    {
         $this->name = '';
         $this->category = '';
         $this->price = '';
@@ -126,13 +142,13 @@ class AnnounceForm extends Component
         $this->temporary_images = [];
     }
 
-    public function updated($propertyName){
+    public function updated($propertyName)
+    {
         $this->validateOnly($propertyName);
     }
 
     public function render()
     {
         return view('livewire.announce-form');
-        
     }
 }
