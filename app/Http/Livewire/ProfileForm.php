@@ -42,10 +42,6 @@ class ProfileForm extends Component
                 'user_id'=>$userID,
             ]);
 
-            $userAge=$this->age;
-            $userAddress=$this->address;
-            $userDescription=$this->description;
-
             Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
             return redirect(route('profileRevisor'))->with('message', 'Complimenti! Richiesta inviata con successo!');
         }
