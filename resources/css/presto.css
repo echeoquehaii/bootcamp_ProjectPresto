@@ -1095,3 +1095,13 @@ height: 39px;
 }
  
   /*SWIPER & BUTTONS REVISOR END*/
+
+
+  /* miki dettaglio card */
+
+  .glass{
+    background: rgba(230, 210, 237, 0.27) !important;
+        box-shadow: 0 8px 32px 0 rgba(235, 218, 234, 0.37);
+        backdrop-filter: blur( 4.5px );
+        -webkit-backdrop-filter: blur( 4.5px );
+  }
