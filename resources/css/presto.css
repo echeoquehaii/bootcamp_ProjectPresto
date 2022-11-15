@@ -866,7 +866,7 @@ height: 39px;
 .formAnnounce {
     position: relative;
     width: 700px;
-    height: 1600px;
+    height: 1800px;
     background: #333;
     transition: 0.5s;
 }
@@ -1140,6 +1140,15 @@ height: 39px;
  
   /*SWIPER & BUTTONS REVISOR END*/
 
+
+  /* miki dettaglio card */
+
+  .glass{
+    background: rgba(230, 210, 237, 0.27) !important;
+        box-shadow: 0 8px 32px 0 rgba(235, 218, 234, 0.37);
+        backdrop-filter: blur( 4.5px );
+        -webkit-backdrop-filter: blur( 4.5px );
+  }
 .dropdown-menu {
     background: rgba(91, 27, 112, 0.27) !important;
     box-shadow: 0 8px 32px 0 rgba(82, 17, 78, 0.37);
