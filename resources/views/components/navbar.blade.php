@@ -83,7 +83,7 @@
                   <span class="visually-hidden">unread messages</span>
                 </span></a>             
               @endif</li>
-              <li><a class=" me-5 hover-underline-animation dropdown-item userdropjs-item" href="{{route('logout')}}" onclick="event.preventDefadivt();document.getElementById('logout-form').submit();">Logout</a>
+              <li><a class=" me-5 hover-underline-animation dropdown-item" href="{{route('logout')}}" onclick="event.preventDefadivt();document.getElementById('logout-form').submit();">Logout</a>
                 <form id="logout-form" method="POST" class="d-none" action="{{route('logout')}}">
               @csrf
                 </form>
