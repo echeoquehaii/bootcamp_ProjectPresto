@@ -12,8 +12,8 @@ return [
     'profilo'=>'Profilo',
     'zonaRevisore'=>'Zona revisore:',
     'logout'=>'Logout',
-
     // end navbar
+
     // footer
     
     // end footer
