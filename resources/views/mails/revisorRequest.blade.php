@@ -19,9 +19,9 @@
         <h2 style="color: white">Ecco i suoi dati: </h2>
         <p style="color: white">Nome: {{$user->name}}</p>
         <p style="color: white">Email: {{$user->email}}</p>
-        <p style="color: white">Età: {{$userAge}}</p>
-        <p style="color: white">Indirizzo: {{$userAddress}}</p>
-        <p style="color: white">Descrizione: {{$userDescription}}</p>
+        <p style="color: white">Età: {{$user->profile->age}}</p>
+        <p style="color: white">Indirizzo: {{$user->profile->address}}</p>
+        <p style="color: white">Descrizione: {{$user->profile->description}}</p>
         <p style="color: white">Se vuoi renderlo revisore clicca qui:</p>
         <a style="color: white" href="{{route('makeRevisor' , compact('user'))}}"> <button>Rendi revisore!</button></a>
     </header>

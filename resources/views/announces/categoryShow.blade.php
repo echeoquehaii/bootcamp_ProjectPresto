@@ -30,8 +30,11 @@
                     
                 </div> 
             </div>
-            @empty
+            @empty               
                 <h1 class=" text-wh d-flex justify-content-center mt-3 pt-5 mb-5">{{__('ui.noAnnunci')}}</h4>
+                <div class="col-12 d-flex justify-content-center">    
+                    <img src="/img/sleepy.gif" alt="" class="img-filter">
+                </div>
                 @auth
                     <div class="container d-flex justify-content-center mt-5">
                         <a href="{{route('createAnnounce')}}"><button class=" btn btn-custom">{{__('ui.createAnnounce')}}</button><i></i></a>
