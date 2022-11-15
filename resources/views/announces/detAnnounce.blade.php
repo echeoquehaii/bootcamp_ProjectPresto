@@ -2,7 +2,7 @@
     
     <h1 class="mt-custom text-center">Il dettaglio di {{$announce->name}}</h1>
     <div class="container height">
-        <div class="row vh-100">
+        <div class="row">
             <div class="col-12">
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
@@ -32,32 +32,39 @@
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
-
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <div class="text-center mt-5 detText glass">
-                            <h3 class="card-title">Nome: {{$announce->name}}</h5>
-                            <p class="card-text fs-4">Venditore: {{$announce->user->name}}</p>
-                            <p class="card-text fs-4">Prezzo: {{$announce->price}} €</p>
-                            <p class="card-text fs-4">Posizione: {{$announce->location}}</p>
-                            <p class="card-text fs-4">Categoria: {{$announce->category->name}}</p>
-                        </div>
-
-                    </div>
-
-                    <div class="col-12 col-md-6">
-
-                        <div class="text-center mt-5 detText glass">
-                            <p class="card-text fs-4">Descrizione: {{$announce->description}}</p>
-                        </div>
-
-
-                    </div>
-                </div>
-
             </div>
         </div>
+
+                <div class="row mt-custom1">
+                    <div class="col-12 col-md-6 d-flex justify-content-evenly">
+                        <div class="cardDet">       
+                        <div class="linesDet"></div>
+                            <div class="contentDet">
+                                <div class="detText text-white">
+                                    <p class="card-text"><span class="fontRev">Nome:</span> {{$announce->name}}</p>
+                                    <p class="card-text"><span class="fontRev">Venditore:</span> {{$announce->user->name}}</p>
+                                    <p class="card-text"><span class="fontRev">Prezzo:</span> {{$announce->price}} €</p>
+                                    <p class="card-text"><span class="fontRev">Posizione:</span> {{$announce->location}}</p>
+                                    <p class="card-text"><span class="fontRev">Categoria:</span> {{$announce->category->name}}</p>
+                                </div>                                                                                             
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 d-flex justify-content-evenly">
+                        <div class="cardDet">       
+                        <div class="linesDet"></div>
+                            <div class="contentDet">
+                                <div class="detText text-white">
+                                   <p class="card-text"><span class="fontRev">Descrizione:</span> {{$announce->description}}</p>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
     </div>
     
     
 </x-layout>
+
+

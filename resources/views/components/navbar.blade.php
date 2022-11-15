@@ -36,7 +36,7 @@
               </p>
               <ul class="dropdown-menu">
                   @foreach ($categories as $category)
-                  <li><a class="dropdown-item text-white" href="{{route('categoryShow', compact('category'))}}">{{$category->name}}</a></li>
+                  <li><a class="dropdown-item text-white hover-underline-animation" href="{{route('categoryShow', compact('category'))}}">{{$category->name}}</a></li>
                   @endforeach
               </ul>
           </div>
@@ -78,16 +78,16 @@
       </ul>
             
       <div class="nav-item dropdown mx-3">
-            <a class="nav-link text-wh dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="hover-underline-animation">{{Auth::user()->name}}</span></a>
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="hover-underline-animation text-white">{{Auth::user()->name}}</span></a>
             <div class="dropdown-menu dropdown-menu-end" id="userdropjs">
-              <li><a href="#" class="hover-underline-animation dropdown-item userdropjs-item">{{__('ui.profilo')}}</a></li>
+              <li><a href="#" class="hover-underline-animation dropdown-item userdropjs-item text-white">{{__('ui.profilo')}}</a></li>
               <li>@if(Auth::user()->is_revisor)
-                <a href="{{route('indexRevisor')}}" id="noShow" class="hover-underline-animation dropdown-item userdropjs-item">{{__('ui.zonaRevisore')}}<span>{{App\Models\Announce::toBeRevisionedCount()}}
+                <a href="{{route('indexRevisor')}}" id="noShow" class="hover-underline-animation dropdown-item userdropjs-item text-white">{{__('ui.zonaRevisore')}}<span>{{App\Models\Announce::toBeRevisionedCount()}}
                   <span class="visually-hidden">unread messages</span>
                 </span></a>
               </li>             
               @endif
-              <li><a class="me-5 hover-underline-animation dropdown-item userdropjs-item" href="{{route('logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{__('ui.logout')}}</a>
+              <li><a class="me-5 hover-underline-animation dropdown-item userdropjs-item text-white" href="{{route('logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{__('ui.logout')}}</a>
                 <form id="logout-form" method="POST" class="d-none" action="{{route('logout')}}">
               @csrf
                 </form>
