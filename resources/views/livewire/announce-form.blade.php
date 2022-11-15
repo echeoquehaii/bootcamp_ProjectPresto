@@ -63,18 +63,20 @@
                             </div>
 
                             @if (!empty($images))
-                                <div class="row">
+                                <div class="row align-item-center">
                                     <div class="col-12">
-                                        <p>Anteprima foto</p>
-                                        <div class="raw border border-4 border-info rounded shadow py-4">
-                                            @foreach ($images as $key => $image)
-                                            <div class="col my-3">
-                                                <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}}); height:200px;"></div>
-                                                <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">Cancella</button>
-                                            </div>
-                                            @endforeach
-                                        </div>
+                                        <p class="text-white text-center">Anteprima foto</p>
                                     </div>
+                                    <div class="col-12">    
+                                            @foreach ($images as $key => $image)
+                                            
+                                                <div class="loadImg mt-customImg" style="background-image: url({{$image->temporaryUrl()}}); height:200px;"></div>
+
+                                                <button type="button" class="btnLogImg d-block text-center text-white mt-2 mx-auto" wire:click="removeImage({{$key}})">Cancella</button>
+                                            
+                                            @endforeach
+                                    </div>    
+                                    
                                 </div>
                             @endif  
 
