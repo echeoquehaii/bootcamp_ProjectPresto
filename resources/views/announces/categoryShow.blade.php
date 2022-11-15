@@ -1,11 +1,13 @@
 <x-layout>
 
     
-    <h1 class="text-center mt-custom">Ecco la tua categoria stellare: {{$category->name}}</h1>
+    
     
     <div class="container-fluid height">
         <div class="row mt-custom">
+            
             @forelse ($acceptedAnnounces as $announce)
+            <h1 class="text-center mt-3 pt-5 mb-5">Ecco la tua categoria stellare: {{$category->name}}</h1>
             <div class="col-12 col-md-4 mt-custom mx-0 card-height d-flex justify-content-center">
                 <div class="card0">
                     <div class="lines"></div>
@@ -29,15 +31,16 @@
                 </div> 
             </div>
             @empty
-                <p>Non ci sono oggetti di questa categoria!</p>
+                <h1 class=" text-wh d-flex justify-content-center mt-3 pt-5 mb-5">Non ci sono annunci per questa categoria</h4>
                 @auth
-                    <div class="container height">
-                        <a href="{{route('createAnnounce')}}"><button class="btn btn-warning">Inserisci annuncio</button></a>
+                    <div class="container d-flex justify-content-center mt-5">
+                        <a href="{{route('createAnnounce')}}"><button class=" btn btn-custom">Inserisci annuncio</button><i></i></a>
                     </div>
                 @endauth 
+
             @endforelse
         
-         </div> 
+        </div> 
     </div>
 
 {{--     <div class="container">

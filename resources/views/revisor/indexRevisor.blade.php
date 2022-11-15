@@ -3,10 +3,10 @@
     
     
     <h1 class="space text-center titles">{{$announce_to_check ? 'Annunci da revisionare' : 'Non ci sono annunci da revisionare'}} </h1>
+    <div class="container-fluid vh-100">
+        @if ($announce_to_check)
     
-    @if ($announce_to_check)
-    
-        <div class="container-fluid vh-100">
+      
             <div class="row align-items-center justify-content-evenly mt-custom1">
                 <div class="col-6">
                         <div class="swiper mySwiper">
@@ -67,6 +67,18 @@
                             @method('PATCH')
                                 <button type="submit" class="btn btn-customRevDen">Rifiuta</button>
                         </form>
+<<<<<<< HEAD
+                    </div>
+            </div>
+                    
+             
+    @endif
+    </div>
+    @if (session('message'))
+        <div class="alert alert-success">
+            {{ session('message') }}
+        </div>
+=======
                     </div>                  
             </div>     
     @endif
@@ -75,6 +87,7 @@
                     <div class="alert alert-success">
                         {{ session('message') }}
                     </div>
+>>>>>>> 9592e59ebcc306308f37743442f0211dd85b4e5c
     @endif
         </div>
 </x-layout>
