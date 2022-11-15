@@ -40,27 +40,34 @@
                 </div>
                    
                     <div class="col-12 col-md-4">
-                        <div class="text-center detText">
-                            <h5 class="card-title">Nome: {{$announce_to_check->name}}</h5>
-                            <p class="card-text">Venditore: {{$announce_to_check->user->name}}</p>
-                            <p class="card-text">Prezzo: {{$announce_to_check->price}} €</p>
-                            <p class="card-text">Posizione: {{$announce_to_check->location}}</p>
-                            <p class="card-text">Descrizione: {{$announce_to_check->description}}</p>
-                            <p class="card-text">Categoria: {{$announce_to_check->category->name}}</p>
+                        <div class="cardRev">       
+                            <div class="linesRev"></div>
+                                <div class="contentRev">
+                                    <div class="detText text-white">
+                                        <p class="card-text"><span class="fontRev">Nome:</span> {{$announce_to_check->name}}</p>
+                                        <p class="card-text"><span class="fontRev">Venditore:</span> {{$announce_to_check->user->name}}</p>
+                                        <p class="card-text"><span class="fontRev">Prezzo:</span> {{$announce_to_check->price}} €</p>
+                                        <p class="card-text"><span class="fontRev">Posizione:</span> {{$announce_to_check->location}}</p>
+                                        <p class="card-text"><span class="fontRev">Categoria:</span> {{$announce_to_check->category->name}}</p>
+                                        <p class="card-text"><span class="fontRev">Descrizione:</span> {{$announce_to_check->description}}</p>                                      
+                                    </div>
+                                </div>
                         </div>
                     </div>
+
                     <div class="col-12 col-md-12 mt-custom1 d-flex justify-content-evenly">
                         <form action="{{route('revisor.acceptAnnounce', ['announce'=>$announce_to_check])}}" method="POST">
                             @csrf
-                                @method('PATCH')
-                                    <button type="submit" class="btn btn-customRevAcc">Accetta</button>
+                            @method('PATCH')
+                                <button type="submit" class="btn btn-customRevAcc">Accetta</button>
                         </form>
 
                         <form action="{{route('revisor.rejectAnnounce', ['announce'=>$announce_to_check])}}" method="POST">
                             @csrf
-                                @method('PATCH')
-                                    <button type="submit" class="btn btn-customRevDen">Rifiuta</button>
+                            @method('PATCH')
+                                <button type="submit" class="btn btn-customRevDen">Rifiuta</button>
                         </form>
+<<<<<<< HEAD
                     </div>
             </div>
                     
@@ -71,5 +78,16 @@
         <div class="alert alert-success">
             {{ session('message') }}
         </div>
+=======
+                    </div>                  
+            </div>     
     @endif
+
+                @if (session('message'))
+                    <div class="alert alert-success">
+                        {{ session('message') }}
+                    </div>
+>>>>>>> 9592e59ebcc306308f37743442f0211dd85b4e5c
+    @endif
+        </div>
 </x-layout>
