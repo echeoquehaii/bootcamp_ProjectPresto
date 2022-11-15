@@ -81,9 +81,10 @@
               <li>@if(Auth::user()->is_revisor)
                 <a href="{{route('indexRevisor')}}" id="noShow" class="hover-underline-animation dropdown-item userdropjs-item">Zona revisore: <span>{{App\Models\Announce::toBeRevisionedCount()}}
                   <span class="visually-hidden">unread messages</span>
-                </span></a>             
-              @endif</li>
-              <li><a class=" me-5 hover-underline-animation dropdown-item" href="{{route('logout')}}" onclick="event.preventDefadivt();document.getElementById('logout-form').submit();">Logout</a>
+                </span></a>
+              </li>             
+              @endif
+              <li><a class="me-5 hover-underline-animation dropdown-item userdropjs-item" href="{{route('logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
                 <form id="logout-form" method="POST" class="d-none" action="{{route('logout')}}">
               @csrf
                 </form>
