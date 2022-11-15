@@ -10,7 +10,7 @@
                 <div class="card0">
                     <div class="lines"></div>
                     <div class="imgBx pb-0">
-                        <img src="{{!$announce->images()->get()->isEmpty() ? Storage::url($announce->images()->first()->path) : 'https://picsum.photos/200/300'}}" alt="" class="imageBx pb-0">
+                        <img src="{{!$announce->images()->get()->isEmpty() ? $announce->images()->first()->getUrl(400, 300) : 'https://picsum.photos/200/300'}}" alt="" class="imageBx pb-0">
                     </div>
                     <div class="content pb-2 pt-0">
                         <div class="details pb-2 pt-0">
