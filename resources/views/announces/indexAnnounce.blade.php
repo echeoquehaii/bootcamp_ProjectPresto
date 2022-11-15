@@ -16,11 +16,11 @@
                         <div class="details pb-2 pt-0">
                             <h2 class="cardTitle pb-4">{{$announce->name}}</h2>
                             <div class="data pb-2">
-                                <h3>Venditore: {{$announce->user->name}}</h3>
-                                <h3>Categoria: {{$announce->category->name}}</h3>
+                                <h3>{{__('ui.venditore')}} {{$announce->user->name}}</h3>
+                                <h3>{{__('ui.categoria')}} {{$announce->category->name}}</h3>
                             </div>
                             <div class="actionBtn pb-2">
-                                <a href="{{route('detAnnounce', compact('announce'))}}"><button>Vai al dettaglio</button></a>
+                                <a href="{{route('detAnnounce', compact('announce'))}}"><button>{{__('ui.dettaglio')}}</button></a>
                             </div>
                         </div>
         
@@ -31,7 +31,7 @@
             @empty
             <div class="col-12">
                 <div>
-                    <p>Non ci sono annunci per questo titolo</p>
+                    <p>{{__('ui.noAnnunci')}}</p>
                 </div>
             </div>
             @endforelse      

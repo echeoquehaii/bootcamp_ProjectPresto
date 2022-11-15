@@ -10,10 +10,18 @@ return [
     'cerca'=>'Search',
     'lingua'=>'Language',
     'profilo'=>'Profile',
-    'zonaRevisore'=>'reviewer area:',
+    'zonaRevisore'=>'Reviewer area:',
     'logout'=>'Logout',
     // end navbar
-    
+
+    // footer
+    'team'=>'The team:',
+    'lavoraConNoi'=>'Work with us',
+    'diventaRevisore'=>'Become an auditor',
+    'contattaci'=>'Contact us:',
+    'indirizzo'=>'Address:',
+    // end footer
+
     // welcome
     'welcome1'=>'Are you looking for a star?',
     'welcome2'=>'Find your favorite on our portal!',
@@ -27,5 +35,70 @@ return [
     'welcome8'=>'Look Here!',
     'createAnnounce'=> 'Insert your ad',
     // fine welcome
-    'allAnnounces'=> 'Here\'s all our announces',
+
+    // category show
+    'stellare'=>'Here is your star category:',
+    // end category show
+
+    // index Announce
+    'allAnnounces'=> 'Here are the announcements present!',
+    'venditore'=>'Seller:',
+    'categoria'=>'Category:',
+    'dettaglio'=>'Go to detail',
+    'noAnnunci'=>'There are no ads for this title',
+
+    // fine index announce
+
+    // det announce
+
+    'dettaglioDi'=>'The detail of',
+    'nome'=>'Name:',
+    'prezzo'=>'Price:',
+    'posizione'=>'Position:',
+    'descrizione'=>'Description:',
+
+    // end det announce
+
+    // announce form
+
+    'creaAnnunc'=>'CREATE YOUR AD',
+    'nomeStella'=>'Star Name:',
+    'sceltaCategoria'=>'Choose a category:',
+    'anteprimaFoto'=>'Photo preview',
+    'caricaAnnuncio'=>'Upload your ad',
+    'cancella'=>'Cancel',
+    
+
+
+    // end announce form
+
+    //  profile form
+    'età'=>'Age:',
+
+    // end profile form
+
+    // index revisor
+    'annunciDaRevisionare'=>'Annunci da revisionare',
+    'NonCiSono'=>'Non ci sono annunci da revisionare',
+    'accetta'=>'Accept',
+    'rifiuta'=>'Decline',
+
+    // end index revisor
+
+    // register
+    'registrati'=>'SIGN IN',
+    'email'=>'Email address:',
+    'nomeCognome'=>'Name and surname:',
+    'password'=>'Password:',
+    'passwordConf'=>'Confirm Password:',
+    'registrati2'=>'Sign in',
+
+
+    // end register
+
+    // login
+
+    'signIn'=>'SIGN IN',
+    'logOn'=>'Don\'t have an account yet? Sign in!'
+    // end login
 ];

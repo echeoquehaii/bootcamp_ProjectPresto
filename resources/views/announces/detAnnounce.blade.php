@@ -1,6 +1,6 @@
 <x-layout>
     
-    <h1 class="mt-custom text-center">Il dettaglio di {{$announce->name}}</h1>
+    <h1 class="mt-custom text-center">{{__('ui.dettaglioDi')}} {{$announce->name}}</h1>
     <div class="container height">
         <div class="row vh-100">
             <div class="col-12">
@@ -36,11 +36,11 @@
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <div class="text-center mt-5 detText glass">
-                            <h3 class="card-title">Nome: {{$announce->name}}</h5>
-                            <p class="card-text fs-4">Venditore: {{$announce->user->name}}</p>
-                            <p class="card-text fs-4">Prezzo: {{$announce->price}} €</p>
-                            <p class="card-text fs-4">Posizione: {{$announce->location}}</p>
-                            <p class="card-text fs-4">Categoria: {{$announce->category->name}}</p>
+                            <h3 class="card-title">{{__('ui.nome')}} {{$announce->name}}</h5>
+                            <p class="card-text fs-4">{{__('ui.venditore')}} {{$announce->user->name}}</p>
+                            <p class="card-text fs-4">{{__('ui.prezzo')}} {{$announce->price}} €</p>
+                            <p class="card-text fs-4">{{__('ui.posizione')}} {{$announce->location}}</p>
+                            <p class="card-text fs-4">{{__('ui.categoria')}} {{$announce->category->name}}</p>
                         </div>
 
                     </div>
@@ -48,7 +48,7 @@
                     <div class="col-12 col-md-6">
 
                         <div class="text-center mt-5 detText glass">
-                            <p class="card-text fs-4">Descrizione: {{$announce->description}}</p>
+                            <p class="card-text fs-4">{{__('ui.descrizione')}} {{$announce->description}}</p>
                         </div>
 
 

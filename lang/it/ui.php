@@ -14,10 +14,51 @@ return [
     'logout'=>'Logout',
 
     // end navbar
+
     // footer
-    
+    'team'=>'Il team:',
+    'lavoraConNoi'=>'Lavora con noi',
+    'diventaRevisore'=>'Diventa Revisore',
+    'contattaci'=>'Contattaci:',
+    'indirizzo'=>'Indirizzo:',
     // end footer
-    'allAnnounces'=> 'inserisci l\'annuncio',
+
+    // index Announce
+    'allAnnounces'=> 'Ecco gli annunci presenti!',
+    'venditore'=>'Venditore:',
+    'categoria'=>'Categoria:',
+    'dettaglio'=>'Vai al dettaglio',
+    'noAnnunci'=>'Non ci sono annunci per questo titolo',
+
+    // fine index announce
+
+    // category show
+    'stellare'=>'Ecco la tua categoria stellare:',
+    // end category show
+
+    // det announce
+
+    'dettaglioDi'=>'Il dettaglio di',
+    'nome'=>'Nome:',
+    'prezzo'=>'Prezzo:',
+    'posizione'=>'Posizione:',
+    'descrizione'=>'Descrizione:',
+
+    // end det announce
+
+    // announce form
+
+    'creaAnnunc'=>'CREA IL TUO ANNUNCIO',
+    'nomeStella'=>'Nome Stella:',
+    'sceltaCategoria'=>'Scegli una categoria:',
+    'anteprimaFoto'=>'Anteprima foto',
+    'caricaAnnuncio'=>'Carica l\'annuncio',
+    'cancella'=>'Cancella',
+    
+
+
+    // end announce form
+    
     // welcome
     'createAnnounce'=> 'Inserisci l\'annuncio',
     'welcome1'=>'Stai cercando una stella?',
@@ -31,4 +72,34 @@ return [
     'welcome7'=>' Guarda gli ultimi annunci presenti!',
     'welcome8'=>'Guarda qui!',
      // fine welcome
+
+    //  profile form
+    'età'=>'Età:',
+
+    // end profile form
+
+    // index revisor
+    'annunciDaRevisionare'=>'Annunci da revisionare',
+    'NonCiSono'=>'Non ci sono annunci da revisionare',
+    'accetta'=>'Accetta',
+    'rifiuta'=>'Rifiuta',
+
+    // end index revisor
+
+    // register
+    'registrati'=>'REGISTRATI',
+    'email'=>'Indirizzo email:',
+    'nomeCognome'=>'Nome e Cognome:',
+    'password'=>'Password:',
+    'passwordConf'=>'Conferma Password:',
+    'registrati2'=>'Registrati',
+
+
+    // end register
+
+    // login
+
+    'signIn'=>'SIGN IN',
+    'logOn'=>'Non hai ancora un account? Registrati!'
+    // end login
 ];

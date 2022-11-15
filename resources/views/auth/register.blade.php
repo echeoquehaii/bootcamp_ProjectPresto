@@ -20,33 +20,33 @@
                             
                         <form method="POST" action="{{route('register')}}">
     
-                                <h2 class="text-wh text-center mb-4">REGISTRATI</h2>
+                                <h2 class="text-wh text-center mb-4">{{__('ui.registrati')}}</h2>
     
                                 @csrf
                     
                                 <div class="mb-4 inputBox">
                                     <input type="email"  name="email" required="required">
-                                    <label for="exampleInputEmail1" class="form-label">Indirizzo email:</label>
+                                    <label for="exampleInputEmail1" class="form-label">{{__('ui.email')}}</label>
                                     <i></i>                                   
                                 </div>
                             
                                 <div class="mb-2 inputBox">
                                     <input type="text"  name="name" required="required">
-                                    <label for="exampleInputPassword1" class="form-label">Nome e Cognome:</label>
+                                    <label for="exampleInputPassword1" class="form-label">{{__('ui.nomeCognome')}}</label>
                                     <i></i>                                   
                                 </div>
                                 <div class="mb-2 inputBox">
                                     <input type="password"  name="password" required="required">
-                                    <label for="exampleInputPassword1" class="form-label">Password:</label>
+                                    <label for="exampleInputPassword1" class="form-label">{{__('ui.password')}}</label>
                                     <i></i>                                   
                                 </div>
                                 <div class="mb-2 inputBox">
                                     <input type="password"  name="password_confirmation" required="required">
-                                    <label for="exampleInputPassword1" class="form-label">Conferma Password:</label>
+                                    <label for="exampleInputPassword1" class="form-label">{{__('ui.passwordConf')}}</label>
                                     <i></i>                                   
                                 </div>
                                 
-                                <button type="submit" class="btnLogForm">Registrati</button>
+                                <button type="submit" class="btnLogForm">{{__('ui.registrati2')}}</button>
                             </form>
                     </div>                       
                 </div>

@@ -2,7 +2,7 @@
 
     
     
-    <h1 class="space text-center titles">{{$announce_to_check ? 'Annunci da revisionare' : 'Non ci sono annunci da revisionare'}} </h1>
+    <h1 class="space text-center titles">{{$announce_to_check ? 'Annunci da revisionare' : 'Non ci sono annunci da revisionare' }} </h1>
     <div class="container-fluid vh-100">
         @if ($announce_to_check)
     
@@ -44,12 +44,12 @@
                             <div class="linesRev"></div>
                                 <div class="contentRev">
                                     <div class="detText text-white">
-                                        <p class="card-text"><span class="fontRev">Nome:</span> {{$announce_to_check->name}}</p>
-                                        <p class="card-text"><span class="fontRev">Venditore:</span> {{$announce_to_check->user->name}}</p>
-                                        <p class="card-text"><span class="fontRev">Prezzo:</span> {{$announce_to_check->price}} €</p>
-                                        <p class="card-text"><span class="fontRev">Posizione:</span> {{$announce_to_check->location}}</p>
-                                        <p class="card-text"><span class="fontRev">Categoria:</span> {{$announce_to_check->category->name}}</p>
-                                        <p class="card-text"><span class="fontRev">Descrizione:</span> {{$announce_to_check->description}}</p>                                      
+                                        <p class="card-text"><span class="fontRev">{{__('ui.nome')}}</span> {{$announce_to_check->name}}</p>
+                                        <p class="card-text"><span class="fontRev">{{__('ui.venditore')}}</span> {{$announce_to_check->user->name}}</p>
+                                        <p class="card-text"><span class="fontRev">{{__('ui.prezzo')}}</span> {{$announce_to_check->price}} €</p>
+                                        <p class="card-text"><span class="fontRev">{{__('ui.posizione')}}</span> {{$announce_to_check->location}}</p>
+                                        <p class="card-text"><span class="fontRev">{{__('ui.categoria')}}</span> {{$announce_to_check->category->name}}</p>
+                                        <p class="card-text"><span class="fontRev">{{__('ui.descrizione')}}</span> {{$announce_to_check->description}}</p>                                      
                                     </div>
                                 </div>
                         </div>
@@ -59,26 +59,14 @@
                         <form action="{{route('revisor.acceptAnnounce', ['announce'=>$announce_to_check])}}" method="POST">
                             @csrf
                             @method('PATCH')
-                                <button type="submit" class="btn btn-customRevAcc">Accetta</button>
+                                <button type="submit" class="btn btn-customRevAcc">{{__('ui.accetta')}}</button>
                         </form>
 
                         <form action="{{route('revisor.rejectAnnounce', ['announce'=>$announce_to_check])}}" method="POST">
                             @csrf
                             @method('PATCH')
-                                <button type="submit" class="btn btn-customRevDen">Rifiuta</button>
+                                <button type="submit" class="btn btn-customRevDen">{{__('ui.rifiuta')}}</button>
                         </form>
-<<<<<<< HEAD
-                    </div>
-            </div>
-                    
-             
-    @endif
-    </div>
-    @if (session('message'))
-        <div class="alert alert-success">
-            {{ session('message') }}
-        </div>
-=======
                     </div>                  
             </div>     
     @endif
@@ -87,7 +75,6 @@
                     <div class="alert alert-success">
                         {{ session('message') }}
                     </div>
->>>>>>> 9592e59ebcc306308f37743442f0211dd85b4e5c
     @endif
         </div>
 </x-layout>
