@@ -4,24 +4,6 @@ let navLink = document.querySelectorAll('.nav-link');
 let buttonUpScroll = document.querySelector('#buttonUpScroll');
 let noShows = document.querySelectorAll('#noShow');
 
-// Responsiveness Navbar, sfondo dropdown
-let navdrop = document.querySelector('#userdropjs');
-let navdropitem = document.querySelector('.userdropjs-item');
-
-
-const mq = window.matchMedia( "(min-width: 500px)" );
-
-if (mq.matches) {
-    // window width is at least 500px
-    } else {
-    navdrop.classList.remove('dropdown-menu-end');
-    navdrop.classList.add('dropdown-mobile');
-    navdrop.classList.add('dropdown-center');
-    navdropitem.classList.add('dropdown-item-mobile');
-    // window width is less than 500px
-    }
-
-
 window.addEventListener('scroll' , ()=>{
     let scrolled = window.scrollY;
     if(scrolled > 0){
@@ -53,4 +35,22 @@ search.onclick = function(){
 close.onclick = function(){
     searchBox.classList.remove('active');
 }
+
+// Responsiveness Navbar, sfondo dropdown
+let navdrop = document.querySelector('#userdropjs');
+let navdropitem = document.querySelector('.userdropjs-item');
+
+
+const mq = window.matchMedia( "(min-width: 500px)" );
+
+if (mq.matches) {
+    // window width is at least 500px
+    } else {
+    navdrop.classList.remove('dropdown-menu-end');
+    navdrop.classList.add('dropdown-mobile');
+    navdrop.classList.add('dropdown-center');
+    navdropitem.classList.add('dropdown-item-mobile');
+    // window width is less than 500px
+    }
+
 
