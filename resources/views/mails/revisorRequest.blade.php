@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Presto.it</title>
 </head>
-<body style="background-color:rgb(64, 0, 88)">
+<body style="background-color:rgb(75, 0, 102)">
 
 
 
@@ -19,9 +19,15 @@
         <h2 style="color: white">Ecco i suoi dati: </h2>
         <p style="color: white">Nome: {{$user->name}}</p>
         <p style="color: white">Email: {{$user->email}}</p>
+        <p style="color: white">Età: {{$user->profile->age}}</p>
+        <p style="color: white">Indirizzo: {{$user->profile->address}}</p>
+        <p style="color: white">Descrizione: {{$user->profile->description}}</p>
         <p style="color: white">Se vuoi renderlo revisore clicca qui:</p>
         <a style="color: white" href="{{route('makeRevisor' , compact('user'))}}"> <button>Rendi revisore!</button></a>
     </header>
+
+
+
 
     <footer style="margin-bottom: 0px"><p style="color: white">Presto.it 2022 © Ogni diritto è riservato</p> </footer>
 
