@@ -31,9 +31,9 @@ class ProfileForm extends Component
  */        $this->validate();
 
         if(Auth::user()->is_revisor == 1){
-            return redirect(route('profileRevisor'))->with('message', 'Sei già revisore, richiesta rifiutata!');
+            return redirect(route('profileRevisor'))->with('message', trans('ui.revisoreSi'));
         }elseif($profile_user_id){
-            return redirect(route('profileRevisor'))->with('message', 'Hai già inviato la richiesta, aspetta una risposta!');
+            return redirect(route('profileRevisor'))->with('message', trans('ui.revisoreNo'));
         }else{
             Profile::create([
                 'age'=>$this->age,
@@ -43,7 +43,7 @@ class ProfileForm extends Component
             ]);
 
             Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
-            return redirect(route('profileRevisor'))->with('message', 'Complimenti! Richiesta inviata con successo!');
+            return redirect(route('profileRevisor'))->with('message', trans('ui.revisoreInv'));
         }
 
 

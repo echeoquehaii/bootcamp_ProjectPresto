@@ -20,12 +20,12 @@ class RevisorController extends Controller
 
     public function acceptAnnounce(Announce $announce){
         $announce->setAccepted(true);
-        return redirect()->back()->with('message', 'Complimenti, hai accettato l\'annuncio');
+        return redirect()->back()->with('message', trans('ui.annuncioAccettato'));
     }
 
     public function rejectAnnounce(Announce $announce){
         $announce->setAccepted(false);
-        return redirect()->back()->with('message', 'Complimenti, hai rifiutato l\'annuncio');
+        return redirect()->back()->with('message', trans('ui.annuncioRifiutato'));
     }
 
     public function profileRevisor(){
@@ -43,7 +43,7 @@ class RevisorController extends Controller
  */
     public function makeRevisor(User $user){
         Artisan::call('presto:makeUserRevisor', ["email"=>$user->email]);
-        return redirect('/')->with('message', 'Complimenti! L\'utente è diventato revisore!');
+        return redirect('/')->with('message', trans('ui.diventatoRevisore'));
     }
 
   

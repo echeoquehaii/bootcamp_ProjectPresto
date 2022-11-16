@@ -5,8 +5,12 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\Announce;
 use App\Models\Category;
+use App\Jobs\RemoveFaces;
 use App\Jobs\ResizeImage;
+use App\Jobs\AddWatermark;
 use Livewire\WithFileUploads;
+use App\Jobs\GoogleVisionLabelImage;
+use App\Jobs\GoogleVisionSafeSearch;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 
@@ -44,13 +48,18 @@ class AnnounceForm extends Component
                 $newFileName = "announces/{$this->announce->id}";
                 $newImage = $this->announce->images()->create(['path' => $image->store($newFileName, 'public')]);
 
-                dispatch(new ResizeImage($newImage->path, 400, 300));
+                RemoveFaces::withChain([
+                    new ResizeImage($newImage->path, 400, 300),
+                    new GoogleVisionSafeSearch($newImage->id),  
+                    new GoogleVisionLabelImage($newImage->id),  
+/*                  new AddWatermark($newImage->id),   */
+                ])->dispatch($newImage->id);
             }
 
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
 
-        session()->flash('message', 'Annuncio in attesa di revisione');
+        session()->flash('message', trans('ui.attesaRevisione'));
         redirect(route('indexAnnounce'));
 
 
