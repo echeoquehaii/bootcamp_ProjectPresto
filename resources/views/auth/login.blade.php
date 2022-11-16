@@ -20,25 +20,25 @@
                             
                             <form method="POST" action="{{route('login')}}">
 
-                                <h2 class="text-wh text-center mb-4">SIGN IN</h2>
+                                <h2 class="text-wh text-center mb-4">{{__('ui.signIn')}}</h2>
 
                                 @csrf
                     
                                 <div class="mb-4 inputBox">
                                     <input type="email"  name="email" required="required">
-                                    <label for="exampleInputEmail1" class="form-label">Indirizzo email</label>
+                                    <label for="exampleInputEmail1" class="form-label">{{__('ui.email')}}</label>
                                     <i></i>                                   
                                 </div>
                             
                                 <div class="mb-2 inputBox">
                                     <input type="password"  name="password" required="required">
-                                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                                    <label for="exampleInputPassword1" class="form-label">{{__('ui.password')}}</label>
                                     <i></i>                                   
                                 </div>
                                 <div class="links">
-                                    <a href="{{route('register')}}">Non hai ancora un account? Registrati!</a>
+                                    <a href="{{route('register')}}">{{__('ui.logOn')}}</a>
                                 </div>
-                                <button type="submit" class="btnLog">Login</button>
+                                <button type="submit" class="btnLog">{{__('ui.login')}}</button>
                             </form>
                     </div>                       
                 </div>

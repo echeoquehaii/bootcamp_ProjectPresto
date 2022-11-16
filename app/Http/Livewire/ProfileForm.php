@@ -13,6 +13,9 @@ class ProfileForm extends Component
     public $age;
     public $address;
     public $description;
+    public $userAge;
+    public $userAddress;
+    public $userDescription;
     public $user_id;
 
     public function storeProfile(){
@@ -20,6 +23,8 @@ class ProfileForm extends Component
  */
         $userID=Auth::user()->id;
         $userRev=Auth::user()->is_revisor;
+        
+        
 
         $profile_user_id = Profile::where('user_id', $userID)->pluck('user_id')->first();
 /*          dd($profile_user_id, $userID, $userRev);

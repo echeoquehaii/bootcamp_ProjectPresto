@@ -1,0 +1,15 @@
+@switch(Config::get('app.locale'))
+    @case('it')
+        {{$category->it}}
+        @break
+    @case('en')
+        {{$category->en}}
+        @break
+    @case('es')
+        {{$category->es}}
+        @break
+    @case('no')
+        {{$category->no}}
+        @break
+    @default
+@endswitch

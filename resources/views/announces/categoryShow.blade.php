@@ -6,7 +6,7 @@
     <div class="container-fluid height">
         <div class="row mt-custom">
             @if ($acceptedAnnounces->isNotEmpty())
-            <h1 class="text-center mt-3 pt-5 mb-5">Ecco la tua categoria stellare: {{$category->name}}</h1>
+            <h1 class="text-center mt-3 pt-5 mb-5">{{__('ui.stellare')}} {{$category->name}}</h1>
             @foreach ($acceptedAnnounces as $announce)
             
             <div class="col-12 col-md-4 mt-custom mx-0 card-height d-flex justify-content-center">
@@ -19,11 +19,11 @@
                         <div class="details pb-2 pt-0">
                             <h2 class="cardTitle pb-4">{{$announce->name}}</h2>
                             <div class="data pb-2">
-                                <h3>Venditore: {{$announce->user->name}}</h3>
-                                <h3>Categoria: {{$announce->category->name}}</h3>
+                                <h3>{{__('ui.venditore')}} {{$announce->user->name}}</h3>
+                                <h3>{{__('ui.categoria')}}{{$announce->category->name}}</h3>
                             </div>
                             <div class="actionBtn pb-2">
-                                <a href="{{route('detAnnounce', compact('announce'))}}"><button>Vai al dettaglio</button></a>
+                                <a href="{{route('detAnnounce', compact('announce'))}}"><button>{{__('ui.dettaglio')}}</button></a>
                             </div>
                         </div>
         
@@ -32,11 +32,14 @@
                 </div> 
             </div>
             @endforeach
-            @else
-            <h1 class=" text-wh d-flex justify-content-center mt-3 pt-5 mb-5">Non ci sono annunci per questa categoria</h4>
+            @else               
+            <h1 class=" text-wh d-flex justify-content-center mt-3 pt-5 mb-5">{{__('ui.noAnnunci')}}</h4>
+                <div class="col-12 d-flex justify-content-center">    
+                    <img src="/img/sleepy.gif" alt="" class="img-filter">
+                </div>
                 @auth
                     <div class="container d-flex justify-content-center mt-5">
-                        <a href="{{route('createAnnounce')}}"><button class=" btn btn-custom">Inserisci annuncio</button><i></i></a>
+                        <a href="{{route('createAnnounce')}}"><button class=" btn btn-custom">{{__('ui.createAnnounce')}}</button><i></i></a>
                     </div>
                 @endauth 
             @endif
