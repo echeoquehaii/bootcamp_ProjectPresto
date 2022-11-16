@@ -15,20 +15,20 @@ return [
     // end navbar
 
     // footer
-    'team'=>'The team:',
+    'team'=>'Our team:',
     'lavoraConNoi'=>'Work with us',
-    'diventaRevisore'=>'Become an auditor',
+    'diventaRevisore'=>'Become a revisor ',
     'contattaci'=>'Contact us:',
     'indirizzo'=>'Address:',
     // end footer
 
     // welcome
     'welcome1'=>'Are you looking for a star?',
-    'welcome2'=>'Find your favorite on our portal!',
+    'welcome2'=>'Find your favorite on our website!',
     'welcome3'=>'Import or find your favorite star!',
-    'welcome4'=>'On our portal you can place your announcements about your stars, or find the one that best suits you!
+    'welcome4'=>'On our website you can publish your own stars, or find the one that best suits you!
         Enter your ad in a few simple clicks and the game is done! 
-        or try to find the star you prefer among the ads and make it yours!',
+        or try to find your favourite star and make it yours!',
     'welcome5'=>'Log in and try our features!',
     'welcome6'=>'Please log in!',
     'welcome7'=>' Check out the latest ads!',
@@ -41,17 +41,17 @@ return [
     // end category show
 
     // index Announce
-    'allAnnounces'=> 'HERE ARE THE ANNOUNCEMENTS PRESENT!',
+    'allAnnounces'=> 'OUR ANNOUNCEMENTS!',
     'venditore'=>'Seller:',
     'categoria'=>'Category:',
-    'dettaglio'=>'Go to detail',
+    'dettaglio'=>'Details',
     'noAnnunci'=>'THERE ARE NO ADS FOR THIS TITLE',
 
     // fine index announce
 
     // det announce
 
-    'dettaglioDi'=>'The detail of',
+    'dettaglioDi'=>'Details of',
     'nome'=>'Name:',
     'prezzo'=>'Price:',
     'posizione'=>'Position:',
@@ -78,8 +78,8 @@ return [
     // end profile form
 
     // index revisor
-    'annunciDaRevisionare'=>'Annunci da revisionare',
-    'NonCiSono'=>'Non ci sono annunci da revisionare',
+    'annunciDaRevisionare'=>'Announces review',
+    'NonCiSono'=>'No announces to check',
     'accetta'=>'Accept',
     'rifiuta'=>'Decline',
 
@@ -98,19 +98,19 @@ return [
 
     // login
 
-    'signIn'=>'SIGN IN',
+    'signIn'=>'LOG IN',
     'logOn'=>'Don\'t have an account yet? Sign in!',
     // end login
 
     // messaggi
-    'revisoreSi'=>'Already a reviewer, request declined!',
-    'revisoreNo'=>'You have already sent the request, wait for an answer!',
+    'revisoreSi'=>'You\'re already a reviewer',
+    'revisoreNo'=>'You have already sent the request, wait for a reply!',
     'revisoreInv'=>'Well done! Request sent successfully!',
-    'revisioneSi'=>'Announcements to review',
-    'revisioneNo'=>'There are no ads to review',
+    'revisioneSi'=>'Announces review',
+    'revisioneNo'=>'No new announces to check',
     'attesaRevisione'=>'Announcement awaiting review',
-    'annuncioAccettato'=>'Congratulations, you have accepted the ad',
-    'annuncioRifiutato'=>'Congratulations, you have rejected the ad',
+    'annuncioAccettato'=>'Ad published!',
+    'annuncioRifiutato'=>'Ad rejected!',
     'diventatoRevisore'=>'Well done! The user has become a reviewer!',
 
     // end messaggi
