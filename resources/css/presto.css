@@ -1237,3 +1237,7 @@ height: 39px;
     filter: grayscale(1);
     border-radius: 20%;
 }
+
+.minHeight{
+    min-height: 100px;
+}

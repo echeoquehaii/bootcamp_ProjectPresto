@@ -2,7 +2,7 @@
 
 return [
     // navbar
-    'registrazione'=>'registration',
+    'registrazione'=>'Registration',
     'login'=>'Log in',
     'creaAnnuncio' =>'Create ad',
     'listaAnnunci'=>'Announcement list',
