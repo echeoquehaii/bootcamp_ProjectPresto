@@ -2,50 +2,50 @@
 
 return [
     // navbar
-    'registrazione'=>'registrering',
+    'registrazione'=>'Bli medlem',
     'login'=>'Logg in',
-    'creaAnnuncio' =>'Opprette annonse',
-    'listaAnnunci'=>'Kunngjøringsliste',
-    'categorie'=>'Kategori',
-    'cerca'=>'Nær',
+    'creaAnnuncio' =>'Ny annonse',
+    'listaAnnunci'=>'Annonser',
+    'categorie'=>'Kategorier',
+    'cerca'=>'Søk',
     'lingua'=>'Språk',
-    'profilo'=>'Profil',
-    'zonaRevisore'=>'Anmelderområdet:',
+    'profilo'=>'Konto',
+    'zonaRevisore'=>'Kontrollørområdet:',
     'logout'=>'Logg ut',
     // end navbar
 
      // footer
      'team'=>'Laget:',
      'lavoraConNoi'=>'Jobb med oss',
-     'diventaRevisore'=>'Bli revisor',
+     'diventaRevisore'=>'Bli kontrollør',
      'contattaci'=>'Kontakt oss:',
      'indirizzo'=>'Adresse:',
      // end footer
 
     // welcome
-    'createAnnounce'=>'legg ut annonsen din',
+    'createAnnounce'=>'Legg ut annonsen',
     'welcome1'=>'Leter du etter en stjerne?',
-    'welcome2'=>'Finn din favoritt på vår portal!',
+    'welcome2'=>'Finn din favoritt!',
     'welcome3'=>'Importer eller finn din favorittstjerne!',
-    'welcome4'=>'På vår portal kan du legge inn kunngjøringene dine angående stjernene dine, eller finne den som passer best for deg!
-    Skriv inn annonsen din med noen få enkle klikk og spillet er ferdig!
-    eller prøv å finne stjernen du foretrekker blant annonsene og gjør den til din!',
-    'welcome5'=>'Logg inn og prøv funksjonene våre!',
-    'welcome6'=>'Vennligst Logg inn!',
+    'welcome4'=>'På vår portal kan du legge ut stjernene dine, eller finne den som passer best for deg!
+    Skriv inn annonsen din med noen få enkle klikk!
+    Eller finn din favorit-stjerne blant annonsene og gjør den din!',
+    'welcome5'=>'Logg inn og opplever det!',
+    'welcome6'=>'Logg inn!',
     'welcome7'=>'Sjekk ut de siste annonsene!',
     'welcome8'=>'Se her!',
     // fine welcome
 
     // category show
-    'stellare'=>'Her er stjernekategorien din:',
+    'stellare'=>'Stjernen i kategorien',
     // end category show
 
     // index Announce
-    'allAnnounces'=> 'Her er kunngjøringene tilstede!',
+    'allAnnounces'=> 'VÅRES ANNONSER',
     'venditore'=>'Selger:',
     'categoria'=>'Kategori:',
-    'dettaglio'=>'Gå til detaljer',
-    'noAnnunci'=>'Det er ingen annonser for denne tittelen',
+    'dettaglio'=>'Finn ut mer',
+    'noAnnunci'=>'Ingen matchende stjernen!',
     // fine index announce
 
     // det announce
@@ -60,7 +60,7 @@ return [
 
     // announce form
 
-    'creaAnnunc'=>'LAG ANNONSEN DIN',
+    'creaAnnunc'=>'LAST OPP STJERNEN DIN',
     'nomeStella'=>'Stjernenavn:',
     'sceltaCategoria'=>'Velg en kategori:',
     'anteprimaFoto'=>'Forhåndsvisning av bilde',
@@ -77,20 +77,19 @@ return [
     // end profile form
 
     // index revisor
-    'annunciDaRevisionare'=>'Annunci da revisionare',
-    'NonCiSono'=>'Non ci sono annunci da revisionare',
-    'accetta'=>'Aksepterer',
-    'rifiuta'=>'Avslå',
-
+    'annunciDaRevisionare'=>'Annonser å kontrollere',
+    'NonCiSono'=>'Det er ingen annonser å kontrollere',
+    'accetta'=>'Godkjenn',
+    'rifiuta'=>'Avvis',
     // end index revisor
 
     // register
-    'registrati'=>'LOGG INN',
-    'email'=>'Epostadresse:',
+    'registrati'=>'OPPRETT NY KONTO',
+    'email'=>'E-postadresse:',
     'nomeCognome'=>'Fornavn og etternavn:',
     'password'=>'Passord:',
     'passwordConf'=>'Bekreft passord:',
-    'registrati2'=>'Logg inn',
+    'registrati2'=>'Oppret bruker',
 
 
     // end register
@@ -98,19 +97,19 @@ return [
     // login
 
     'signIn'=>'LOGG INN',
-    'logOn'=>'Har du ikke en konto ennå? Logg inn!',
+    'logOn'=>'Har du ikke en konto ennå? Bli medlem!',
     // end login
 
     // messaggi
-    'revisoreSi'=>'Du er allerede anmelder, forespørselen ble avvist!',
-    'revisoreNo'=>'Du har allerede sendt forespørselen, vent på svar!',
-    'revisoreInv'=>'Bra gjort! Forespørselen ble sendt!',
-    'revisioneSi'=>'Kunngjøringer til vurdering',
-    'revisioneNo'=>'Det er ingen annonser å vurdere',
-    'attesaRevisione'=>'Kunngjøring avventer vurdering',
-    'annuncioAccettato'=>'Gratulerer, du har godtatt annonsen',
-    'annuncioRifiutato'=>'Gratulerer, du har avvist annonsen',
-    'diventatoRevisore'=>'Bra gjort! Brukeren har blitt anmelder!',
+    'revisoreSi'=>'Du er allerede kontrollør!',
+    'revisoreNo'=>'Du har allerede sendt forespørselen, vent på svaret!',
+    'revisoreInv'=>'Forespørselen ble sendt!',
+    'revisioneSi'=>'Annonser å kontrollere',
+    'revisioneNo'=>'Det er ingen annonser å kontrollere',
+    'attesaRevisione'=>'Annonser ble sendt til kontroll',
+    'annuncioAccettato'=>'Annonsen godkjent!',
+    'annuncioRifiutato'=>'Annonsen avvist!',
+    'diventatoRevisore'=>'Brukeren har blitt anmelder!',
 
     // end messaggi
 ];
