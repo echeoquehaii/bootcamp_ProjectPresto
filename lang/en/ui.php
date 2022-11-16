@@ -99,6 +99,21 @@ return [
     // login
 
     'signIn'=>'SIGN IN',
-    'logOn'=>'Don\'t have an account yet? Sign in!'
+    'logOn'=>'Don\'t have an account yet? Sign in!',
     // end login
+
+    // messaggi
+    'revisoreSi'=>'Already a reviewer, request declined!',
+    'revisoreNo'=>'You have already sent the request, wait for an answer!',
+    'revisoreInv'=>'Well done! Request sent successfully!',
+    'revisioneSi'=>'Announcements to review',
+    'revisioneNo'=>'There are no ads to review',
+    'attesaRevisione'=>'Announcement awaiting review',
+    'annuncioAccettato'=>'Congratulations, you have accepted the ad',
+    'annuncioRifiutato'=>'Congratulations, you have rejected the ad',
+    'diventatoRevisore'=>'Well done! The user has become a reviewer!',
+
+    // end messaggi
+
+    
 ];

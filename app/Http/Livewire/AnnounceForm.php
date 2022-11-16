@@ -50,7 +50,7 @@ class AnnounceForm extends Component
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
 
-        session()->flash('message', 'Annuncio in attesa di revisione');
+        session()->flash('message', trans('ui.attesaRevisione'));
         redirect(route('indexAnnounce'));
 
 

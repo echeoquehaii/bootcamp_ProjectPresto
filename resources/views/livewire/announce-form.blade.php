@@ -3,7 +3,7 @@
     <div class="container-fluid mb-5 height space">
         <div class="row">
             <div class="col-12 d-flex justify-content-center">
-                <div class="formAnnounce my-5">       
+                <div class="formAnnounce my-5 ">       
                     <div class="lines"></div>
                     <div class="content">
                         <form wire:submit.prevent="storeAnnounce">
@@ -22,7 +22,7 @@
                             <select class="@error('category') is-invalid @enderror btnLogDrop" wire:model.defer="category" id="">
                                 <option value="">{{__('ui.sceltaCategoria')}}</option>
                                 @foreach($categories as $category)
-                                    <option value="{{$category->id}}">{{$category->name}}</option>
+                                    <option value="{{$category->id}}"><x-categoriesLocale :category="$category"/></option>
                                 @endforeach
                             </select>
                                 <div class="text-white">
@@ -64,10 +64,10 @@
 
                             @if (!empty($images))
                                 <div class="row align-item-center">
-                                    <div class="col-12">
+                                    <div class="col-12 col-md-12">
                                         <p class="text-white text-center">{{__('ui.anteprimaFoto')}}</p>
                                     </div>
-                                    <div class="col-12">    
+                                    <div class="col-12 col-md-12">    
                                             @foreach ($images as $key => $image)
                                             
                                                 <div class="loadImg mt-customImg" style="background-image: url({{$image->temporaryUrl()}}); height:200px;"></div>

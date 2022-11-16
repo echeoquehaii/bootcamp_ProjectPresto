@@ -703,7 +703,7 @@ a:hover i::before {
 }
 
 .height{
-    min-height: 110vh;
+    min-height: 110px;
 }
 
 /* padding zona revisore */

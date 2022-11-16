@@ -100,6 +100,21 @@ return [
     // login
 
     'signIn'=>'SIGN IN',
-    'logOn'=>'¿Aún no tienes una cuenta? ¡Iniciar sesión!'
+    'logOn'=>'¿Aún no tienes una cuenta? ¡Iniciar sesión!',
     // end login
+    
+    // messaggi
+    'revisoreSi'=>'Ya eres revisor, ¡solicitud rechazada!',
+    'revisoreNo'=>'Ya has enviado la solicitud, ¡espera una respuesta!',
+    'revisoreInv'=>'¡Bien hecho! ¡Solicitud enviada con éxito!',
+    'revisioneSi'=>'Anuncios para revisar',
+    'revisioneNo'=>'No hay anuncios para revisar',
+    'attesaRevisione'=>'Anuncio pendiente de revisión',
+    'annuncioAccettato'=>'Enhorabuena, has aceptado el anuncio',
+    'annuncioRifiutato'=>'Enhorabuena, ha rechazado el anuncio',
+    'diventatoRevisore'=>'¡Bien hecho! ¡El usuario se ha convertido en revisor!',
+
+    // end messaggi
+
+    
 ];

@@ -43,6 +43,7 @@ return [
     'posizione'=>'Posizione:',
     'descrizione'=>'Descrizione:',
 
+
     // end det announce
 
     // announce form
@@ -99,6 +100,21 @@ return [
     // login
 
     'signIn'=>'SIGN IN',
-    'logOn'=>'Non hai ancora un account? Registrati!'
+    'logOn'=>'Non hai ancora un account? Registrati!',
     // end login
+
+    // messaggi
+    'revisoreSi'=>'Sei già revisore, richiesta rifiutata!',
+    'revisoreNo'=>'Hai già inviato la richiesta, aspetta una risposta!',
+    'revisoreInv'=>'Complimenti! Richiesta inviata con successo!',
+    'revisioneSi'=>'Annunci da revisionare',
+    'revisioneNo'=>'Non ci sono annunci da revisionare',
+    'attesaRevisione'=>'Annuncio in attesa di revisione',
+    'annuncioAccettato'=>'Complimenti, hai accettato l\'annuncio',
+    'annuncioRifiutato'=>'Complimenti, hai rifiutato l\'annuncio',
+    'diventatoRevisore'=>'Complimenti! L\'utente è diventato revisore!',
+
+    // end messaggi
+
+    
 ];

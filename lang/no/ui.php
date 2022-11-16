@@ -98,6 +98,19 @@ return [
     // login
 
     'signIn'=>'LOGG INN',
-    'logOn'=>'Har du ikke en konto ennå? Logg inn!'
+    'logOn'=>'Har du ikke en konto ennå? Logg inn!',
     // end login
+
+    // messaggi
+    'revisoreSi'=>'Du er allerede anmelder, forespørselen ble avvist!',
+    'revisoreNo'=>'Du har allerede sendt forespørselen, vent på svar!',
+    'revisoreInv'=>'Bra gjort! Forespørselen ble sendt!',
+    'revisioneSi'=>'Kunngjøringer til vurdering',
+    'revisioneNo'=>'Det er ingen annonser å vurdere',
+    'attesaRevisione'=>'Kunngjøring avventer vurdering',
+    'annuncioAccettato'=>'Gratulerer, du har godtatt annonsen',
+    'annuncioRifiutato'=>'Gratulerer, du har avvist annonsen',
+    'diventatoRevisore'=>'Bra gjort! Brukeren har blitt anmelder!',
+
+    // end messaggi
 ];
