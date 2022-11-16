@@ -3,7 +3,7 @@
 return [
     // navbar
     'registrazione'=>'Crea una cuenta',
-    'login'=>'Connectate',
+    'login'=>'Log In',
     'creaAnnuncio' =>'Crear anuncio',
     'listaAnnunci'=>'Lista de anuncios',
     'categorie'=>'Categorías',
@@ -90,7 +90,7 @@ return [
     'registrati'=>'REGISTRARSE',
     'email'=>'Email:',
     'nomeCognome'=>'Nombre y apellido:',
-    'password'=>'clave:',
+    'password'=>'Clave:',
     'passwordConf'=>'Confirmar clave:',
     'registrati2'=>'Registrarse',
 
@@ -99,7 +99,7 @@ return [
 
     // login
 
-    'signIn'=>'REGISTRARSE',
+    'signIn'=>'SIGN IN',
     'logOn'=>'¿Aún no tienes una cuenta? ¡Iniciar sesión!'
     // end login
 ];
