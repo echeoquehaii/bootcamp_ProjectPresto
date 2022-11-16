@@ -56,7 +56,8 @@
         <li>
           <div class="btn-group nav-item hover-underline-animation text-wh">
             <p class="nav-link dropdown-toggle text-wh mb-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              {{__('ui.lingua')}}
+              <i class="fa-solid fa-language"></i>
+              {{-- {{__('ui.lingua')}} --}}
             </p>
             <ul class="dropdown-menu">
               <li class="nav-item">
@@ -74,6 +75,7 @@
             </ul>
           </div>
         </li>
+        
       </ul>
           @auth
             <div class="nav-item dropdown mx-3">
