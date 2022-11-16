@@ -1,38 +1,43 @@
 <div>
-    <div class="container vh-100 mt-custom1">
-        <div class="row vh-100 justify-content-center text-center align-items-center">
+    <div class="container-fluid mb-5 height space">
+        <div class="row">
             <div class="col-12 col-md-3"></div>
-            <div class="col-12 col-md-6">
-                <div class="formRegister">       
+            <div class="col-12 col-md-6 justify-content-center d-flex">
+                <div class="formRegister my-5">       
                     <div class="lines"></div>
                     <div class="content">                       
                             
                         <form wire:submit.prevent="storeProfile">
     
-                                <h2 class="text-wh text-center mb-4">Inserisci le tue informazioni per diventare revisore</h2>
+                                <h2 class="text-wh text-center mb-4">{{__('ui.lavoraConNoi')}}</h2>
                         
-                                <div class="mb-4 inputBox">
-                                    <input type="numeric" class="@error('age') is-invalid @enderror" wire:model.lazy="age">
-                                    <label class="form-label">Età</label>
+                                <div class="mb-3 inputBox">
+                                    <input required="required" type="numeric" class="@error('age') is-invalid @enderror" wire:model.lazy="age">
+                                    <label class="form-label">{{__('ui.età')}}</label>
                                     <i></i>
                                 </div>
-                                @error('age') <div class="error text-wh">{{ $message }}</div> @enderror
+                                <div class="text-white">
+                                    @error('age'){{ $message }} @enderror
+                                </div>
 
-                                <div class="mb-2 inputBox">
-                                    <input type="text" class="@error('address') is-invalid @enderror" wire:model.lazy="address">
-                                    <label class="form-label">Indirizzo</label>
+                                <div class="mb-3 inputBox">
+                                    <input required="required" type="text" class="@error('address') is-invalid @enderror" wire:model.lazy="address">
+                                    <label class="form-label">{{__('ui.indirizzo')}}</label>
                                     <i></i>
                                 </div>
-                                @error('address') <div class="error text-wh">{{ $message }}</div> @enderror
-
-                                <div class="mb-2 inputBox">
-                                    <input type="text" class="@error('description') is-invalid @enderror" wire:model.lazy="description">
-                                    <label class="form-label">Descrizione</label>
+                                <div class="text-white">
+                                    @error('address'){{ $message }} @enderror
+                                </div>
+                                <div class="mb-3 inputBox">
+                                    <input required="required" type="text" class="@error('description') is-invalid @enderror" wire:model.lazy="description">
+                                    <label class="form-label">{{__('ui.descrizione')}}</label>
                                     <i></i>
                                 </div>
-                                @error('description') <div class="error text-wh">{{ $message }}</div> @enderror
+                                <div class="text-wh">
+                                    @error('description'){{ $message }} @enderror
+                                </div>
                             
-                                <button type="submit" class="btnLogForm">Diventa revisore!</button>
+                                <button type="submit" class="btnLogForm">{{__('ui.diventaRevisore')}}</button>
                             </form>
                     </div>                       
                 </div>

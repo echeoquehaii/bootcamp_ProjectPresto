@@ -1,26 +1,28 @@
 <x-layout>
 
     
-    <h1 class="text-center mt-custom">Ecco la tua categoria stellare: {{$category->name}}</h1>
+    
     
     <div class="container-fluid height">
         <div class="row mt-custom">
+            
             @forelse ($acceptedAnnounces as $announce)
+            <h1 class="text-center mt-3 pt-5 mb-5">{{__('ui.stellare')}} {{$category->name}}</h1>
             <div class="col-12 col-md-4 mt-custom mx-0 card-height d-flex justify-content-center">
                 <div class="card0">
                     <div class="lines"></div>
                     <div class="imgBx pb-0">
-                        <img src="https://picsum.photos/200/300" alt="" class="imageBx pb-0">
+                        <img src="{{!$announce->images()->get()->isEmpty() ? Storage::url($announce->images()->first()->path) : 'https://picsum.photos/200/300'}}" alt="" class="imageBx pb-0">
                     </div>
                     <div class="content pb-2 pt-0">
                         <div class="details pb-2 pt-0">
                             <h2 class="cardTitle pb-4">{{$announce->name}}</h2>
                             <div class="data pb-2">
-                                <h3>Venditore: {{$announce->user->name}}</h3>
-                                <h3>Categoria: {{$announce->category->name}}</h3>
+                                <h3>{{__('ui.venditore')}} {{$announce->user->name}}</h3>
+                                <h3>{{__('ui.categoria')}}{{$announce->category->name}}</h3>
                             </div>
                             <div class="actionBtn pb-2">
-                                <a href="{{route('detAnnounce', compact('announce'))}}"><button>Vai al dettaglio</button></a>
+                                <a href="{{route('detAnnounce', compact('announce'))}}"><button>{{__('ui.dettaglio')}}</button></a>
                             </div>
                         </div>
         
@@ -28,16 +30,20 @@
                     
                 </div> 
             </div>
-            @empty
-                <p>Non ci sono oggetti di questa categoria!</p>
+            @empty               
+                <h1 class=" text-wh d-flex justify-content-center mt-3 pt-5 mb-5">{{__('ui.noAnnunci')}}</h4>
+                <div class="col-12 d-flex justify-content-center">    
+                    <img src="/img/sleepy.gif" alt="" class="img-filter">
+                </div>
                 @auth
-                    <div class="container height">
-                        <a href="{{route('createAnnounce')}}"><button class="btn btn-warning">Inserisci annuncio</button></a>
+                    <div class="container d-flex justify-content-center mt-5">
+                        <a href="{{route('createAnnounce')}}"><button class=" btn btn-custom">{{__('ui.createAnnounce')}}</button><i></i></a>
                     </div>
                 @endauth 
+
             @endforelse
         
-         </div> 
+        </div> 
     </div>
 
 {{--     <div class="container">
