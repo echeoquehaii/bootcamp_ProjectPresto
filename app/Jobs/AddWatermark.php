@@ -15,7 +15,9 @@ use Spatie\Image\Manipulations;
 class AddWatermark implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
+    
 
+    private $announce_image_id;
     /**
      * Create a new job instance.
      *
@@ -41,17 +43,13 @@ class AddWatermark implements ShouldQueue
         $srcPath = storage_path('app/public/' . $i->path);
         $image = file_get_contents($srcPath);
 
-        $bounds = [];
-        $w = $bounds [2][0] - $bounds[0][0];
-        $h = $bounds [2][1] - $bounds[0][1];
+       
 
         $image = SpatieImage::load($srcPath);
 
         $image->watermark(base_path('resources/media/logo.png'))
             ->watermarkOpacity(50)
             ->watermarkPosition('top-left')
-            ->watermarkWidth($w, Manipulations::UNIT_PIXELS)
-            ->watermarkHeight($h, Manipulations::UNIT_PIXELS)
             ->watermarkFit(Manipulations::FIT_STRETCH);
 
         $image->save($srcPath);
