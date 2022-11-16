@@ -7,6 +7,8 @@ use App\Models\Announce;
 use App\Models\Category;
 use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
+use App\Jobs\GoogleVisionLabelImage;
+use App\Jobs\GoogleVisionSafeSearch;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 
@@ -45,6 +47,8 @@ class AnnounceForm extends Component
                 $newImage = $this->announce->images()->create(['path' => $image->store($newFileName, 'public')]);
 
                 dispatch(new ResizeImage($newImage->path, 400, 300));
+                dispatch(new GoogleVisionSafeSearch($newImage->id));
+                dispatch(new GoogleVisionLabelImage($newImage->id));
             }
 
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
