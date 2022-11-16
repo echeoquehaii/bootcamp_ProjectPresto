@@ -5,7 +5,9 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\Announce;
 use App\Models\Category;
+use App\Jobs\RemoveFaces;
 use App\Jobs\ResizeImage;
+use App\Jobs\AddWatermark;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
@@ -42,9 +44,15 @@ class AnnounceForm extends Component
             foreach ($this->images as $image) {
                 /*  $this->announce->images()->create(['path'=>$image->store('images', 'public')]);  */
                 $newFileName = "announces/{$this->announce->id}";
-                $newImage = $this->announce->images()->create(['path' => $image->store($newFileName, 'public')]);
+                $newImage = $this->announce->images()->watermark()->create(['path' => $image->store($newFileName, 'public')]);
 
-                dispatch(new ResizeImage($newImage->path, 400, 300));
+                RemoveFaces::withChain([
+                    dispatch(new ResizeImage($newImage->path, 400, 300)),
+                 /* dispatch(new GoogleVisionSafeSearch($newImage->id)),  */   
+                 /* dispatch(new GoogleVisionLabelImage($newImage->id)), */   
+/*                     dispatch(new AddWatermark($newImage->id)),   
+ */                ])->dispatch($newImage->id);
+
             }
 
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
