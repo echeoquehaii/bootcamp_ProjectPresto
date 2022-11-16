@@ -1,6 +1,6 @@
 <x-layout>
     
-    <h1 class="mt-custom text-center">{{__('ui.dettaglioDi')}} {{$announce->name}}</h1>
+    <h1 class="mt-custom text-center titles">{{__('ui.dettaglioDi')}} {{$announce->name}}</h1>
     <div class="container height">
         <div class="row">
             <div class="col-12">
@@ -37,7 +37,7 @@
 
                 <div class="row mt-custom1">
                     <div class="col-12 col-md-6 d-flex justify-content-evenly">
-                        <div class="cardDet">       
+                        <div class="cardDet" data-aos="fade-right" data-aos-duration="2000">       
                         <div class="linesDet"></div>
                             <div class="contentDet">
                                 <div class="detText text-white">
@@ -52,7 +52,7 @@
                     </div>
 
                     <div class="col-12 col-md-6 d-flex justify-content-evenly">
-                        <div class="cardDet">       
+                        <div class="cardDet" data-aos="fade-left" data-aos-duration="2000">       
                         <div class="linesDet"></div>
                             <div class="contentDet">
                                 <div class="detText text-white">

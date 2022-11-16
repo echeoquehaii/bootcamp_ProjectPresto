@@ -37,20 +37,18 @@ close.onclick = function(){
 }
 
 // Responsiveness Navbar, sfondo dropdown
-let navdrop = document.querySelector('#userdropjs');
-let navdropitem = document.querySelector('.userdropjs-item');
+// let navdrop = document.querySelector('#userdropjs');
+// let navdropitem = document.querySelector('.userdropjs-item');
 
 
-const mq = window.matchMedia( "(min-width: 500px)" );
+// const mq = window.matchMedia( "(min-width: 500px)" );
 
-if (mq.matches) {
-    // window width is at least 500px
-    } else {
-    navdrop.classList.remove('dropdown-menu-end');
-    navdrop.classList.add('dropdown-mobile');
-    navdrop.classList.add('dropdown-center');
-    navdropitem.classList.add('dropdown-item-mobile');
-    // window width is less than 500px
-    }
-
-
+// if (mq.matches) {
+//     // window width is at least 500px
+//     } else {
+//     navdrop.classList.remove('dropdown-menu-end');
+//     navdrop.classList.add('dropdown-mobile');
+//     navdrop.classList.add('dropdown-center');
+//     navdropitem.classList.add('dropdown-item-mobile');
+//     // window width is less than 500px
+//     }

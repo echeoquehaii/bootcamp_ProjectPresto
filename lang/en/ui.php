@@ -37,15 +37,15 @@ return [
     // fine welcome
 
     // category show
-    'stellare'=>'Here is your star category:',
+    'stellare'=>'HERE IS YOUR STAR CATEGORY:',
     // end category show
 
     // index Announce
-    'allAnnounces'=> 'Here are the announcements present!',
+    'allAnnounces'=> 'HERE ARE THE ANNOUNCEMENTS PRESENT!',
     'venditore'=>'Seller:',
     'categoria'=>'Category:',
     'dettaglio'=>'Go to detail',
-    'noAnnunci'=>'There are no ads for this title',
+    'noAnnunci'=>'THERE ARE NO ADS FOR THIS TITLE',
 
     // fine index announce
 

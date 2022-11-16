@@ -23,21 +23,21 @@ return [
     // end footer
 
     // index Announce
-    'allAnnounces'=> 'Ecco gli annunci presenti!',
+    'allAnnounces'=> 'ECCO GLI ANNUNCI PRESENTI!',
     'venditore'=>'Venditore:',
     'categoria'=>'Categoria:',
     'dettaglio'=>'Vai al dettaglio',
-    'noAnnunci'=>'Non ci sono annunci per questo titolo',
+    'noAnnunci'=>'NON CI SONO ANNUNCI PER QUESTO TITOLO',
 
     // fine index announce
 
     // category show
-    'stellare'=>'Ecco la tua categoria stellare:',
+    'stellare'=>'ECCO LA TUA CATEGORIA STELLARE:',
     // end category show
 
     // det announce
 
-    'dettaglioDi'=>'Il dettaglio di',
+    'dettaglioDi'=>'IL DETTAGLIO DI',
     'nome'=>'Nome:',
     'prezzo'=>'Prezzo:',
     'posizione'=>'Posizione:',
@@ -78,8 +78,8 @@ return [
     // end profile form
 
     // index revisor
-    'annunciDaRevisionare'=>'Annunci da revisionare',
-    'NonCiSono'=>'Non ci sono annunci da revisionare',
+    'annunciDaRevisionare'=>'ANNUNCI DA REVISIONARE',
+    'NonCiSono'=>'NON CI SONO ANNUNCI DA REVISIONARE',
     'accetta'=>'Accetta',
     'rifiuta'=>'Rifiuta',
 

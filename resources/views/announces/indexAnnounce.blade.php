@@ -1,6 +1,6 @@
 <x-layout>
 
-    <h1 class="text-center mt-custom">{{__('ui.allAnnounces')}}</h1>
+    <h1 class="text-center mt-custom titles">{{__('ui.allAnnounces')}}</h1>
    
     <div class="container-fluid height">
         <div class="row mt-custom">
@@ -31,7 +31,10 @@
             @empty
             <div class="col-12">
                 <div>
-                    <p>{{__('ui.noAnnunci')}}</p>
+                    <p class="titles">{{__('ui.noAnnunci')}}</p>
+                    <div class="col-12 d-flex justify-content-center">    
+                        <img src="/img/sleepy.gif" alt="" class="img-filter">
+                    </div>
                 </div>
             </div>
             @endforelse      

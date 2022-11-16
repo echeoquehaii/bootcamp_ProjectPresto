@@ -20,7 +20,7 @@
                             
                         <form method="POST" action="{{route('register')}}">
     
-                                <h2 class="text-wh text-center mb-4">{{__('ui.registrati')}}</h2>
+                                <h2 class="text-wh text-center mb-4 titles">{{__('ui.registrati')}}</h2>
     
                                 @csrf
                     

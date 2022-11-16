@@ -2,7 +2,7 @@
 
     
     
-    <h1 class="space text-center titles">{{$announce_to_check ? 'Annunci da revisionare' : 'Non ci sono annunci da revisionare'}} </h1>
+    <h1 class="space text-center titles">{{$announce_to_check ? 'ANNUNCI DA REVISIONARE' : 'NON CI SONO ANNUNCI DA REVISIONARE'}} </h1>
     <div class="container-fluid">
         @if ($announce_to_check)
     
@@ -59,13 +59,13 @@
                         <form action="{{route('revisor.acceptAnnounce', ['announce'=>$announce_to_check])}}" method="POST">
                             @csrf
                             @method('PATCH')
-                                <button type="submit" class="btn btn-customRevAcc">{{__('ui.accetta')}}</button>
+                                <button type="submit" class="btn btn-customRevAcc fonty">{{__('ui.accetta')}}</button>
                         </form>
 
                         <form action="{{route('revisor.rejectAnnounce', ['announce'=>$announce_to_check])}}" method="POST">
                             @csrf
                             @method('PATCH')
-                                <button type="submit" class="btn btn-customRevDen">{{__('ui.rifiuta')}}</button>
+                                <button type="submit" class="btn btn-customRevDen fonty">{{__('ui.rifiuta')}}</button>
                         </form>
                     </div>                  
             </div>     

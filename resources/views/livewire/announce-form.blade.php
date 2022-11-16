@@ -8,7 +8,7 @@
                     <div class="content">
                         <form wire:submit.prevent="storeAnnounce">
 
-                            <h2 class="text-wh text-center mb-4">{{__('ui.creaAnnunc')}}</h2>
+                            <h2 class="text-wh text-center mb-4 titles">{{__('ui.creaAnnunc')}}</h2>
         
                             <div class="mb-3 inputBox">
                                 <input required="required" type="text" class="@error('name') is-invalid @enderror" wire:model.lazy='name'>

@@ -1,6 +1,8 @@
 <x-layout>
     @vite(['resources/js/welcome.js'])
 
+    {{-- <div id="preloader"></div> --}}
+
     <div id="bubble" class="navbar navbar-expand-lg fixed-top bg-transparent">
         <span style="--i:11;"></span>
         <span style="--i:12;"></span>
@@ -28,17 +30,39 @@
             <div class="row align-items-center row-height">
                 <div class="col-12 col-md-8 text-wh">
                     <h1 class="display-1 titles">P R E S T O</h1>
-                    <h3 class="titles">A New Way to Own a Star!</h3>
+                    <h3 class="titles">A NEW WAY TO OWN A STAR!</h3>
                 </div>
                 <div class="col-12 col-md-4">
                     @auth
         
-                    <a href="{{route('createAnnounce')}}"><button class=" btn btn-custom">{{__('ui.createAnnounce')}}</button><i></i></a>
+                    <a href="{{route('createAnnounce')}}"><button class=" btn btn-custom fonty">{{__('ui.createAnnounce')}}</button><i></i></a>
         
                     @endauth
                 </div>
             </div>
         </div>
+
+        {{-- <div class="container-fluid">
+            <div class="row vh-100">
+                <div class="col-12 col-md-12 p-0">
+                    <div class="swiper1 mySwiper1">
+            <div class="swiper-wrapper">
+                @forelse ($announces as $announce)
+              <div class="swiper-slide swiper-slide1 imgBx pb-0">
+                <img src="{{!$announce->images()->get()->isEmpty() ? $announce->images()->first()->getUrl(400, 300) : 'https://picsum.photos/200/300'}}" alt="" class="imageBx pb-0">
+              </div>
+              @empty
+              <div class="swiper-slide swiper-slide1 imgBx pb-0">
+                <img src='https://picsum.photos/200/300' alt="" class="imageBx pb-0">
+              </div>
+                @endforelse 
+            </div>
+            <div class="swiper-pagination1"></div>
+          </div>
+                </div>
+            </div>
+        </div> --}}
+        
 
         <div class="container-fluid img-wel">
             <h2 class="text-center text-wh display-5">{{__('ui.welcome1')}}</h2>
@@ -55,13 +79,13 @@
                     <h3 class="text-wh">{{__('ui.welcome5')}}</h3>
                     
 
-                    <a href="{{route('login')}}"><button class=" btn btn-custom mt-5">{{__('ui.welcome6')}}</button><i></i></a>
+                    <a href="{{route('login')}}"><button class=" btn btn-custom mt-5 fonty" data-aos="fade-left" data-aos-duration="2000">{{__('ui.welcome6')}}</button><i data-aos="fade-left" data-aos-duration="2000"></i></a>
 
                     @endguest
                     @auth
                     <h3 class="text-wh">{{__('ui.welcome7')}}</h3>
 
-                    <a href="{{route('indexAnnounce')}}"><button class=" btn btn-custom mt-5">{{__('ui.welcome8')}}</button><i></i></a>
+                    <a href="{{route('indexAnnounce')}}"><button class=" btn btn-custom mt-5 fonty" data-aos="fade-left" data-aos-duration="2000">{{__('ui.welcome8')}}</button><i data-aos="fade-left" data-aos-duration="2000"></i></a>
 
                     @endauth
 
@@ -70,7 +94,6 @@
                 </div>
             </div>
         </div>
-
 {{--         <script type="text/javascript" src="{{ URL::asset('js/welcome.js') }}"></script>
  --}}
     </x-layout>
