@@ -2,13 +2,13 @@
 
     
     
-    <h1 class="space text-center titles">{{$announce_to_check ? 'Annunci da revisionare' : 'Non ci sono annunci da revisionare' }} </h1>
-    <div class="container-fluid vh-100">
+    <h1 class="space text-center titles">{{$announce_to_check ? 'Annunci da revisionare' : 'Non ci sono annunci da revisionare'}} </h1>
+    <div class="container-fluid">
         @if ($announce_to_check)
     
       
-            <div class="row align-items-center justify-content-evenly mt-custom1">
-                <div class="col-6">
+            <div class="row align-items-center mt-custom1">
+                <div class="col-12 col-md-6">
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
                                 @if(!$announce_to_check->images()->get()->isEmpty())
@@ -35,11 +35,11 @@
                                     </div>
                                 @endif
                             </div>
-                            <div class="swiper-pagination"></div>
+                            
                         </div>
                 </div>
                    
-                    <div class="col-12 col-md-4">
+                    <div class="col-12 col-md-6">
                         <div class="cardRev">       
                             <div class="linesRev"></div>
                                 <div class="contentRev">
@@ -71,10 +71,6 @@
             </div>     
     @endif
 
-                @if (session('message'))
-                    <div class="alert alert-success">
-                        {{ session('message') }}
-                    </div>
-    @endif
-        </div>
+                
+    </div>
 </x-layout>

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg fixed-top">
+<nav class="navbar navbar-expand-lg fixed-top mb-3">
   <div class="container-fluid collapsedNavContainer">
     <a class="navbar-brand text-wh hover-underline-animation nav-link" href="{{route('welcome')}}"><img src="/img/logo.png" alt="" class="logoSize"> Presto</a>
   

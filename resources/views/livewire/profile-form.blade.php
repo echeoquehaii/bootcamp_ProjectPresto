@@ -7,7 +7,7 @@
                     <div class="lines"></div>
                     <div class="content">                       
                             
-                        <form wire:submit.prevent="storeProfile">
+                            <form wire:submit.prevent="storeProfile">
     
                                 <h2 class="text-wh text-center mb-4">{{__('ui.lavoraConNoi')}}</h2>
                         
