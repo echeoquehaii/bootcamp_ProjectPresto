@@ -11,7 +11,7 @@ return [
     'lingua'=>'Language',
     'profilo'=>'Profile',
     'zonaRevisore'=>'Reviewer area:',
-    'logout'=>'Logout',
+    'logout'=>'Log out',
     // end navbar
 
     // footer

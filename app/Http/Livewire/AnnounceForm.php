@@ -52,7 +52,7 @@ class AnnounceForm extends Component
                     new ResizeImage($newImage->path, 400, 300),
                     new GoogleVisionSafeSearch($newImage->id),  
                     new GoogleVisionLabelImage($newImage->id),  
-/*                  new AddWatermark($newImage->id),   */
+                    new AddWatermark($newImage->id),  
                 ])->dispatch($newImage->id);
             }
 
