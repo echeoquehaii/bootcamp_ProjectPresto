@@ -6,7 +6,7 @@
     <div class="container-fluid height">
         <div class="row mt-custom">
             @if ($acceptedAnnounces->isNotEmpty())
-            <h1 class="text-center mt-3 pt-5 mb-5 titles">{{__('ui.stellare')}} {{$category->name}}</h1>
+            <h1 class="text-center mt-3 pt-5 mb-5 titles">{{__('ui.stellare')}} <x-categoriesLocale :category="$category"/></h1>
             @foreach ($acceptedAnnounces as $announce)
             
             <div class="col-12 col-md-4 mt-custom mx-0 card-height d-flex justify-content-center">
