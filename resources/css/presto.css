@@ -365,7 +365,8 @@ a:hover i::before {
     display: flex;
     text-decoration: none;
     text-align: center;
-    justify-content: center;    
+    justify-content: center;
+    z-index: 100000 !important;    
 }
 
 #bottoneSu{
@@ -373,6 +374,7 @@ a:hover i::before {
     position: fixed;
     bottom: 15%;
     right: 2%;
+    z-index: 100000 !important;
 }
 
 /* Button UP Valerio END*/
@@ -851,7 +853,7 @@ height: 39px;
     outline: none;
     background: var(--vio);
     padding: 11px 25px;
-    width: 100px;
+    width: 150px;
     margin-top: 20px;
     border-radius: 4px;
     font-weight: 600;
