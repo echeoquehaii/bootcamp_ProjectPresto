@@ -951,6 +951,12 @@ height: 39px;
     padding-bottom: 40px;
 }
 
+.announceTitle{
+    z-index: 999;
+    overflow-wrap: break-word;
+    padding-inline: 20px; 
+}
+
 .imgLoader {
     z-index: 999;
     background-size: cover !important;
