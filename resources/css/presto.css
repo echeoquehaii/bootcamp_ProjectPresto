@@ -1359,3 +1359,7 @@ height: 39px;
     height: 100vh !important;
     object-fit: fill;
   }
+
+  .annError{
+    z-index: 999999;
+  }

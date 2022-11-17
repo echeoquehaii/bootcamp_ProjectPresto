@@ -15,7 +15,7 @@
                                 <label class="form-label">{{__('ui.nomeStella')}}</label>
                                 <i></i>                                                         
                             </div>
-                                <div class="text-white">
+                                <div class="text-white annError">
                                     @error('name') {{$message}} @enderror
                                 </div>
                     
@@ -25,7 +25,7 @@
                                     <option value="{{$category->id}}"><x-categoriesLocale :category="$category"/></option>
                                 @endforeach
                             </select>
-                                <div class="text-white">
+                                <div class="text-white annError">
                                     @error('category') {{$message}} @enderror
                                 </div>
                     
@@ -34,7 +34,7 @@
                                 <label class="form-label">{{__('ui.prezzo')}}</label>
                                 <i></i>                                                                       
                             </div>
-                                <div class="text-white">
+                                <div class="text-white annError">
                                     @error('price') {{$message}} @enderror
                                 </div>
                     
@@ -43,23 +43,23 @@
                                 <label class="form-label">{{__('ui.posizione')}}</label>
                                 <i></i>   
                             </div>
-                                <div class="text-white">    
+                                <div class="text-white annError">    
                                     @error('location') {{$message}} @enderror
                                 </div>
                     
                             <div class="mb-3 inputBox d-flex flex-column justify-content-center">
                                 <p class="form-label text-white">{{__('ui.descrizione')}}</p>
                                 <textarea wire:model.lazy='description' cols="27" rows="10" class="@error('description') is-invalid @enderror"></textarea>
-                            </div>
-                                <div class="text-white textbox">
+                                <div class="text-white textbox annError">
                                     @error('description') {{$message}} @enderror
                                 </div>
+                            </div>
                             
                                 <div class="mb-3 imgLoader d-flex flex-column justify-content-center">
                                     <div class="my-3 imgLoaderBtn">
                                         <input wire:model="temporary_images" type="file" name="images" multiple class="imgLoaderButton form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="Img"/>
                                         @error('temporary_images.*') 
-                                            <p class="text-danger mt-2">{{$message}}</p>
+                                            <p class="text-danger mt-2 annError">{{$message}}</p>
                                         @enderror
                                     </div>
                                     <div class="mb-3 imgLoader d-flex flex-column justify-content-center">

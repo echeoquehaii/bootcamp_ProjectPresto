@@ -1,7 +1,9 @@
 <x-layout>
     @vite(['resources/js/welcome.js'])
 
-    {{-- <div id="preloader"></div> --}}
+    <div class="preloader">
+        <div class="counter">0</div>
+    </div>
 
     <div id="bubble" class="navbar navbar-expand-lg fixed-top bg-transparent">
         <span style="--i:11;"></span>

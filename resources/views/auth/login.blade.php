@@ -1,14 +1,20 @@
 <x-layout>
     
    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{$error }}</li>
-                @endforeach
-            </ul>
+    <div class="container-fluid position-absolute">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                <div class="alert alert-success w-100 mt-custom2 purple text-white d-flex justify-content-center align-items-center">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <p>{{$error }}</p>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>  
         </div>
-    @endif 
+    </div>
+    @endif
 
     <div class="container vh-100">
         <div class="row vh-100 justify-content-center text-center align-items-center">

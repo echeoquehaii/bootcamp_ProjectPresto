@@ -20,21 +20,22 @@
     <x-navbar></x-navbar>
 
     @if (session('message'))
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-3"></div>
-            <div class="col-12 col-md-6">
-                 <div class="alert alert-success w-100 mt-custom2 purple text-white d-flex justify-content-center">
+    <div class="container-fluid position-absolute">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                <div class="alert alert-success w-100 mt-custom2 purple text-white d-flex justify-content-center align-items-center">
+                    <ul>
                      {{ session('message') }}
-                 </div>
-            </div>
+                    </ul>
+                </div>
+            </div>  
         </div>
     </div>
         
     @endif
 
     @if (session('access.denied'))
-    <div class="container">
+    <div class="container position-absolute">
         <div class="row">
             <div class="col-12 col-md-3"></div>
             <div class="col-12 col-md-6">
