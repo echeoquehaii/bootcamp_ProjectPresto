@@ -12,7 +12,7 @@
 
     <div class="container vh-100 mt-custom1">
         <div class="row vh-100 justify-content-center text-center align-items-center">
-            <div class="col-12 d-flex justify-content-center">
+            <div class="col-12 d-flex justify-content-center align-items-center">
                 <div class="formRegister">       
                     <div class="lines"></div>
                     <div class="content">                       
