@@ -35,11 +35,11 @@
                         </li>
                         <li class="phone">
                             <span class="icon"><i class="fa fa-phone"></i></span>
-                            <p><a href="#">+12 345 67890</a></p>
+                            <p>+12 345 67890</p>
                         </li>
                         <li class="email">
-                            <span class="icon"><i class="fa fa-envelope-o"></i></span>
-                            <p><a href="#">admin@presto.it</a></p>
+                            <span class="icon"><i class="fa fa-envelope"></i></span>
+                            <p>admin@presto.it</p>
                         </li>
                     </ul>
                 </div>
