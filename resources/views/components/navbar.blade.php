@@ -28,36 +28,26 @@
           <li class="nav-item">
             <a class="nav-link text-wh hover-underline-animation" href="{{route('createAnnounce')}}">{{__('ui.creaAnnuncio')}}</a>
           </li>
-          @endguest
+        @endguest
 
+        {{-- PULSANTE CATEGORIE --}}
           <li>
             <div class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="hover-underline-animation text-white">{{__('ui.categorie')}}</span></a>
-              <ul class="dropdown-menu dropdown-menu" id="userdropjs">
-                @foreach ($categories as $category)
-                <li><a class="hover-underline-animation dropdown-item userdropjs-item text-white" href="{{route('categoryShow', compact('category'))}}"><x-categoriesLocale :category="$category"/></a></li>
-                @endforeach
-          </ul>
+              <span class="hover-underline-animation">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="text-white navHoverTxt ">{{__('ui.categorie')}}</span></a>
+                <ul class="dropdown-menu dropdown-menu">
+                  @foreach ($categories as $category)
+                  <li><a class="hover-underline-animation dropdown-item userdropjs-item text-white" href="{{route('categoryShow', compact('category'))}}"><x-categoriesLocale :category="$category"/></a></li>
+                  @endforeach
+                </ul>
+              </span>
             </div>
           </li>
-{{-- 
-          <li>
-            <div class="nav-item dropdown hover-underline-animation">
-                <p class="nav-link dropdown-toggle text-wh mb-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  {{__('ui.categorie')}}
-                </p>
-                <ul class="dropdown-menu">
-                    @foreach ($categories as $category)
-                    <li><a class="hover-underline-animation dropdown-item userdropjs-item text-white" href="{{route('categoryShow', compact('category'))}}"><x-categoriesLocale :category="$category"/></a></li>
-                    @endforeach
-                </ul>
-            </div>
-          </li> --}}
 
         <li>
           <form action="{{route('searchAnnounces')}}" method="GET" class="d-flex" id="noShow">
-            <div class="searchBox">
-              <div class="search"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="searchBox hover-underline-animation">
+              <div class="search navHoverTxt"><i class="fa-solid fa-magnifying-glass"></i></div>
               <div class="searchInput">
                 <input name="searched" type="text" placeholder="{{__('ui.cerca')}}" aria-label="Search" class="searchBoxInputField">
               </div>
@@ -66,28 +56,6 @@
           </form>
         </li>
 
-{{--         <li>
-          <div class="btn-group nav-item hover-underline-animation text-wh">
-            <p class="nav-link dropdown-toggle text-wh mb-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="fa-solid fa-language"></i>
-              {{-- {{__('ui.lingua')}} --}}
-{{--             </p>
-            <ul class="dropdown-menu">
-              <li class="nav-item">
-                <x-_locale lang="it" nation="it"></x-_locale>
-              </li>
-              <li class="nav-item">
-                <x-_locale lang="en" nation="gb"></x-_locale>
-              </li>
-              <li class="nav-item">
-                <x-_locale lang="es" nation="es"></x-_locale>
-              </li>
-              <li class="nav-item">
-                <x-_locale lang="no" nation="no"></x-_locale>
-              </li>
-            </ul>
-          </div>
-        </li> --}}
 
        <div class="nav-item dropdown">
           <span class="hover-underline-animation">
@@ -112,13 +80,15 @@
           </span>
         </div>
       </ul>
-          @auth
+
+        @auth
+          <span class="hover-underline-animation pb-2">
             <div class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="hover-underline-animation text-white">{{Auth::user()->name}}</span></a>
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="text-white navHoverTxt">{{Auth::user()->name}}</span></a>
               <div class="dropdown-menu dropdown-menu-end" id="userdropjs">
                 @if(Auth::user()->is_revisor)
                   <li> 
-                    <a href="{{route('indexRevisor')}}" id="noShow" class="hover-underline-animation dropdown-item userdropjs-item text-white">{{__('ui.zonaRevisore')}} <span>{{App\Models\Announce::toBeRevisionedCount()}}
+                    <a href="{{route('indexRevisor')}}" id="noShow" class="dropdown-item hover-underline-animation userdropjs-item text-white ">{{__('ui.zonaRevisore')}} <span>{{App\Models\Announce::toBeRevisionedCount()}}
                       <span class="visually-hidden">unread messages</span>
                     </a>
                   </li>             
@@ -131,7 +101,9 @@
                 </li>
               </div>
             </div>
-          @endauth
+          </span>
+        @endauth
+
     </div>
     @guest
       <p class="text-transparent" id="invisibleLogo"><img src="/img/logo-transparent.png" alt="" class="logoSize"> Presto</p>
