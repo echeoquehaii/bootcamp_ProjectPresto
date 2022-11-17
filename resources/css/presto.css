@@ -982,6 +982,7 @@ height: 39px;
     font-weight: 600;
     cursor: pointer;
     opacity: 0.9;
+    z-index: 99999999;
 }
 
 .btnLogForm:hover {
@@ -999,6 +1000,7 @@ height: 39px;
     font-weight: 600;
     cursor: pointer;
     opacity: 0.9;
+    z-index: 99999999;
 }
 
 .btnLogDrop:hover {

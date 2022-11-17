@@ -61,7 +61,7 @@ return [
 
     // announce form
 
-    'creaAnnunc'=>'CREATE YOUR AD',
+    'creaAnnunc'=>'ADD YOUR STAR',
     'nomeStella'=>'Star Name:',
     'sceltaCategoria'=>'Choose a category:',
     'anteprimaFoto'=>'Photo preview',
