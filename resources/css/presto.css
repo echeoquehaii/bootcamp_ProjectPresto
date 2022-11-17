@@ -634,9 +634,6 @@ a:hover i::before {
         width: 100% !important;
     }
 
-    .inputBox {
-        width: 100% !important;
-    }
 }
 /* Modifiche card Miguel END */    
 
@@ -907,7 +904,6 @@ height: 39px;
 .formAnnounce {
     position: relative;
     width: 700px;
-    height: 1800px;
     background: #333;
     transition: 0.5s;
 }
@@ -926,7 +922,6 @@ height: 39px;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 1400px;
-    height: 1800px;
     background: linear-gradient(transparent, rgb(156, 0, 218), rgb(156, 0, 218), rgb(156, 0, 218), transparent);
     animation: animate1 8s linear infinite;
 }
@@ -948,13 +943,26 @@ height: 39px;
 }
 
 .formAnnounce .content {
-    position: absolute;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     overflow: hidden;
-    padding: 40px;
+    padding-bottom: 40px;
+}
+
+.imgLoader {
+    z-index: 999;
+    background-size: cover !important;
+}
+
+.imgLoaderBtn{
+    z-index: 999;
+    height: 100%;
+}
+
+.textbox{
+    width:100%;
 }
 
 .btnLogForm{
@@ -1280,7 +1288,7 @@ height: 39px;
 }
 
 .minHeight{
-    min-height: 900px ;
+    min-height: 500px;
 }
 
 /* #preloader {

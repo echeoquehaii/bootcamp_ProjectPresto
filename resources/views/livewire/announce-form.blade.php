@@ -3,10 +3,10 @@
     <div class="container-fluid mb-5 height space">
         <div class="row">
             <div class="col-12 d-flex justify-content-center">
-                <div class="formAnnounce my-5 ">       
+                <div class="formAnnounce d-flex">       
                     <div class="lines"></div>
-                    <div class="content">
-                        <form wire:submit.prevent="storeAnnounce">
+                    <div class="content d-flex justify-content-center">
+                        <form wire:submit.prevent="storeAnnounce" class="d-flex flex-column align-items-center">
 
                             <h2 class="text-wh text-center mb-4 titles">{{__('ui.creaAnnunc')}}</h2>
         
@@ -47,38 +47,31 @@
                                     @error('location') {{$message}} @enderror
                                 </div>
                     
-                            <div class="mb-3 inputBox">
+                            <div class="mb-3 inputBox d-flex flex-column justify-content-center">
                                 <p class="form-label text-white">{{__('ui.descrizione')}}</p>
-                                <textarea wire:model.lazy='description' cols="30" rows="10" class="@error('description') is-invalid @enderror"></textarea>
+                                <textarea wire:model.lazy='description' cols="27" rows="10" class="@error('description') is-invalid @enderror"></textarea>
                             </div>
-                                <div class="text-white">
+                                <div class="text-white textbox">
                                     @error('description') {{$message}} @enderror
                                 </div>
-                                
-                            <div class="mb-3">
-                                <input wire:model="temporary_images" type="file" name="images" multiple class="form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="Img"/>
-                                @error('temporary_images.*') 
-                                    <p class="text-danger mt-2">{{$message}}</p>
-                                @enderror
-                            </div>
-
-                            @if (!empty($images))
-                                <div class="row align-item-center">
-                                    <div class="col-12 col-md-12">
-                                        <p class="text-white text-center">{{__('ui.anteprimaFoto')}}</p>
+                            
+                                <div class="mb-3 imgLoader d-flex flex-column justify-content-center">
+                                    <div class="my-3 imgLoaderBtn">
+                                        <input wire:model="temporary_images" type="file" name="images" multiple class="imgLoaderButton form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="Img"/>
+                                        @error('temporary_images.*') 
+                                            <p class="text-danger mt-2">{{$message}}</p>
+                                        @enderror
                                     </div>
-                                    <div class="col-12 col-md-12">    
-                                            @foreach ($images as $key => $image)
-                                            
-                                                <div class="loadImg mt-customImg" style="background-image: url({{$image->temporaryUrl()}}); height:200px;"></div>
-
-                                                <button type="button" class="btnLogImg d-block text-center text-white mt-2 mx-auto" wire:click="removeImage({{$key}})">{{__('ui.cancella')}}</button>
-                                            
-                                            @endforeach
-                                    </div>    
-                                    
+                                    <div class="mb-3 imgLoader d-flex flex-column justify-content-center">
+                                        @if (!empty($images))
+                                            <p class="text-white text-center mb-0 mt-2">{{__('ui.anteprimaFoto')}}</p>
+                                                @foreach ($images as $key => $image)
+                                                    <div class="imgLoader mt-2 d-flex flex-column justify-content-center" style="background-image: url({{$image->temporaryUrl()}}); height:200px;"></div>
+                                                    <button type="button" class="btnLogImg d-block text-center text-white mt-4 mb-3 mx-auto" wire:click="removeImage({{$key}})">{{__('ui.cancella')}}</button>
+                                                @endforeach
+                                        @endif 
+                                    </div>
                                 </div>
-                            @endif  
 
                             <button type="submit" class="btnLogForm">{{__('ui.caricaAnnuncio')}}</button>
 

@@ -35,7 +35,7 @@
             </div>
         </div>
 
-                <div class="row mt-custom1 justify-content-center align-items-center">
+                <div class="row mt-custom1 mb-5 justify-content-center align-items-center">
                     <div class="col-10 col-md-6 d-flex justify-content-center align-items-center">
                         <div class="cardDet" data-aos="fade-right" data-aos-duration="2000">       
                         <div class="linesDet"></div>
