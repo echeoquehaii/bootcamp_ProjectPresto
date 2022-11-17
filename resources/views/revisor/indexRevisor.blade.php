@@ -3,7 +3,7 @@
     
     
     <h1 class="space text-center titles">{{$announce_to_check ? trans('ui.revisioneSi') : trans('ui.revisioneNo')}} </h1>
-    <div class="container-fluid">
+    <div class="container-fluid minHeight space">
         @if ($announce_to_check)
         
         

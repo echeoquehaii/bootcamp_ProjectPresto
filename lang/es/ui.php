@@ -37,21 +37,21 @@ return [
     // end welcome
 
     // category show
-    'stellare'=>'Aquí está tu categoría estrella:',
+    'stellare'=>'AQUÍ ESTÁ TU CATEGORÍA ESTRELLA:',
     // end category show
 
     // index Announce
-    'allAnnounces'=> 'Nuestros anuncios',
+    'allAnnounces'=> 'NUESTROS ANUNCIOS', 
     'venditore'=>'Vendedor:',
     'categoria'=>'Categoría:',
     'dettaglio'=>'Detalles',
-    'noAnnunci'=>'No hay anuncios para este título',
+    'noAnnunci'=>'NO HAY ESTRELLAS EN ESTA CATEGORIA',
 
     // fine index announce
 
     // det announce
 
-    'dettaglioDi'=>'Detalles de',
+    'dettaglioDi'=>'DETALLES DE', 
     'nome'=>'Nombre:',
     'prezzo'=>'Precio:',
     'posizione'=>'Ubicación:',
@@ -78,8 +78,8 @@ return [
     // end profile form
 
     // index revisor
-    'annunciDaRevisionare'=>'Anuncios para revisar',
-    'NonCiSono'=>'No hay anuncios para revisar',
+    'annunciDaRevisionare'=>'ANUNCIOS PARA REVISAR',
+    'NonCiSono'=>'NO HAY ANUNCIOS PARA REVISAR',
     'accetta'=>'Aceptar',
     'rifiuta'=>'Rechazar',
 
