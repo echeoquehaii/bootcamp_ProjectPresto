@@ -12,7 +12,7 @@ class PublicController extends Controller
    
 
     public function welcome(){
-        $announces = Announce::where("is_accepted", true)->get()->reverse()->take(3);
+        $announces = Announce::where("is_accepted", true)->get()->reverse()->take(4);
         return view ('welcome', compact ('announces'));
     }
 
