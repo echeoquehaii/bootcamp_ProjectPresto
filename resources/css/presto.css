@@ -54,6 +54,16 @@ h1 {
     color: white;
 }
 
+.lang-item {
+    display: inline-block !important;
+    padding-right: 10px;
+}
+
+.langDrop {
+    width: 280px !important;
+}
+
+
 .nav-link:hover {
     color: var(--vio);
 }
@@ -164,46 +174,52 @@ h1 {
 /* SEARCHBOX END */
 
 /* Responsiveness Navbar Miguel */
-@media (max-width: 990px) {
+@media (max-width: 768px) {
     .collapse {
-        padding: 0px;
+        width: 100% ;
+        padding-inline: 12px;
+        background: transparent !important;
+        backdrop-filter: blur( 4.5px );
+        }
+
+    .dropdown-menu{
+        background: transparent !important;
+        }
+
+    .dropdown-item{
+        color: white !important;
+        }
+
+    .collapsedNavContainer {
+        padding-inline: 0px;
+        }
+    }
+
+@media (max-width: 991px) {
+    #invisibleLogo {
+        display: none;
+    }
+
+    .collapse {
         width: 100% ;
         padding-inline: 12px;
         background: rgba(91, 27, 112, 0.27) !important;
         box-shadow: 0 8px 32px 0 rgba(82, 17, 78, 0.37);
         backdrop-filter: blur( 4.5px );
         }
-    .dropdown-menu{
-        background: rgba(91, 27, 112, 0.27) !important;
-        box-shadow: 0 8px 32px 0 rgba(82, 17, 78, 0.37);
-        backdrop-filter: blur( 4.5px );
-        -webkit-backdrop-filter: blur( 4.5px );
-        
-    }
-    .dropdown-item{
-        color: white !important;
-    }
-    }
 
-@media (max-width: 990px) {
-    .collapsedNavContainer {
-        padding: 0px;
-        }
-    }
 
-.dropdown-mobile {
-    position: relative !important;
-    margin: 0 !important;
-    width: 100% !important;
-    background: transparent !important;
-    backdrop-filter: none;
-    border: transparent;
+    .dropdown-menu {
+        position: relative !important;
+        width: 100% !important;
+        background: transparent !important;
+        backdrop-filter: none !important;
+        border: transparent !important;
+    }
 }
 
-.dropdown-item-mobile:focus, .dropdown-item-mobile:hover {
-    background-color: #1C2331 !important;
-    color: orange !important;
-}
+
+
 
 /* Responsiveness Navbar Miguel END */
 
