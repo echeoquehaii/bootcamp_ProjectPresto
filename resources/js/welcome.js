@@ -7,3 +7,16 @@ window.addEventListener('scroll' , ()=>{
     }else{
         bubble.classList.remove('bubbles');
 }})
+
+function counter(){
+    var count = setInterval(function(){
+        var c = parseInt($('.counter').text());
+        $('.counter').text((++c).toString());
+        if (c == 20){
+            clearInterval(count);
+            $('.counter').addClass('hide')
+            $('.preloader').addClass('hide')
+        }
+    },60)
+}
+counter()

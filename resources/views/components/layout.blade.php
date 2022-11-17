@@ -60,6 +60,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script>
             AOS.init();
 
@@ -102,10 +103,10 @@
     var swiper1 = new Swiper(".mySwiper1", {
       slidesPerView: 3,
       spaceBetween: 2,
-      pagination: {
-        el: ".swiper-pagination1",
-        clickable: true,
-      },
+      navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
     });
   </script>
 
