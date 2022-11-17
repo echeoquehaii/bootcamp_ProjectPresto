@@ -12,32 +12,34 @@
           <a class="nav-link text-wh hover-underline-animation" aria-current="page" href="{{route('welcome')}}">Home</a>
         </li>
         @guest
-        <li class="nav-item">
-          <a class="nav-link text-wh hover-underline-animation" href="{{route('register')}}">{{__('ui.registrazione')}}</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-wh hover-underline-animation" href="{{route('login')}}">{{__('ui.login')}}</a>
-        </li>
+          <li class="nav-item">
+            <a class="nav-link text-wh hover-underline-animation" href="{{route('register')}}">{{__('ui.registrazione')}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-wh hover-underline-animation" href="{{route('login')}}">{{__('ui.login')}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-wh hover-underline-animation" href="{{route('indexAnnounce')}}">{{__('ui.listaAnnunci')}}</a>
+          </li>
         @else
-        
-        <li class="nav-item">
-          <a class="nav-link text-wh hover-underline-animation" href="{{route('createAnnounce')}}">{{__('ui.creaAnnuncio')}}</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-wh hover-underline-animation" href="{{route('indexAnnounce')}}">{{__('ui.listaAnnunci')}}</a>
-        </li>
-        <li>
-          <div class="nav-item dropdown hover-underline-animation">
-              <p class="nav-link dropdown-toggle text-wh mb-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                {{__('ui.categorie')}}
-              </p>
-              <ul class="dropdown-menu">
-                  @foreach ($categories as $category)
-                  <li><a class="dropdown-item text-white hover-underline-animation" href="{{route('categoryShow', compact('category'))}}"><x-categoriesLocale :category="$category"/></a></li>
-                  @endforeach
-              </ul>
-          </div>
-        </li>
+          <li class="nav-item">
+            <a class="nav-link text-wh hover-underline-animation" href="{{route('indexAnnounce')}}">{{__('ui.listaAnnunci')}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-wh hover-underline-animation" href="{{route('createAnnounce')}}">{{__('ui.creaAnnuncio')}}</a>
+          </li>
+          <li>
+            <div class="nav-item dropdown hover-underline-animation">
+                <p class="nav-link dropdown-toggle text-wh mb-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  {{__('ui.categorie')}}
+                </p>
+                <ul class="dropdown-menu">
+                    @foreach ($categories as $category)
+                    <li><a class="dropdown-item text-white hover-underline-animation" href="{{route('categoryShow', compact('category'))}}"><x-categoriesLocale :category="$category"/></a></li>
+                    @endforeach
+                </ul>
+            </div>
+          </li>
         @endguest
         <li>
           <form action="{{route('searchAnnounces')}}" method="GET" class="d-flex" id="noShow">
@@ -54,7 +56,8 @@
         <li>
           <div class="btn-group nav-item hover-underline-animation text-wh">
             <p class="nav-link dropdown-toggle text-wh mb-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              {{__('ui.lingua')}}
+              <i class="fa-solid fa-language"></i>
+              {{-- {{__('ui.lingua')}} --}}
             </p>
             <ul class="dropdown-menu">
               <li class="nav-item">
@@ -72,6 +75,7 @@
             </ul>
           </div>
         </li>
+        
       </ul>
           @auth
             <div class="nav-item dropdown mx-3">
@@ -84,10 +88,11 @@
                   <li> 
                     <a href="{{route('indexRevisor')}}" id="noShow" class="hover-underline-animation dropdown-item userdropjs-item text-white">{{__('ui.zonaRevisore')}} <span>{{App\Models\Announce::toBeRevisionedCount()}}
                       <span class="visually-hidden">unread messages</span>
-                    </span></a>
+                    </a>
                   </li>             
                 @endif
-                <li><a class="me-5 hover-underline-animation dropdown-item userdropjs-item text-white" href="{{route('logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{__('ui.logout')}}</a>
+                <li>
+                  <a class="me-5 hover-underline-animation dropdown-item userdropjs-item text-white" href="{{route('logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{__('ui.logout')}}</a>
                   <form id="logout-form" method="POST" class="d-none" action="{{route('logout')}}">
                     @csrf
                   </form>

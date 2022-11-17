@@ -27,7 +27,7 @@ return [
     'venditore'=>'Venditore:',
     'categoria'=>'Categoria:',
     'dettaglio'=>'Vai al dettaglio',
-    'noAnnunci'=>'NON CI SONO ANNUNCI PER QUESTO TITOLO',
+    'noAnnunci'=>'NON CI SONO STELLE IN QUESTA CATEGORIA',
 
     // fine index announce
 

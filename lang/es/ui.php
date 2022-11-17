@@ -2,39 +2,38 @@
 
 return [
     // navbar
-    'registrazione'=>'Crea una cuenta',
-    'login'=>'Log In',
-    'creaAnnuncio' =>'Crear anuncio',
-    'listaAnnunci'=>'Lista de anuncios',
+    'registrazione'=>'Crea tu cuenta',
+    'login'=>'Identifícate ',
+    'creaAnnuncio' =>'Sube una estrella',
+    'listaAnnunci'=>'Nuestros anuncios',
     'categorie'=>'Categorías',
-    'cerca'=>'Cerca',
+    'cerca'=>'Busca',
     'lingua'=>'Idioma',
     'profilo'=>'Perfil',
-    'zonaRevisore'=>'área de revisión:',
+    'zonaRevisore'=>'Área de revisión:',
     'logout'=>'Logout',
     // end navbar
 
     // footer
-    'team'=>'El equipo:',
+    'team'=>'Nuestro equipo:',
     'lavoraConNoi'=>'Trabaja con nosotros',
-    'diventaRevisore'=>'Convertirse en un auditor',
+    'diventaRevisore'=>'Hazte revisor',
     'contattaci'=>'Contáctenos:',
     'indirizzo'=>'Dirección:',
     // end footer
 
     // welcome
-    'createAnnounce'=> 'Publica tu anuncio',
+    'createAnnounce'=> 'Sube una estrella',
     'welcome1'=>'¿Estás buscando una estrella?',
-    'welcome2'=>'¡Encuentra tu favorito en nuestro portal!',
+    'welcome2'=>'¡Encuentra tu favorita en nuestra plataforma!',
     'welcome3'=>'¡Importa o encuentra tu estrella favorita!',
-    'welcome4'=>'¡En nuestro portal puedes colocar tus anuncios con respecto a tus estrellas, o encontrar el que mejor se adapte a ti!
-    ¡Ingrese su anuncio en unos pocos clics y el juego está listo!
-    ¡o intenta encontrar la estrella que prefieras entre los anuncios y hazla tuya!',
+    'welcome4'=>'¡En nuestra plataforma puedes subir tus estrellas, o encontrar la que mejor se adapte a ti!
+    ¡Ingrese su anuncio en unos pocos clics y listo!
+    ¡O intenta encontrar la estrella que más te guste entre los anuncios y hazla tuya!',
     'welcome5'=>'¡Inicia sesión y prueba nuestras funciones!',
-    'welcome6'=>'¡Por favor Iniciar sesión!',
+    'welcome6'=>'¡Inicia sesión!',
     'welcome7'=>'¡Echa un vistazo a los últimos anuncios!',
     'welcome8'=>'¡Mira aquí!',
-    'allAnnounces'=> 'Aquí están nuestros anuncios',
     // end welcome
 
     // category show
@@ -42,77 +41,77 @@ return [
     // end category show
 
     // index Announce
-    'allAnnounces'=> 'Aquí están los anuncios presentes!',
+    'allAnnounces'=> 'Nuestros anuncios',
     'venditore'=>'Vendedor:',
     'categoria'=>'Categoría:',
-    'dettaglio'=>'Ir al detalle',
+    'dettaglio'=>'Detalles',
     'noAnnunci'=>'No hay anuncios para este título',
 
     // fine index announce
 
     // det announce
 
-    'dettaglioDi'=>'El detalle de',
+    'dettaglioDi'=>'Detalles de',
     'nome'=>'Nombre:',
     'prezzo'=>'Precio:',
-    'posizione'=>'Posición:',
+    'posizione'=>'Ubicación:',
     'descrizione'=>'Descripción:',
 
     // end det announce
 
     // announce form
 
-    'creaAnnunc'=>'CREA TU ANUNCIO',
+    'creaAnnunc'=>'SUBE TU ESTRELLA',
     'nomeStella'=>'Nombre de la estrella:',
     'sceltaCategoria'=>'Elige una categoría:',
     'anteprimaFoto'=>'Vista previa de la foto',
     'caricaAnnuncio'=>'Sube tu anuncio',
-    'cancella'=>'Claro',
+    'cancella'=>'Borrar',
     
 
 
     // end announce form
 
     //  profile form
-    'età'=>'Años:',
+    'età'=>'Edad:',
 
     // end profile form
 
     // index revisor
-    'annunciDaRevisionare'=>'Annunci da revisionare',
-    'NonCiSono'=>'Non ci sono annunci da revisionare',
+    'annunciDaRevisionare'=>'Anuncios para revisar',
+    'NonCiSono'=>'No hay anuncios para revisar',
     'accetta'=>'Aceptar',
     'rifiuta'=>'Rechazar',
 
     // end index revisor
 
     // register
-    'registrati'=>'REGISTRARSE',
+    'registrati'=>'CREAR UNA CUENTA',
     'email'=>'Email:',
     'nomeCognome'=>'Nombre y apellido:',
-    'password'=>'Clave:',
-    'passwordConf'=>'Confirmar clave:',
-    'registrati2'=>'Registrarse',
+    'password'=>'Contaseña:',
+    'passwordConf'=>'Confirma tu contraseña:',
+    'registrati2'=>'Regístrate',
 
 
     // end register
 
     // login
 
-    'signIn'=>'SIGN IN',
-    'logOn'=>'¿Aún no tienes una cuenta? ¡Iniciar sesión!',
+    'signIn'=>'IDENTÍFICATE',
+    'logOn'=>'¿Aún no tienes una cuenta? ¡Regístrate!',
     // end login
     
     // messaggi
-    'revisoreSi'=>'Ya eres revisor, ¡solicitud rechazada!',
+    'revisoreSi'=>'Ya eres revisor!',
     'revisoreNo'=>'Ya has enviado la solicitud, ¡espera una respuesta!',
-    'revisoreInv'=>'¡Bien hecho! ¡Solicitud enviada con éxito!',
+    'revisoreInv'=>'¡Solicitud enviada con éxito!',
     'revisioneSi'=>'Anuncios para revisar',
     'revisioneNo'=>'No hay anuncios para revisar',
     'attesaRevisione'=>'Anuncio pendiente de revisión',
-    'annuncioAccettato'=>'Enhorabuena, has aceptado el anuncio',
-    'annuncioRifiutato'=>'Enhorabuena, ha rechazado el anuncio',
-    'diventatoRevisore'=>'¡Bien hecho! ¡El usuario se ha convertido en revisor!',
+    'annuncioAccettato'=>'Has aceptado el anuncio',
+    'annuncioRifiutato'=>'Has rechazado el anuncio',
+    'diventatoRevisore'=>'¡Guay! ¡El usuario se ha convertido en revisor!',
 
     // end messaggi
 

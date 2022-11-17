@@ -42,7 +42,7 @@
             </div>
         </div>
 
-        {{-- <div class="container-fluid">
+         <div class="container-fluid">
             <div class="row vh-100">
                 <div class="col-12 col-md-12 p-0">
                     <div class="swiper1 mySwiper1">
@@ -61,7 +61,7 @@
           </div>
                 </div>
             </div>
-        </div> --}}
+        </div>
         
 
         <div class="container-fluid img-wel">
