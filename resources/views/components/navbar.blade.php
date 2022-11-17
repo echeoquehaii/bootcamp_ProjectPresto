@@ -82,6 +82,14 @@
       </ul>
 
         @auth
+
+        @if (App\Models\Announce::toBeRevisionedBadge())
+        <div class="base">
+          <div class="indicator">
+            <div class="noti_count" role="status"></div>
+          </div>
+        </div>
+        @endif
           <span class="hover-underline-animation pb-2">
             <div class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="text-white navHoverTxt">{{Auth::user()->name}}</span></a>

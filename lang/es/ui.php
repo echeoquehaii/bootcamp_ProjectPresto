@@ -5,7 +5,7 @@ return [
     'registrazione'=>'Crea tu cuenta',
     'login'=>'Identifícate ',
     'creaAnnuncio' =>'Sube una estrella',
-    'listaAnnunci'=>'Nuestros anuncios',
+    'listaAnnunci'=>'Estrellas en venta',
     'categorie'=>'Categorías',
     'cerca'=>'Busca',
     'lingua'=>'Idioma',

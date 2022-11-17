@@ -38,6 +38,16 @@ class Announce extends Model
         return Announce::where('is_accepted', null)->count();
     }
 
+    public static function toBeRevisionedBadge(){
+        $badge = Announce::where('is_accepted', null)->count();
+        if ($badge > 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+
     public function toSearchableArray(){
 
        $category = $this->category;

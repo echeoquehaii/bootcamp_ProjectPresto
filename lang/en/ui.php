@@ -4,8 +4,8 @@ return [
     // navbar
     'registrazione'=>'Registration',
     'login'=>'Log in',
-    'creaAnnuncio' =>'Create ad',
-    'listaAnnunci'=>'Announcement list',
+    'creaAnnuncio' =>'Add your star',
+    'listaAnnunci'=>'Stars for sale',
     'categorie'=>'Category',
     'cerca'=>'Search',
     'lingua'=>'Language',

@@ -5,7 +5,7 @@ return [
     'registrazione'=>'Registrazione',
     'login'=>'Log in',
     'creaAnnuncio' =>'Crea annuncio',
-    'listaAnnunci'=>'Lista annunci',
+    'listaAnnunci'=>'Stelle in vendita',
     'categorie'=>'Categorie',
     'cerca'=>'Cerca',
     'lingua'=>'Lingua',
