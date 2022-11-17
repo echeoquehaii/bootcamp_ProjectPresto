@@ -12,8 +12,7 @@
 
     <div class="container vh-100">
         <div class="row vh-100 justify-content-center text-center align-items-center">
-            <div class="col-12 col-md-4"></div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 d-flex justify-content-center align-items-center">
                 <div class="form">       
                     <div class="lines"></div>
                     <div class="content">                       
@@ -43,7 +42,6 @@
                     </div>                       
                 </div>
             </div>
-            <div class="col-12 col-md-4"></div>
         </div>
     </div>
 
