@@ -12,8 +12,7 @@
 
     <div class="container vh-100 mt-custom1">
         <div class="row vh-100 justify-content-center text-center align-items-center">
-            <div class="col-12 col-md-3"></div>
-            <div class="col-12 col-md-6">
+            <div class="col-12 d-flex justify-content-center">
                 <div class="formRegister">       
                     <div class="lines"></div>
                     <div class="content">                       
@@ -51,7 +50,6 @@
                     </div>                       
                 </div>
             </div>
-            <div class="col-12 col-md-3"></div>
         </div>
     </div>
 
