@@ -45,13 +45,13 @@ return [
     'venditore'=>'Seller:',
     'categoria'=>'Category:',
     'dettaglio'=>'Details',
-    'noAnnunci'=>'THERE ARE NO ADS FOR THIS TITLE',
+    'noAnnunci'=>'THERE ARE NO STARS FOR THIS TITLE',
 
     // fine index announce
 
     // det announce
 
-    'dettaglioDi'=>'Details of',
+    'dettaglioDi'=>'DETAILS OF',
     'nome'=>'Name:',
     'prezzo'=>'Price:',
     'posizione'=>'Position:',
@@ -78,8 +78,8 @@ return [
     // end profile form
 
     // index revisor
-    'annunciDaRevisionare'=>'Announces review',
-    'NonCiSono'=>'No announces to check',
+    'annunciDaRevisionare'=>'ADS TO REVIEW',
+    'NonCiSono'=>'THERE ARE NO ADS TO REVIEW',
     'accetta'=>'Accept',
     'rifiuta'=>'Decline',
 

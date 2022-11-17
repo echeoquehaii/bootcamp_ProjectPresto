@@ -38,7 +38,7 @@
                     <img src="/img/sleepy.gif" alt="" class="img-filter">
                 </div>
                 @auth
-                    <div class="container d-flex justify-content-center mt-5">
+                    <div class="container d-flex justify-content-center mt-5 mb-5">
                         <a href="{{route('createAnnounce')}}"><button class=" btn btn-custom fonty">{{__('ui.createAnnounce')}}</button><i></i></a>
                     </div>
                 @endauth 

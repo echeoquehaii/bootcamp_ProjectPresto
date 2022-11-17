@@ -37,7 +37,7 @@ return [
     // fine welcome
 
     // category show
-    'stellare'=>'Stjernen i kategorien',
+    'stellare'=>'STJERNEN I KATEGORIEN', 
     // end category show
 
     // index Announce
@@ -45,12 +45,12 @@ return [
     'venditore'=>'Selger:',
     'categoria'=>'Kategori:',
     'dettaglio'=>'Finn ut mer',
-    'noAnnunci'=>'Ingen matchende stjernen!',
+    'noAnnunci'=>'DET ER INGEN STJERNER I DENNE KATEGORIEN',
     // fine index announce
 
     // det announce
 
-    'dettaglioDi'=>'Detaljen av',
+    'dettaglioDi'=>'DETALJEN AV',
     'nome'=>'Fornavn:',
     'prezzo'=>'Pris:',
     'posizione'=>'Stilling:',
@@ -77,8 +77,8 @@ return [
     // end profile form
 
     // index revisor
-    'annunciDaRevisionare'=>'Annonser å kontrollere',
-    'NonCiSono'=>'Det er ingen annonser å kontrollere',
+    'annunciDaRevisionare'=>'ANNONSER Å ANMELDE',
+    'NonCiSono'=>'DET ER INGEN ANNONSER Å VURDERE',
     'accetta'=>'Godkjenn',
     'rifiuta'=>'Avvis',
     // end index revisor

@@ -3,7 +3,7 @@
     
     
     <h1 class="space text-center titles">{{$announce_to_check ? trans('ui.revisioneSi') : trans('ui.revisioneNo')}} </h1>
-    <div class="container-fluid">
+    <div class="container-fluid minHeight space">
         @if ($announce_to_check)
     
       
@@ -80,7 +80,7 @@
                         </div>
                     </div>
 
-                    <div class="col-12 col-md-12 mt-custom1 d-flex justify-content-evenly">
+                    <div class="col-12 col-md-12 mt-custom1 d-flex justify-content-evenly mb-5">
                         <form action="{{route('revisor.acceptAnnounce', ['announce'=>$announce_to_check])}}" method="POST">
                             @csrf
                             @method('PATCH')
