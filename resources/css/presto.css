@@ -263,6 +263,10 @@ h1 {
     margin-top: 40px !important;
 }
 
+.mt-custom2{
+    margin-top: 70px !important;
+}
+
 .row-height {
     height: 800px;
     margin-left: 70px;
@@ -343,9 +347,14 @@ a:hover i::before {
     margin-bottom: 20px;
     font-weight: bolder;
 }
+
 .detText {
     color:  rgb(64, 0, 88);
     font-weight: bolder;
+}
+
+.purple {
+    background-color:  rgb(64, 0, 88);
 }
 
 /* Button UP Valerio */
