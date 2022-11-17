@@ -57,7 +57,7 @@
               </div>
                 @endforelse 
             </div>
-            <div class="swiper-pagination1"></div>
+            
           </div>
                 </div>
             </div>

@@ -381,7 +381,8 @@ a:hover i::before {
     display: flex;
     text-decoration: none;
     text-align: center;
-    justify-content: center;    
+    justify-content: center;
+    z-index: 100000 !important;    
 }
 
 #bottoneSu{
@@ -389,6 +390,7 @@ a:hover i::before {
     position: fixed;
     bottom: 15%;
     right: 2%;
+    z-index: 100000 !important;
 }
 
 /* Button UP Valerio END*/
@@ -867,7 +869,7 @@ height: 39px;
     outline: none;
     background: var(--vio);
     padding: 11px 25px;
-    width: 100px;
+    width: 150px;
     margin-top: 20px;
     border-radius: 4px;
     font-weight: 600;
@@ -1075,7 +1077,7 @@ height: 39px;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 5em;
+    font-size: 4em;
     letter-spacing: 0.1em;
     font-weight: 400;
     padding: 10px 30px;
@@ -1097,7 +1099,7 @@ height: 39px;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 5em;
+    font-size: 4em;
     letter-spacing: 0.1em;
     font-weight: 400;
     padding: 10px 30px;
@@ -1118,7 +1120,7 @@ height: 39px;
 .cardRev {
     position: relative;
     width: 450px;
-    height: 500px;
+    height: 750px;
     background: #333;
     transition: 0.5s;
 }
@@ -1153,7 +1155,7 @@ height: 39px;
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     overflow: hidden;
     padding: 60px;
 }
