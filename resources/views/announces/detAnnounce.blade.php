@@ -35,8 +35,8 @@
             </div>
         </div>
 
-                <div class="row mt-custom1">
-                    <div class="col-12 col-md-6 d-flex justify-content-evenly">
+                <div class="row mt-custom1 justify-content-center align-items-center">
+                    <div class="col-10 col-md-6 d-flex justify-content-center align-items-center">
                         <div class="cardDet" data-aos="fade-right" data-aos-duration="2000">       
                         <div class="linesDet"></div>
                             <div class="contentDet">
@@ -51,7 +51,7 @@
                         </div>
                     </div>
 
-                    <div class="col-12 col-md-6 d-flex justify-content-evenly">
+                    <div class="col-10 col-md-6 d-flex justify-content-center align-items-center">
                         <div class="cardDet" data-aos="fade-left" data-aos-duration="2000">       
                         <div class="linesDet"></div>
                             <div class="contentDet">
