@@ -96,6 +96,10 @@ h1 {
     color: var(--vio) !important;
 }
 
+.navHoverTxt:hover {
+    color: var(--vio) !important;
+}
+
 .dropdown-toggle{
     color:white;
 }
