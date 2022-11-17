@@ -39,13 +39,26 @@ close.onclick = function(){
 // Responsiveness Navbar, sfondo dropdown
 // let navdrop = document.querySelector('#userdropjs');
 // let navdropitem = document.querySelector('.userdropjs-item');
+// let invisibleLogo = document.querySelector('#invisibleLogo');
+// let langDrop = document.querySelector('#langDrop')
 
 
-// const mq = window.matchMedia( "(min-width: 500px)" );
+// const mq = window.matchMedia( "(min-width: 768px)" );
 
 // if (mq.matches) {
-//     // window width is at least 500px
+//    invisibleLogo.classList.add('d-none');
+//      langDrop.classList.remove('dropdown');
+//      langDrop.classList.add('dropend');
+//
+
+     // window width is at least 768px
 //     } else {
+        
+//      langDrop.classList.remove('dropend');
+//      langDrop.classList.add('dropdown');
+
+
+//    invisibleLogo.classList.remove('d-none');
 //     navdrop.classList.remove('dropdown-menu-end');
 //     navdrop.classList.add('dropdown-mobile');
 //     navdrop.classList.add('dropdown-center');

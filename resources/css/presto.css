@@ -54,6 +54,16 @@ h1 {
     color: white;
 }
 
+.lang-item {
+    display: inline-block !important;
+    padding-right: 10px;
+}
+
+.langDrop {
+    width: 280px !important;
+}
+
+
 .nav-link:hover {
     color: var(--vio);
 }
@@ -83,6 +93,10 @@ h1 {
   }
 
 .dropdown:hover {
+    color: var(--vio) !important;
+}
+
+.navHoverTxt:hover {
     color: var(--vio) !important;
 }
 
@@ -164,46 +178,52 @@ h1 {
 /* SEARCHBOX END */
 
 /* Responsiveness Navbar Miguel */
-@media (max-width: 990px) {
+@media (max-width: 768px) {
     .collapse {
-        padding: 0px;
+        width: 100% ;
+        padding-inline: 12px;
+        background: transparent !important;
+        backdrop-filter: blur( 4.5px );
+        }
+
+    .dropdown-menu{
+        background: transparent !important;
+        }
+
+    .dropdown-item{
+        color: white !important;
+        }
+
+    .collapsedNavContainer {
+        padding-inline: 0px;
+        }
+    }
+
+@media (max-width: 991px) {
+    #invisibleLogo {
+        display: none;
+    }
+
+    .collapse {
         width: 100% ;
         padding-inline: 12px;
         background: rgba(91, 27, 112, 0.27) !important;
         box-shadow: 0 8px 32px 0 rgba(82, 17, 78, 0.37);
         backdrop-filter: blur( 4.5px );
         }
-    .dropdown-menu{
-        background: rgba(91, 27, 112, 0.27) !important;
-        box-shadow: 0 8px 32px 0 rgba(82, 17, 78, 0.37);
-        backdrop-filter: blur( 4.5px );
-        -webkit-backdrop-filter: blur( 4.5px );
-        
-    }
-    .dropdown-item{
-        color: white !important;
-    }
-    }
 
-@media (max-width: 990px) {
-    .collapsedNavContainer {
-        padding: 0px;
-        }
-    }
 
-.dropdown-mobile {
-    position: relative !important;
-    margin: 0 !important;
-    width: 100% !important;
-    background: transparent !important;
-    backdrop-filter: none;
-    border: transparent;
+    .dropdown-menu {
+        position: relative !important;
+        width: 100% !important;
+        background: transparent !important;
+        backdrop-filter: none !important;
+        border: transparent !important;
+    }
 }
 
-.dropdown-item-mobile:focus, .dropdown-item-mobile:hover {
-    background-color: #1C2331 !important;
-    color: orange !important;
-}
+
+
 
 /* Responsiveness Navbar Miguel END */
 
@@ -263,9 +283,17 @@ h1 {
     margin-top: 40px !important;
 }
 
+.mt-custom2{
+    margin-top: 70px !important;
+}
+
 .row-height {
     height: 800px;
     margin-left: 70px;
+}
+
+.row-height-wel3{
+    min-height: 450px;
 }
 
 .btn-custom {
@@ -343,9 +371,14 @@ a:hover i::before {
     margin-bottom: 20px;
     font-weight: bolder;
 }
+
 .detText {
     color:  rgb(64, 0, 88);
     font-weight: bolder;
+}
+
+.purple {
+    background-color:  rgb(64, 0, 88);
 }
 
 /* Button UP Valerio */
@@ -365,7 +398,8 @@ a:hover i::before {
     display: flex;
     text-decoration: none;
     text-align: center;
-    justify-content: center;    
+    justify-content: center;
+    z-index: 100000 !important;    
 }
 
 #bottoneSu{
@@ -373,6 +407,7 @@ a:hover i::before {
     position: fixed;
     bottom: 15%;
     right: 2%;
+    z-index: 100000 !important;
 }
 
 /* Button UP Valerio END*/
@@ -851,7 +886,7 @@ height: 39px;
     outline: none;
     background: var(--vio);
     padding: 11px 25px;
-    width: 100px;
+    width: 150px;
     margin-top: 20px;
     border-radius: 4px;
     font-weight: 600;
@@ -1059,7 +1094,7 @@ height: 39px;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 5em;
+    font-size: 4em;
     letter-spacing: 0.1em;
     font-weight: 400;
     padding: 10px 30px;
@@ -1081,7 +1116,7 @@ height: 39px;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 5em;
+    font-size: 4em;
     letter-spacing: 0.1em;
     font-weight: 400;
     padding: 10px 30px;
@@ -1102,7 +1137,7 @@ height: 39px;
 .cardRev {
     position: relative;
     width: 450px;
-    height: 500px;
+    height: 750px;
     background: #333;
     transition: 0.5s;
 }
@@ -1137,7 +1172,7 @@ height: 39px;
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     overflow: hidden;
     padding: 60px;
 }
@@ -1257,14 +1292,14 @@ height: 39px;
 
 .swiper1 {
     width: 100%;
-    height: 100%;
+    height: 100vh;
   }
 
   .swiper-slide1 {
     text-align: center;
     font-size: 18px;
     background: #fff;
-    height: 975px !important;
+    height: 100% !important;
     width: 473px !important;
 
     /* Center slide text vertically */
@@ -1285,6 +1320,6 @@ height: 39px;
   .swiper-slide1 img {
     display: block;
     width: 473px !important;
-    height: 975px !important;
+    height: 100vh !important;
     object-fit: fill;
   }

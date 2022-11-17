@@ -10,7 +10,7 @@
             @foreach ($acceptedAnnounces as $announce)
             
             <div class="col-12 col-md-4 mt-custom mx-0 card-height d-flex justify-content-center">
-                <div class="card0" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="card0">
                     <div class="lines"></div>
                     <div class="imgBx pb-0">
                         <img src="{{!$announce->images()->get()->isEmpty() ? Storage::url($announce->images()->first()->path) : 'https://picsum.photos/200/300'}}" alt="" class="imageBx pb-0">
